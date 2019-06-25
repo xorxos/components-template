@@ -18,6 +18,8 @@ import { RegularTablesComponent } from './tables/regular-tables/regular-tables.c
 import { CustomTablesComponent } from './tables/custom-tables/custom-tables.component';
 import { FilteredTablesComponent } from './tables/filtered-tables/filtered-tables.component';
 import { PaginatedTablesComponent } from './tables/paginated-tables/paginated-tables.component';
+import { Nvd3ChartsComponent } from './charts/nvd3-charts/nvd3-charts.component';
+import { Ng2ChartsComponent } from './charts/ng2-charts/ng2-charts.component';
 
 @NgModule({
   declarations: [
@@ -36,7 +38,9 @@ import { PaginatedTablesComponent } from './tables/paginated-tables/paginated-ta
     RegularTablesComponent,
     CustomTablesComponent,
     FilteredTablesComponent,
-    PaginatedTablesComponent
+    PaginatedTablesComponent,
+    Nvd3ChartsComponent,
+    Ng2ChartsComponent
   ],
   imports: [
     BrowserModule,
