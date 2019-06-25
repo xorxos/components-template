@@ -32,6 +32,8 @@ import { NotificationsComponent } from './misc-utilities/notifications/notificat
 import { DateTimePickersComponent } from './misc-utilities/date-time-pickers/date-time-pickers.component';
 import { CarouselsComponent } from './misc-utilities/carousels/carousels.component';
 import { AccordionsComponent } from './misc-utilities/accordions/accordions.component';
+import { NavbarComponent } from './navbar/navbar.component';
+import { SideBarComponent } from './side-bar/side-bar.component';
 
 @NgModule({
   declarations: [
@@ -64,7 +66,9 @@ import { AccordionsComponent } from './misc-utilities/accordions/accordions.comp
     NotificationsComponent,
     DateTimePickersComponent,
     CarouselsComponent,
-    AccordionsComponent
+    AccordionsComponent,
+    NavbarComponent,
+    SideBarComponent
   ],
   imports: [
     BrowserModule,
