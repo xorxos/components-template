@@ -29,6 +29,9 @@ import { AlertsComponent } from './misc-utilities/alerts/alerts.component';
 import { FileUploadComponent } from './misc-utilities/file-upload/file-upload.component';
 import { AutoCompleteComponent } from './misc-utilities/auto-complete/auto-complete.component';
 import { NotificationsComponent } from './misc-utilities/notifications/notifications.component';
+import { DateTimePickersComponent } from './misc-utilities/date-time-pickers/date-time-pickers.component';
+import { CarouselsComponent } from './misc-utilities/carousels/carousels.component';
+import { AccordionsComponent } from './misc-utilities/accordions/accordions.component';
 
 @NgModule({
   declarations: [
@@ -58,7 +61,10 @@ import { NotificationsComponent } from './misc-utilities/notifications/notificat
     AlertsComponent,
     FileUploadComponent,
     AutoCompleteComponent,
-    NotificationsComponent
+    NotificationsComponent,
+    DateTimePickersComponent,
+    CarouselsComponent,
+    AccordionsComponent
   ],
   imports: [
     BrowserModule,
