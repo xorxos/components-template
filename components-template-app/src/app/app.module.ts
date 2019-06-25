@@ -20,6 +20,10 @@ import { FilteredTablesComponent } from './tables/filtered-tables/filtered-table
 import { PaginatedTablesComponent } from './tables/paginated-tables/paginated-tables.component';
 import { Nvd3ChartsComponent } from './charts/nvd3-charts/nvd3-charts.component';
 import { Ng2ChartsComponent } from './charts/ng2-charts/ng2-charts.component';
+import { GridsComponent } from './layouts/grids/grids.component';
+import { ListsComponent } from './layouts/lists/lists.component';
+import { CardsComponent } from './layouts/cards/cards.component';
+import { TabsComponent } from './layouts/tabs/tabs.component';
 
 @NgModule({
   declarations: [
@@ -40,7 +44,11 @@ import { Ng2ChartsComponent } from './charts/ng2-charts/ng2-charts.component';
     FilteredTablesComponent,
     PaginatedTablesComponent,
     Nvd3ChartsComponent,
-    Ng2ChartsComponent
+    Ng2ChartsComponent,
+    GridsComponent,
+    ListsComponent,
+    CardsComponent,
+    TabsComponent
   ],
   imports: [
     BrowserModule,
