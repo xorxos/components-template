@@ -9,6 +9,11 @@ import { ChartsComponent } from './charts/charts.component';
 import { HomeComponent } from './home/home.component';
 import { MiscUtilitiesComponent } from './misc-utilities/misc-utilities.component';
 import { LayoutsComponent } from './layouts/layouts.component';
+import { ControlsAndValidationComponent } from './forms/controls-and-validation/controls-and-validation.component';
+import { ControlsExtendedComponent } from './forms/controls-extended/controls-extended.component';
+import { SampleRegistrationsComponent } from './forms/sample-registrations/sample-registrations.component';
+import { SampleLoginsComponent } from './forms/sample-logins/sample-logins.component';
+import { MaterialFormsComponent } from './forms/material-forms/material-forms.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +23,12 @@ import { LayoutsComponent } from './layouts/layouts.component';
     ChartsComponent,
     HomeComponent,
     MiscUtilitiesComponent,
-    LayoutsComponent
+    LayoutsComponent,
+    ControlsAndValidationComponent,
+    ControlsExtendedComponent,
+    SampleRegistrationsComponent,
+    SampleLoginsComponent,
+    MaterialFormsComponent
   ],
   imports: [
     BrowserModule,
