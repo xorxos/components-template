@@ -34,6 +34,7 @@ import { CarouselsComponent } from './misc-utilities/carousels/carousels.compone
 import { AccordionsComponent } from './misc-utilities/accordions/accordions.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { SideBarComponent } from './side-bar/side-bar.component';
+import { SpinnersComponent } from './misc-utilities/spinners/spinners.component';
 
 @NgModule({
   declarations: [
@@ -68,7 +69,8 @@ import { SideBarComponent } from './side-bar/side-bar.component';
     CarouselsComponent,
     AccordionsComponent,
     NavbarComponent,
-    SideBarComponent
+    SideBarComponent,
+    SpinnersComponent
   ],
   imports: [
     BrowserModule,
