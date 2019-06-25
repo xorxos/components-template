@@ -14,6 +14,10 @@ import { ControlsExtendedComponent } from './forms/controls-extended/controls-ex
 import { SampleRegistrationsComponent } from './forms/sample-registrations/sample-registrations.component';
 import { SampleLoginsComponent } from './forms/sample-logins/sample-logins.component';
 import { MaterialFormsComponent } from './forms/material-forms/material-forms.component';
+import { RegularTablesComponent } from './tables/regular-tables/regular-tables.component';
+import { CustomTablesComponent } from './tables/custom-tables/custom-tables.component';
+import { FilteredTablesComponent } from './tables/filtered-tables/filtered-tables.component';
+import { PaginatedTablesComponent } from './tables/paginated-tables/paginated-tables.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +32,11 @@ import { MaterialFormsComponent } from './forms/material-forms/material-forms.co
     ControlsExtendedComponent,
     SampleRegistrationsComponent,
     SampleLoginsComponent,
-    MaterialFormsComponent
+    MaterialFormsComponent,
+    RegularTablesComponent,
+    CustomTablesComponent,
+    FilteredTablesComponent,
+    PaginatedTablesComponent
   ],
   imports: [
     BrowserModule,
