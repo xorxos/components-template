@@ -24,6 +24,11 @@ import { GridsComponent } from './layouts/grids/grids.component';
 import { ListsComponent } from './layouts/lists/lists.component';
 import { CardsComponent } from './layouts/cards/cards.component';
 import { TabsComponent } from './layouts/tabs/tabs.component';
+import { ModalsComponent } from './misc-utilities/modals/modals.component';
+import { AlertsComponent } from './misc-utilities/alerts/alerts.component';
+import { FileUploadComponent } from './misc-utilities/file-upload/file-upload.component';
+import { AutoCompleteComponent } from './misc-utilities/auto-complete/auto-complete.component';
+import { NotificationsComponent } from './misc-utilities/notifications/notifications.component';
 
 @NgModule({
   declarations: [
@@ -48,7 +53,12 @@ import { TabsComponent } from './layouts/tabs/tabs.component';
     GridsComponent,
     ListsComponent,
     CardsComponent,
-    TabsComponent
+    TabsComponent,
+    ModalsComponent,
+    AlertsComponent,
+    FileUploadComponent,
+    AutoCompleteComponent,
+    NotificationsComponent
   ],
   imports: [
     BrowserModule,
