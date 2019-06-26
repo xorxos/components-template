@@ -25,7 +25,6 @@
     border: none;
     height: calc(100vh - 50px);
     position: absolute;
-    overflow: hidden;
 }
 
 .main-content {
@@ -33,7 +32,7 @@
     z-index: 1;
     display: block;
     height: 100%;
-    overflow: hidden;
+    overflow: auto;
     color: rgba(0,0,0,.87);
     margin-left: 265px;
     height: calc(100vh - 50px);
