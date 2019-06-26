@@ -1,0 +1,44 @@
+.container-fluid {
+    padding: 0;
+}
+
+.content-wrapper {
+    padding-top: 50px;
+}
+
+.row {
+    margin: 0;
+}
+
+.col-lg-12 {
+    padding: 0;
+}
+
+.side-content {
+    transform: none;
+    visibility: visible;
+    z-index: 2;
+    width: initial;
+    min-width: initial;
+    background: 0 0;
+    padding: 0 15px 0 0;
+    border: none;
+    height: calc(100vh - 50px);
+    position: absolute;
+    overflow: hidden;
+}
+
+.main-content {
+    position: relative;
+    z-index: 1;
+    display: block;
+    height: 100%;
+    overflow: hidden;
+    color: rgba(0,0,0,.87);
+    margin-left: 265px;
+    height: calc(100vh - 50px);
+}
+
+* {
+    outline: solid 1px red;
+}
