@@ -32,7 +32,7 @@ import { NotificationsComponent } from './misc-utilities/notifications/notificat
 import { DateTimePickersComponent } from './misc-utilities/date-time-pickers/date-time-pickers.component';
 import { CarouselsComponent } from './misc-utilities/carousels/carousels.component';
 import { AccordionsComponent } from './misc-utilities/accordions/accordions.component';
-import { NavbarComponent } from './navbar/navbar.component';
+import { TopBarComponent } from './top-bar/top-bar.component';
 import { SideBarComponent } from './side-bar/side-bar.component';
 import { SpinnersComponent } from './misc-utilities/spinners/spinners.component';
 
@@ -68,7 +68,7 @@ import { SpinnersComponent } from './misc-utilities/spinners/spinners.component'
     DateTimePickersComponent,
     CarouselsComponent,
     AccordionsComponent,
-    NavbarComponent,
+    TopBarComponent,
     SideBarComponent,
     SpinnersComponent
   ],
