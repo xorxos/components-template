@@ -1,5 +1,5 @@
 <div class="expansion-panel">
-  <div class="expansion-panel-header" (click)="formsExpanded = !formsExpanded">
+  <div [ngClass]="{'expansion-panel-header': !formsActive, 'active-expansion-panel-header': formsActive}" class="expansion-panel-header" (click)="formsExpanded = !formsExpanded">
     <span class="header-content">
       <i class="menu-icon-item fa fa-address-card"></i>
       <div class="panel-title">
@@ -13,19 +13,19 @@
   </div>
   <div class="expansion-panel-content" *ngIf="formsExpanded" [@slideUpDown]>
     <div class="expansion-panel-body">
-      <a class="expansion-panel-sub-item" routerLink="/forms/controls_and_validation" routerLinkActive="active">
+      <a class="expansion-panel-sub-item" routerLink="/forms/controls_and_validation" routerLinkActive="active" (click)="activateHeader('forms')">
         <span>Controls & Validation</span>
       </a>
-      <a class="expansion-panel-sub-item" routerLink="/forms/extended_controls" routerLinkActive="active">
+      <a class="expansion-panel-sub-item" routerLink="/forms/extended_controls" routerLinkActive="active" (click)="activateHeader('forms')">
         <span>Extended Controls</span>
       </a>
-      <a class="expansion-panel-sub-item" routerLink="/forms/material_forms" routerLinkActive="active">
+      <a class="expansion-panel-sub-item" routerLink="/forms/material_forms" routerLinkActive="active" (click)="activateHeader('forms')">
         <span>Material Forms</span>
       </a>
-      <a class="expansion-panel-sub-item" routerLink="/forms/sample_logins" routerLinkActive="active">
+      <a class="expansion-panel-sub-item" routerLink="/forms/sample_logins" routerLinkActive="active" (click)="activateHeader('forms')">
         <span>Sample Logins</span>
       </a>
-      <a class="expansion-panel-sub-item" routerLink="/forms/sample_registrations" routerLinkActive="active">
+      <a class="expansion-panel-sub-item" routerLink="/forms/sample_registrations" routerLinkActive="active" (click)="activateHeader('forms')">
         <span>Sample Registrations</span>
       </a>
     </div>
@@ -33,7 +33,7 @@
 </div>
 
 <div class="expansion-panel">
-  <div class="expansion-panel-header" (click)="tablesExpanded = !tablesExpanded">
+  <div [ngClass]="{'expansion-panel-header': !tablesActive, 'active-expansion-panel-header': tablesActive}" (click)="tablesExpanded = !tablesExpanded">
     <span class="header-content">
       <i class="menu-icon-item fa fa-table"></i>
       <div class="panel-title">
@@ -49,16 +49,16 @@
   </div>
   <div class="expansion-panel-content" *ngIf="tablesExpanded" [@slideUpDown]>
     <div class="expansion-panel-body">
-      <a class="expansion-panel-sub-item" routerLink="/tables/regular_tables" routerLinkActive="active">
+      <a class="expansion-panel-sub-item" routerLink="/tables/regular_tables" routerLinkActive="active" (click)="activateHeader('tables')">
         <span>Regular Tables</span>
       </a>
-      <a class="expansion-panel-sub-item" routerLink="/tables/custom_tables" routerLinkActive="active">
+      <a class="expansion-panel-sub-item" routerLink="/tables/custom_tables" routerLinkActive="active" (click)="activateHeader('tables')">
         <span>Custom Tables</span>
       </a>
-      <a class="expansion-panel-sub-item" routerLink="/tables/paginated_tables" routerLinkActive="active">
+      <a class="expansion-panel-sub-item" routerLink="/tables/paginated_tables" routerLinkActive="active" (click)="activateHeader('tables')">
         <span>Paginated Tables</span>
       </a>
-      <a class="expansion-panel-sub-item" routerLink="/tables/filtered_tables" routerLinkActive="active">
+      <a class="expansion-panel-sub-item" routerLink="/tables/filtered_tables" routerLinkActive="active" (click)="activateHeader('tables')">
         <span>Filtered Tables</span>
       </a>
     </div>
@@ -66,7 +66,7 @@
 </div>
 
 <div class="expansion-panel">
-  <div class="expansion-panel-header" (click)="chartsExpanded = !chartsExpanded">
+  <div [ngClass]="{'expansion-panel-header': !chartsActive, 'active-expansion-panel-header': chartsActive}" (click)="chartsExpanded = !chartsExpanded">
     <span class="header-content">
       <i class="menu-icon-item fa fa-chart-bar"></i>
       <div class="panel-title">
@@ -80,10 +80,10 @@
   </div>
   <div class="expansion-panel-content" *ngIf="chartsExpanded" [@slideUpDown]>
     <div class="expansion-panel-body">
-      <a class="expansion-panel-sub-item" routerLink="/charts/ng2_charts" routerLinkActive="active">
+      <a class="expansion-panel-sub-item" routerLink="/charts/ng2_charts" routerLinkActive="active" (click)="activateHeader('charts')">
         <span>NG2 Charts</span>
       </a>
-      <a class="expansion-panel-sub-item" routerLink="/charts/nvd3_charts" routerLinkActive="active">
+      <a class="expansion-panel-sub-item" routerLink="/charts/nvd3_charts" routerLinkActive="active" (click)="activateHeader('charts')">
         <span>NVD3 Charts</span>
       </a>
     </div>
@@ -91,7 +91,7 @@
 </div>
 
 <div class="expansion-panel">
-  <div class="expansion-panel-header" (click)="miscUtilitiesExpanded = !miscUtilitiesExpanded">
+  <div [ngClass]="{'expansion-panel-header': !miscUtilitiesActive, 'active-expansion-panel-header': miscUtilitiesActive}" (click)="miscUtilitiesExpanded = !miscUtilitiesExpanded">
     <span class="header-content">
       <i class="menu-icon-item fa fa-cogs"></i>
       <div class="panel-title">
@@ -105,31 +105,31 @@
   </div>
   <div class="expansion-panel-content" *ngIf="miscUtilitiesExpanded" [@slideUpDown]>
     <div class="expansion-panel-body">
-      <a class="expansion-panel-sub-item" routerLink="/miscellaneous/accordions" routerLinkActive="active">
+      <a class="expansion-panel-sub-item" routerLink="/miscellaneous/accordions" routerLinkActive="active" (click)="activateHeader('misc-utilities')">
         <span>Accordions</span>
       </a>
-      <a class="expansion-panel-sub-item" routerLink="/miscellaneous/alerts" routerLinkActive="active">
+      <a class="expansion-panel-sub-item" routerLink="/miscellaneous/alerts" routerLinkActive="active" (click)="activateHeader('misc-utilities')">
         <span>Alerts</span>
       </a>
-      <a class="expansion-panel-sub-item" routerLink="/miscellaneous/auto_complete" routerLinkActive="active">
+      <a class="expansion-panel-sub-item" routerLink="/miscellaneous/auto_complete" routerLinkActive="active" (click)="activateHeader('misc-utilities')">
         <span>Auto Complete</span>
       </a>
-      <a class="expansion-panel-sub-item" routerLink="/miscellaneous/carousels" routerLinkActive="active">
+      <a class="expansion-panel-sub-item" routerLink="/miscellaneous/carousels" routerLinkActive="active" (click)="activateHeader('misc-utilities')">
         <span>Carousels</span>
       </a>
-      <a class="expansion-panel-sub-item" routerLink="/miscellaneous/date_time_pickers" routerLinkActive="active">
+      <a class="expansion-panel-sub-item" routerLink="/miscellaneous/date_time_pickers" routerLinkActive="active" (click)="activateHeader('misc-utilities')">
         <span>Date & Time Pickers</span>
       </a>
-      <a class="expansion-panel-sub-item" routerLink="/miscellaneous/file_upload" routerLinkActive="active">
+      <a class="expansion-panel-sub-item" routerLink="/miscellaneous/file_upload" routerLinkActive="active" (click)="activateHeader('misc-utilities')">
         <span>File Upload</span>
       </a>
-      <a class="expansion-panel-sub-item" routerLink="/miscellaneous/modals" routerLinkActive="active">
+      <a class="expansion-panel-sub-item" routerLink="/miscellaneous/modals" routerLinkActive="active" (click)="activateHeader('misc-utilities')">
         <span>Modals</span>
       </a>
-      <a class="expansion-panel-sub-item" routerLink="/miscellaneous/notifications" routerLinkActive="active">
+      <a class="expansion-panel-sub-item" routerLink="/miscellaneous/notifications" routerLinkActive="active" (click)="activateHeader('misc-utilities')">
         <span>Notifications</span>
       </a>
-      <a class="expansion-panel-sub-item" routerLink="/miscellaneous/spinners" routerLinkActive="active">
+      <a class="expansion-panel-sub-item" routerLink="/miscellaneous/spinners" routerLinkActive="active" (click)="activateHeader('misc-utilities')">
         <span>Spinners</span>
       </a>
     </div>
@@ -137,7 +137,7 @@
 </div>
 
 <div class="expansion-panel">
-  <div class="expansion-panel-header" (click)="layoutsExpanded = !layoutsExpanded">
+  <div [ngClass]="{'expansion-panel-header': !layoutsActive, 'active-expansion-panel-header': layoutsActive}" (click)="layoutsExpanded = !layoutsExpanded">
     <span class="header-content">
       <i class="menu-icon-item fas fa-th"></i>
       <div class="panel-title">
@@ -151,16 +151,16 @@
   </div>
   <div class="expansion-panel-content" *ngIf="layoutsExpanded" [@slideUpDown]>
     <div class="expansion-panel-body">
-      <a class="expansion-panel-sub-item" routerLink="/layouts/grids" routerLinkActive="active">
+      <a class="expansion-panel-sub-item" routerLink="/layouts/grids" routerLinkActive="active" (click)="activateHeader('layouts')">
         <span>Grids</span>
       </a>
-      <a class="expansion-panel-sub-item" routerLink="/layouts/lists" routerLinkActive="active">
+      <a class="expansion-panel-sub-item" routerLink="/layouts/lists" routerLinkActive="active" (click)="activateHeader('layouts')">
         <span>Lists</span>
       </a>
-      <a class="expansion-panel-sub-item" routerLink="/layouts/cards" routerLinkActive="active">
+      <a class="expansion-panel-sub-item" routerLink="/layouts/cards" routerLinkActive="active" (click)="activateHeader('layouts')">
         <span>Cards</span>
       </a>
-      <a class="expansion-panel-sub-item" routerLink="/layouts/tabs" routerLinkActive="active">
+      <a class="expansion-panel-sub-item" routerLink="/layouts/tabs" routerLinkActive="active" (click)="activateHeader('layouts')">
         <span>Tabs</span>
       </a>
     </div>
