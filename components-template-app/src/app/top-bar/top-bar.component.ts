@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { NavigationService } from '../shared/services/navigation.service';
+import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-top-bar',
@@ -6,10 +8,19 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./top-bar.component.css']
 })
 export class TopBarComponent implements OnInit {
+  public sidebarCollapsed:boolean
 
-  constructor() { }
+  constructor(private navigationService: NavigationService) { }
 
   ngOnInit() {
+    this.navigationService.sidebarCollapsedObservable.subscribe(bool => this.sidebarCollapsed = bool)
   }
 
+  public toggleSidebar() {
+    this.navigationService.toggleSideBar()
+  }
+
+  ngOnDestroy() {
+    // prevent memory leak when component is destroyed
+  }
 }

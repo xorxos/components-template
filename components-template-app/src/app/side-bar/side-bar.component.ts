@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { NavigationService } from '../shared/services/navigation.service';
 
 @Component({
   selector: 'app-side-bar',
@@ -6,10 +7,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./side-bar.component.css']
 })
 export class SideBarComponent implements OnInit {
-
-  constructor() { }
+  formsExpanded: boolean = true;
+  tablesExpanded: boolean = false;
+  chartsExpanded: boolean = false;
+  miscUtilitiesExpanded: boolean = false;
+  layoutsExpanded: boolean = false;
+  constructor(private navigationService: NavigationService) { }
 
   ngOnInit() {
   }
-
 }

@@ -2,6 +2,9 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { routing } from './routes';
+import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
+
+import { NavigationService } from './shared/services/navigation.service';
 
 import { AppComponent } from './app.component';
 import { FormsComponent } from './forms/forms.component';
@@ -75,10 +78,13 @@ import { SpinnersComponent } from './misc-utilities/spinners/spinners.component'
   ],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
     NgbModule,
     routing
   ],
-  providers: [],
+  providers: [
+    NavigationService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

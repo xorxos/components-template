@@ -1,3 +1,168 @@
-<p>
-  side-bar works!
-</p>
+<div class="expansion-panel">
+  <div class="expansion-panel-header" (click)="formsExpanded = !formsExpanded">
+    <span class="header-content">
+      <i class="menu-icon-item fa fa-address-card"></i>
+      <div class="panel-title">
+        <span>Forms</span>
+      </div>
+      <span>
+        <i *ngIf="formsExpanded" class="menu-arrow-indicator fa fa-angle-down"></i>
+        <i *ngIf="!formsExpanded" class="menu-arrow-indicator fa fa-angle-up"></i>
+      </span>
+    </span>
+  </div>
+  <div class="expansion-panel-content" *ngIf="formsExpanded">
+    <div class="expansion-panel-body">
+      <div class="expansion-panel-sub-item">
+        <span>Controls & Validation</span>
+      </div>
+      <div class="expansion-panel-sub-item">
+        <span>Extended Controls</span>
+      </div>
+      <div class="expansion-panel-sub-item">
+        <span>Material Forms</span>
+      </div>
+      <div class="expansion-panel-sub-item">
+        <span>Sample Logins</span>
+      </div>
+      <div class="expansion-panel-sub-item">
+        <span>Sample Registrations</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="expansion-panel">
+  <div class="expansion-panel-header" (click)="tablesExpanded = !tablesExpanded">
+    <span class="header-content">
+      <i class="menu-icon-item fa fa-table"></i>
+      <div class="panel-title">
+        <span>Tables</span>
+      </div>
+      <span>
+        <span>
+          <i *ngIf="tablesExpanded" class="menu-arrow-indicator fa fa-angle-down"></i>
+          <i *ngIf="!tablesExpanded" class="menu-arrow-indicator fa fa-angle-up"></i>
+        </span>
+      </span>
+    </span>
+  </div>
+  <div class="expansion-panel-content" *ngIf="tablesExpanded">
+    <div class="expansion-panel-body">
+      <div class="expansion-panel-sub-item">
+        <span>Regular Tables</span>
+      </div>
+      <div class="expansion-panel-sub-item">
+        <span>Custom Tables</span>
+      </div>
+      <div class="expansion-panel-sub-item">
+        <span>Paginated Tables</span>
+      </div>
+      <div class="expansion-panel-sub-item">
+        <span>Filtered Tables</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="expansion-panel">
+  <div class="expansion-panel-header" (click)="chartsExpanded = !chartsExpanded">
+    <span class="header-content">
+      <i class="menu-icon-item fa fa-chart-bar"></i>
+      <div class="panel-title">
+        <span>Charts</span>
+      </div>
+      <span>
+        <i *ngIf="chartsExpanded" class="menu-arrow-indicator fa fa-angle-down"></i>
+        <i *ngIf="!chartsExpanded" class="menu-arrow-indicator fa fa-angle-up"></i>
+      </span>
+    </span>
+  </div>
+  <div class="expansion-panel-content" *ngIf="chartsExpanded">
+    <div class="expansion-panel-body">
+      <div class="expansion-panel-sub-item">
+        <span>NG2 Charts</span>
+      </div>
+      <div class="expansion-panel-sub-item">
+        <span>NVD3 Charts</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="expansion-panel">
+  <div class="expansion-panel-header" (click)="miscUtilitiesExpanded = !miscUtilitiesExpanded">
+    <span class="header-content">
+      <i class="menu-icon-item fa fa-cogs"></i>
+      <div class="panel-title">
+        <span>Misc Utilities</span>
+      </div>
+      <span>
+        <i *ngIf="miscUtilitiesExpanded" class="menu-arrow-indicator fa fa-angle-down"></i>
+        <i *ngIf="!miscUtilitiesExpanded" class="menu-arrow-indicator fa fa-angle-up"></i>
+      </span>
+    </span>
+  </div>
+  <div class="expansion-panel-content" *ngIf="miscUtilitiesExpanded">
+    <div class="expansion-panel-body">
+      <div class="expansion-panel-sub-item">
+        <span>Accordions</span>
+      </div>
+      <div class="expansion-panel-sub-item">
+        <span>Alerts</span>
+      </div>
+      <div class="expansion-panel-sub-item">
+        <span>Auto Complete</span>
+      </div>
+      <div class="expansion-panel-sub-item">
+        <span>Carousels</span>
+      </div>
+      <div class="expansion-panel-sub-item">
+        <span>Date & Time Pickers</span>
+      </div>
+      <div class="expansion-panel-sub-item">
+        <span>File Upload</span>
+      </div>
+      <div class="expansion-panel-sub-item">
+        <span>Modals</span>
+      </div>
+      <div class="expansion-panel-sub-item">
+        <span>Notifications</span>
+      </div>
+      <div class="expansion-panel-sub-item">
+        <span>Spinners</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="expansion-panel">
+  <div class="expansion-panel-header" (click)="layoutsExpanded = !layoutsExpanded">
+    <span class="header-content">
+      <i class="menu-icon-item fas fa-th"></i>
+      <div class="panel-title">
+        <span>Layouts</span>
+      </div>
+      <span>
+        <i *ngIf="layoutsExpanded" class="menu-arrow-indicator fa fa-angle-down"></i>
+        <i *ngIf="!layoutsExpanded" class="menu-arrow-indicator fa fa-angle-up"></i>
+      </span>
+    </span>
+  </div>
+  <div class="expansion-panel-content" *ngIf="layoutsExpanded">
+    <div class="expansion-panel-body">
+      <div class="expansion-panel-sub-item">
+        <span>Grids</span>
+      </div>
+      <div class="expansion-panel-sub-item">
+        <span>Lists</span>
+      </div>
+      <div class="expansion-panel-sub-item">
+        <span>Cards</span>
+      </div>
+      <div class="expansion-panel-sub-item">
+        <span>Tabs</span>
+      </div>
+    </div>
+  </div>
+</div>
