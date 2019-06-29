@@ -7,12 +7,7 @@ import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { NavigationService } from './shared/services/navigation.service';
 
 import { AppComponent } from './app.component';
-import { FormsComponent } from './forms/forms.component';
-import { TablesComponent } from './tables/tables.component';
-import { ChartsComponent } from './charts/charts.component';
 import { HomeComponent } from './home/home.component';
-import { MiscUtilitiesComponent } from './misc-utilities/misc-utilities.component';
-import { LayoutsComponent } from './layouts/layouts.component';
 import { ControlsAndValidationComponent } from './forms/controls-and-validation/controls-and-validation.component';
 import { ControlsExtendedComponent } from './forms/controls-extended/controls-extended.component';
 import { SampleRegistrationsComponent } from './forms/sample-registrations/sample-registrations.component';
@@ -43,12 +38,7 @@ import { SpinnersComponent } from './misc-utilities/spinners/spinners.component'
 @NgModule({
   declarations: [
     AppComponent,
-    FormsComponent,
-    TablesComponent,
-    ChartsComponent,
     HomeComponent,
-    MiscUtilitiesComponent,
-    LayoutsComponent,
     ControlsAndValidationComponent,
     ControlsExtendedComponent,
     SampleRegistrationsComponent,
