@@ -11,10 +11,10 @@ import { Router } from '@angular/router';
     trigger('slideUpDown', [
       transition(':enter', [   // :enter is alias to 'void => *'
         style({ height: 0 }),
-        animate(100, style({ height: '*' }))
+        animate(150, style({ height: '*' }))
       ]),
       transition(':leave', [   // :leave is alias to '* => void'
-        animate(100, style({ height: 0 }))
+        animate(150, style({ height: 0 }))
       ])
     ])
   ]
