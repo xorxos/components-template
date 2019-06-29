@@ -26,7 +26,7 @@ import { CardsComponent } from './layouts/cards/cards.component';
 import { TabsComponent } from './layouts/tabs/tabs.component';
 
 const appRoutes: Routes = [
-    { path: 'forms/controls_validation', component: ControlsAndValidationComponent },
+    { path: 'forms/controls_and_validation', component: ControlsAndValidationComponent },
     { path: 'forms/extended_controls', component: ControlsExtendedComponent },
     { path: 'forms/material_forms', component: MaterialFormsComponent },
     { path: 'forms/sample_logins', component: SampleLoginsComponent },
@@ -50,7 +50,7 @@ const appRoutes: Routes = [
     { path: 'layouts/lists', component: ListsComponent },
     { path: 'layouts/cards', component: CardsComponent },
     { path: 'layouts/tabs', component: TabsComponent },
-    { path: '', redirectTo: '/forms/controls_validation', pathMatch: 'full'}
+    { path: '', redirectTo: '/forms/controls_and_validation', pathMatch: 'full'}
   ];
   
   export const routing: ModuleWithProviders = RouterModule.forRoot(appRoutes)

@@ -16,7 +16,7 @@ import { trigger, state, style, transition, animate } from '@angular/animations'
       })),
       transition('true => false', animate('200ms ease-in-out')),
       transition('false => true', animate('200ms ease-in-out'))
-    ]),
+    ])
   ]
 })
 export class HomeComponent implements OnInit {

@@ -11,9 +11,9 @@
       </span>
     </span>
   </div>
-  <div class="expansion-panel-content" *ngIf="formsExpanded">
+  <div class="expansion-panel-content" *ngIf="formsExpanded" [@slideUpDown]>
     <div class="expansion-panel-body">
-      <a class="expansion-panel-sub-item" routerLink="/forms/controls_validation" routerLinkActive="active">
+      <a class="expansion-panel-sub-item" routerLink="/forms/controls_and_validation" routerLinkActive="active">
         <span>Controls & Validation</span>
       </a>
       <a class="expansion-panel-sub-item" routerLink="/forms/extended_controls" routerLinkActive="active">
@@ -47,7 +47,7 @@
       </span>
     </span>
   </div>
-  <div class="expansion-panel-content" *ngIf="tablesExpanded">
+  <div class="expansion-panel-content" *ngIf="tablesExpanded" [@slideUpDown]>
     <div class="expansion-panel-body">
       <a class="expansion-panel-sub-item" routerLink="/tables/regular_tables" routerLinkActive="active">
         <span>Regular Tables</span>
@@ -78,7 +78,7 @@
       </span>
     </span>
   </div>
-  <div class="expansion-panel-content" *ngIf="chartsExpanded">
+  <div class="expansion-panel-content" *ngIf="chartsExpanded" [@slideUpDown]>
     <div class="expansion-panel-body">
       <a class="expansion-panel-sub-item" routerLink="/charts/ng2_charts" routerLinkActive="active">
         <span>NG2 Charts</span>
@@ -103,7 +103,7 @@
       </span>
     </span>
   </div>
-  <div class="expansion-panel-content" *ngIf="miscUtilitiesExpanded">
+  <div class="expansion-panel-content" *ngIf="miscUtilitiesExpanded" [@slideUpDown]>
     <div class="expansion-panel-body">
       <a class="expansion-panel-sub-item" routerLink="/miscellaneous/accordions" routerLinkActive="active">
         <span>Accordions</span>
@@ -149,7 +149,7 @@
       </span>
     </span>
   </div>
-  <div class="expansion-panel-content" *ngIf="layoutsExpanded">
+  <div class="expansion-panel-content" *ngIf="layoutsExpanded" [@slideUpDown]>
     <div class="expansion-panel-body">
       <a class="expansion-panel-sub-item" routerLink="/layouts/grids" routerLinkActive="active">
         <span>Grids</span>
