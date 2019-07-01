@@ -5,6 +5,7 @@
 @import 'mixins';
 @import 'md-override';
 @import 'forms';
+@import 'menu';
 
 body {
   background-color: $body-bg-color;
@@ -13,7 +14,7 @@ body {
 
 .main-navbar-container {
   align-items: center;
-  background-color: $violet;
+  background-color: #252525;
   box-shadow: $shadow-container;
   display: flex;
   position: fixed;

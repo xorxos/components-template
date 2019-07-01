@@ -1,0 +1,29 @@
+@import '../../../../shared/styles/_variables';
+@import '../../../../shared/styles/_mixins';
+
+.search-bar-wrapper {
+  .search-bar-icon {
+    color: $white;
+    font-size: $font-size-md;
+    line-height: 30px;
+    padding-left: 10px;
+    position: absolute;
+  }
+
+  .search-bar-input {
+    @include _placeholder {
+      color: $form-input-broder-color;
+    }
+
+    background-color: #252525;
+    border: solid 2px $form-input-broder-color;
+    border-radius: $form-input-broder-radius;
+    color: $white;
+    font-size: $font-size-xs;
+    font-weight: 500;
+    height: 30px;
+    letter-spacing: 2px;
+    padding: 0 10px 0 40px;
+    width: 100%;
+  }
+}

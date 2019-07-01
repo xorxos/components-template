@@ -1,0 +1,24 @@
+<div class="branding-col">
+  <button type="button" (click)="toggleSideMenu()" class="menu-toggle" [ngClass]="{ 'menu-visible': sideMenuVisible, 'menu-hidden': !sideMenuVisible }">
+    <i class="fa fa-bars"></i>
+  </button>
+  <div class="brand-wrapper">
+    <img class="brand-logo" [src]="baseUrl + '/assets/imgs/angular.svg'" alt="Angular">
+    <h3 class="brand-name">Component Templates</h3>
+  </div>
+</div>
+
+<app-search-bar class="hidden-xs"></app-search-bar>
+
+<div class="actions-wrapper">
+  <div class="logged-user">
+    <div class="user-image-wrapper">
+      <app-preload-image class="user-image" [ratio]="{w:1, h:1}" [src]="baseUrl + '/assets/imgs/profiles/profile10.jpg'" alt="profile image" title="profile image"></app-preload-image>
+    </div>
+    <span class="user-name">Parker Leavitt</span>
+  </div>
+
+  <app-messages-menu [messages]="messages"></app-messages-menu>
+
+  <app-notifications-menu-button [notifications]="notifications"></app-notifications-menu-button>
+</div>

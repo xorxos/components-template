@@ -1,0 +1,9 @@
+<div class="search-bar-wrapper">
+  <i class="search-bar-icon fa fa-search"></i>
+  <input class="search-bar-input" type="text" matInput [formControl]="searchBar" [matAutocomplete]="auto" placeholder="Search here">
+</div>
+<mat-autocomplete #auto="matAutocomplete">
+  <mat-option *ngFor="let option of filteredOptions | async" [value]="option">
+    {{ option }}
+  </mat-option>
+</mat-autocomplete>

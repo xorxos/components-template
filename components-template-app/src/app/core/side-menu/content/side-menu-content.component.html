@@ -1,0 +1,132 @@
+<app-condense #condenseMenu [ngClass]="condenseMenu.menuState">
+  <!-- Forms section -->
+  <mat-expansion-panel class="expandable-menu-item" #formsExpandableSection="routerLinkActive" [expanded]="false" [routerLinkActive]="['active']">
+    <mat-expansion-panel-header>
+      <i class="menu-item-icon fa fa-address-card-o"></i>
+      <div class="item-header-content">
+        <mat-panel-title class="expandable-item-title">
+          <span>Forms</span>
+        </mat-panel-title>
+      </div>
+    </mat-expansion-panel-header>
+    <a class="expandable-sub-item" [routerLinkActive]="['active']" [routerLink]="['/forms/controls-and-validations']">
+      <span class="icon-abbr">CV</span>
+      <span class="menu-item-title">Controls & Validations</span>
+    </a>
+    <a class="expandable-sub-item" [routerLinkActive]="['active']" [routerLink]="['/forms/extended-controls']">
+      <span class="icon-abbr">EC</span>
+      <span class="menu-item-title">Extended Controls</span>
+    </a>
+    <a class="expandable-sub-item" [routerLinkActive]="['active']" [routerLink]="['/forms/sample-logins']">
+      <span class="icon-abbr">SL</span>
+      <span class="menu-item-title">Sample Logins</span>
+    </a>
+    <a class="expandable-sub-item" [routerLinkActive]="['active']" [routerLink]="['/forms/sample-registrations']">
+      <span class="icon-abbr">SR</span>
+      <span class="menu-item-title">Sample Registrations</span>
+    </a>
+    <a class="expandable-sub-item" [routerLinkActive]="['active']" [routerLink]="['/forms/material-forms']">
+      <span class="icon-abbr">MF</span>
+      <span class="menu-item-title">Material Forms</span>
+    </a>
+  </mat-expansion-panel>
+
+  <!-- Tables section -->
+  <mat-expansion-panel class="expandable-menu-item" #tablesExpandableSection="routerLinkActive" [expanded]="false" [routerLinkActive]="['active']">
+    <mat-expansion-panel-header>
+      <i class="menu-item-icon fa fa-table"></i>
+      <div class="item-header-content">
+        <mat-panel-title class="expandable-item-title">Tables</mat-panel-title>
+      </div>
+    </mat-expansion-panel-header>
+    <a class="expandable-sub-item" [routerLinkActive]="['active']" [routerLink]="['/tables/regular']">
+      <span class="icon-abbr">RT</span>
+      <span class="menu-item-title">Regular Tables</span>
+    </a>
+    <a class="expandable-sub-item" [routerLinkActive]="['active']" [routerLink]="['/tables/extended']">
+      <span class="icon-abbr">ET</span>
+      <span class="menu-item-title">Extended Tables</span>
+    </a>
+    <a class="expandable-sub-item" [routerLinkActive]="['active']" [routerLink]="['/tables/smart']">
+      <span class="icon-abbr">ST</span>
+      <span class="menu-item-title">Smart Tables</span>
+    </a>
+  </mat-expansion-panel>
+
+  <!-- Charts section -->
+  <mat-expansion-panel class="expandable-menu-item" #chartsExpandableSection="routerLinkActive" [expanded]="false" [routerLinkActive]="['active']">
+    <mat-expansion-panel-header>
+      <i class="menu-item-icon fa fa-bar-chart"></i>
+      <div class="item-header-content">
+        <mat-panel-title class="expandable-item-title">Charts</mat-panel-title>
+      </div>
+    </mat-expansion-panel-header>
+    <a class="expandable-sub-item" [routerLinkActive]="['active']" [routerLink]="['/charts/ng2Nvd3']">
+      <span class="icon-abbr">NVD</span>
+      <span class="menu-item-title">Nvd3</span>
+    </a>
+    <a class="expandable-sub-item" [routerLinkActive]="['active']" [routerLink]="['/charts/ng2Charts']">
+      <span class="icon-abbr">NG2</span>
+      <span class="menu-item-title">Ng2 Charts</span>
+    </a>
+  </mat-expansion-panel>
+
+  <!-- Utilities section -->
+  <mat-expansion-panel class="expandable-menu-item" #utilsExpandableSection="routerLinkActive" [expanded]="false" [routerLinkActive]="['active']">
+    <mat-expansion-panel-header>
+      <i class="menu-item-icon fa fa-gear"></i>
+      <div class="item-header-content">
+        <mat-panel-title class="expandable-item-title">Misc Utilities</mat-panel-title>
+      </div>
+    </mat-expansion-panel-header>
+    <a class="expandable-sub-item" [routerLinkActive]="['active']" [routerLink]="['/utils/modals']">
+      <span class="icon-abbr">MO</span>
+      <span class="menu-item-title">Modals</span>
+    </a>
+    <a class="expandable-sub-item" [routerLinkActive]="['active']" [routerLink]="['/utils/alerts']">
+      <span class="icon-abbr">AL</span>
+      <span class="menu-item-title">Alerts</span>
+    </a>
+    <a class="expandable-sub-item" [routerLinkActive]="['active']" [routerLink]="['/utils/file-uploader']">
+      <span class="icon-abbr">FU</span>
+      <span class="menu-item-title">File uploader</span>
+    </a>
+    <a class="expandable-sub-item" [routerLinkActive]="['active']" [routerLink]="['/utils/auto-completer']">
+      <span class="icon-abbr">AC</span>
+      <span class="menu-item-title">Auto completer</span>
+    </a>
+    <a class="expandable-sub-item" [routerLinkActive]="['active']" [routerLink]="['/utils/notifications']">
+      <span class="icon-abbr">NO</span>
+      <span class="menu-item-title">Notifications</span>
+    </a>
+  </mat-expansion-panel>
+
+  <!-- Layouts section -->
+  <mat-expansion-panel class="expandable-menu-item" #layoutsExpandableSection="routerLinkActive" [expanded]="false" [routerLinkActive]="['active']">
+    <mat-expansion-panel-header>
+      <i class="menu-item-icon fa fa-th"></i>
+      <div class="item-header-content">
+        <mat-panel-title class="expandable-item-title">Layouts</mat-panel-title>
+      </div>
+    </mat-expansion-panel-header>
+    <a class="expandable-sub-item" [routerLinkActive]="['active']" [routerLink]="['/layouts/grids']" data-toggle="tooltip" data-placement="right" title="Grids">
+      <span class="icon-abbr">GR</span>
+      <span class="menu-item-title">Grids</span>
+    </a>
+    <a class="expandable-sub-item" [routerLinkActive]="['active']" [routerLink]="['/layouts/lists']" data-toggle="tooltip" data-placement="right" title="Lists">
+      <span class="icon-abbr">LI</span>
+      <span class="menu-item-title">Lists</span>
+    </a>
+    <a class="expandable-sub-item" [routerLinkActive]="['active']" [routerLink]="['/layouts/cards']" data-toggle="tooltip" data-placement="right" title="Cards">
+      <span class="icon-abbr">CA</span>
+      <span class="menu-item-title">Cards</span>
+    </a>
+    <a class="expandable-sub-item" [routerLinkActive]="['active']" [routerLink]="['/layouts/tabs']" data-toggle="tooltip" data-placement="right" title="Tabs">
+      <span class="icon-abbr">TA</span>
+      <span class="menu-item-title">Tabs</span>
+    </a>
+  </mat-expansion-panel>
+</app-condense>
+<div class="condense-toggle-wrapper" [ngClass]="{'condensed': condenseMenu.menuState == 'condensed'}">
+  <span (click)="condenseMenu.toggleState()" class="condense-toogle"></span>
+</div>

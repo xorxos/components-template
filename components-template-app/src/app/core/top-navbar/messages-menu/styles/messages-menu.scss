@@ -1,0 +1,114 @@
+@import '../../../../shared/styles/_variables';
+
+.btn-notifications {
+  background-color: transparent;
+  border: 0;
+  color: $white;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+.messages {
+  margin-top: 14px;
+
+  .message-wrapper {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &.mat-menu-panel {
+    border-radius: 5px;
+    max-width: none;
+  }
+
+  .mat-menu-content:not(:empty) {
+    padding: 0;
+  }
+
+  header {
+    background-color: $grey8;
+    color: $white;
+    letter-spacing: $letter-spacing-xxxs;
+    padding: 8px 0;
+    text-align: center;
+
+    h5 {
+      margin: 0;
+    }
+  }
+
+  .message {
+    cursor: pointer;
+    padding: 20px 0;
+
+    &:hover {
+      background-color: $beige;
+    }
+
+    &.message-new {
+      background-color: $grey7;
+
+      &:hover {
+        background-color: $beige;
+      }
+    }
+
+    .message-image {
+      border-radius: 50%;
+      height: 58px;
+      margin-right: 22px;
+      width: 58px;
+    }
+
+    .message-content {
+      flex-grow: 2;
+      margin-right: 20px;
+
+      .message-user {
+        color: #252525;
+        font-size: $font-size-sm;
+        letter-spacing: $letter-spacing-sm;
+        margin: 0;
+      }
+
+      .message-title {
+        color: $grey8;
+        font-size: $font-size-sm;
+        letter-spacing: $letter-spacing-md;
+        margin: 0;
+      }
+
+      .message-text {
+        color: $grey;
+        font-size: $font-size-xs;
+        letter-spacing: $letter-spacing-md;
+      }
+    }
+
+    .message-time {
+      color: $grey;
+      font-size: $font-size-xs;
+      letter-spacing: $letter-spacing-lg;
+
+      &.message-time-now {
+        color: #252525;
+      }
+    }
+  }
+
+  .messages-divider {
+    margin: 0 -15px;
+  }
+
+  footer {
+    padding: 10px 0;
+
+    a {
+      color: $grey;
+      font-size: $font-size-xs;
+      font-weight: bold;
+      letter-spacing: $letter-spacing-xs;
+    }
+  }
+
+}

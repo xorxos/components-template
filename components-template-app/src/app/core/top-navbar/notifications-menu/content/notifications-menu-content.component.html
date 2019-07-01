@@ -1,0 +1,125 @@
+<mat-tab-group disableRipple class="notifications-menu">
+  <mat-tab label="TODAY">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-xs-12">
+          <h2 class="day">Monday,</h2>
+          <h2 class="day">16 of October</h2>
+        </div>
+        <div class="col-xs-12">
+          <hr class="notifications-divider">
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-12">
+          <h3 class="sub-title">WEATHER</h3>
+        </div>
+        <div class="col-xs-12">
+          <i class="weather-icon fa fa-sun-o"></i>
+          <span class="weather-temp">26º</span>
+          <div class="weather-city-time">
+            <span class="weather-city">London</span>
+            <span class="weather-time">2:01 PM</span>
+          </div>
+        </div>
+        <div class="col-xs-12">
+          <hr class="notifications-divider">
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-12">
+          <h3 class="sub-title">TO DO</h3>
+        </div>
+        <div class="col-xs-12">
+          <mat-checkbox disableRipple class="todo-check">
+            <div class="todo-task">
+              <h4 class="todo-task-title">Learn Angular 4.0</h4>
+              <span class="todo-task-time">2:45 PM</span>
+            </div>
+          </mat-checkbox>
+          <mat-checkbox disableRipple class="todo-check">
+            <div class="todo-task">
+              <h4 class="todo-task-title">Learn Angular Material</h4>
+              <span class="todo-task-time">3:20 PM</span>
+            </div>
+          </mat-checkbox>
+          <mat-checkbox disableRipple class="todo-check">
+            <div class="todo-task">
+              <h4 class="todo-task-title">Write documentation</h4>
+              <span class="todo-task-time">6:00 PM</span>
+            </div>
+          </mat-checkbox>
+        </div>
+      </div>
+      <div class="row stock">
+        <div class="col-xs-12 stock-inner">
+          <h3 class="sub-title">STOCKS</h3>
+          <div class="table-responsive">
+            <table class="table">
+              <tbody>
+                <tr>
+                  <td>NASDAQ</td>
+                  <td>4,492.87</td>
+                  <td class="color color-red">-0.29%</td>
+                </tr>
+                <tr>
+                  <td>NYSE</td>
+                  <td>10,046.81</td>
+                  <td class="color color-red">-0.53%</td>
+                </tr>
+                <tr>
+                  <td>DOWJ</td>
+                  <td>17,046.81</td>
+                  <td class="color color-red">-0.14%</td>
+                </tr>
+                <tr>
+                  <td>APPL</td>
+                  <td>100.89</td>
+                  <td class="color-aqua">+0.75%</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+      <div class="row meters">
+        <div class="col-xs-12">
+          <h3 class="sub-title">CPU USAGE</h3>
+          <mat-progress-bar [value]="25" class="mat-progress-bar-round color color-green"></mat-progress-bar>
+          <span>348 processes. 1/4 cores</span>
+        </div>
+        <div class="col-xs-12">
+          <h3 class="sub-title">MEMORY USAGE</h3>
+          <mat-progress-bar [value]="45" class="mat-progress-bar-round color color-yellow"></mat-progress-bar>
+          <span>7.5/16 GB</span>
+        </div>
+        <div class="col-xs-12">
+          <h3 class="sub-title">DISK USAGE</h3>
+          <mat-progress-bar [value]="90" class="mat-progress-bar-round color color-red"></mat-progress-bar>
+          <span>0.9/1 TB</span>
+        </div>
+      </div>
+    </div>
+  </mat-tab>
+  <mat-tab label="NOTIFICATIONS">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-xs-12 notification" *ngFor="let notification of notifications">
+          <i *ngIf="notification.type === 'social'" class="notification-icon fa fa-users"></i>
+          <i *ngIf="notification.type === 'alert'" class="notification-icon fa fa-exclamation-circle"></i>
+          <i *ngIf="notification.type === 'promotion'" class="notification-icon fa fa-bolt"></i>
+          <i *ngIf="notification.type === 'update'" class="notification-icon fa fa-clock-o"></i>
+          <i *ngIf="notification.type === 'done'" class="notification-icon fa fa-check"></i>
+          <i *ngIf="notification.type === 'contact'" class="notification-icon fa fa-smile-o"></i>
+          <div class="notification-data">
+            <div class="notification-content">
+              <h2 class="notification-title">{{ notification.title }}</h2>
+              <span class="notification-text">{{ notification.text }}</span>
+            </div>
+            <span class="notification-time" [ngClass]="{'notification-time-now': notification.time === 'JUST NOW'}">{{ notification.time }}</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </mat-tab>
+</mat-tab-group>

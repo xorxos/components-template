@@ -1,0 +1,140 @@
+@import '../../../../shared/styles/_variables';
+@import './menus-buttons';
+
+.logged-user {
+  align-items: center;
+  display: flex;
+  margin-right: 10px;
+  padding-right: 12px;
+
+  .user-image-wrapper {
+    margin-right: 10px;
+    width: 40px;
+
+    app-preload-image {
+      .user-image {
+        border-radius: 50%;
+        width: 100%;
+      }
+    }
+  }
+
+  .user-name {
+    color: $white;
+  }
+}
+
+app-top-navbar-content {
+  align-items: center;
+  display: flex;
+  height: 60px;
+  position: relative;
+  width: 100%;
+  z-index: 5;
+
+  .branding-col {
+    align-items: center;
+    display: flex;
+    max-width: $side-menu-width;
+    padding: 10px $separation;
+    position: relative;
+
+    .menu-toggle {
+      bottom: 0;
+      padding-right: 12px;
+      position: absolute;
+      top: 0;
+      transition: left .2s;
+      width: 36px;
+
+      .fa {
+        font-size: 20px;
+      }
+
+      &.menu-hidden {
+        left: -14px;
+
+        &:not(:focus) {
+          &:hover {
+            left: -6px;
+          }
+        }
+      }
+
+      &.menu-visible {
+        left: -6px;
+
+        &:not(:focus) {
+          &:hover {
+            left: -14px;
+          }
+        }
+
+        .fa {
+          color: $white;
+        }
+      }
+    }
+
+    .brand-wrapper {
+      margin-left: 30px;
+    }
+
+    .brand-logo {
+      height: 40px;
+    }
+
+    .brand-name {
+      color: $white;
+      display: inline-block;
+      font-size: $font-size-sm;
+      font-weight: 500;
+      letter-spacing: 2.5px;
+      margin: 0;
+      margin-left: 6px;
+    }
+  }
+
+  app-search-bar {
+    max-width: 45%;
+    padding-left: 30px;
+    position: relative;
+    width: 750px;
+  }
+
+  .actions-wrapper {
+    align-items: center;
+    display: flex;
+    margin-left: auto;
+  }
+
+  @media only screen and (max-width: $top-navbar-breakpoint) {
+    .logged-user {
+      margin-right: 0;
+
+      .user-image-wrapper {
+        margin-right: 0;
+      }
+
+      .user-name {
+        display: none;
+      }
+    }
+
+    app-search-bar {
+      margin-right: 10px;
+      padding-left: 0;
+    }
+
+    .branding-col {
+      .brand-wrapper {
+        margin-left: 10px;
+        margin-right: 0;
+
+        .brand-name {
+          display: none;
+        }
+      }
+    }
+  }
+}

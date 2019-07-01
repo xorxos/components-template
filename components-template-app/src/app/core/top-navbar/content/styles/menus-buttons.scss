@@ -1,0 +1,30 @@
+@import '../../../../shared/styles/_variables';
+
+.menu-toggle,
+.btn-notifications {
+  background-color: transparent;
+  border: 0;
+  color: $white;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+.btn-notifications {
+  margin: 0 10px;
+  position: relative;
+  vertical-align: middle;
+
+  .notifications-count {
+    background-color: $red2;
+    border-radius: 50%;
+    color: $white;
+    font-size: $font-size-sm;
+    font-weight: bold;
+    height: 16px;
+    line-height: 16px;
+    position: absolute;
+    right: 0;
+    top: 13px;
+    width: 16px;
+  }
+}

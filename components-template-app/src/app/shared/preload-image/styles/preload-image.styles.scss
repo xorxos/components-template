@@ -1,0 +1,48 @@
+@import "../../styles/_variables";
+@import "../../styles/_mixins";
+
+app-preload-image {
+  position: relative;
+  background-color: $preload-image-bg;
+  width: 100%;
+	display: block;
+  overflow: hidden;
+
+	// If the image is rounded
+	&.rounded-image
+	{
+		border-radius: 50%;
+	}
+
+  &.finish-loading,
+  &.img-loaded
+  {
+    background-color: transparent;
+    border: none;
+
+		img
+	  {
+			visibility: visible;
+			opacity: 1;
+	  }
+
+		.spinner
+		{
+			visibility: hidden;
+			display: none;
+		}
+  }
+
+  img
+  {
+    position: absolute;
+		left: 0px;
+		top: 0px;
+		visibility: hidden;
+		opacity: 0;
+		@include transition(visibility 0s linear, opacity 0.5s linear);
+  }
+
+	@include spinner-size($spinner-size);
+	@include spinner-color($spinner-color);
+}

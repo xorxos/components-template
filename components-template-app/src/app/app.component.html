@@ -1,5 +1,19 @@
 <app-responsive-breakpoints></app-responsive-breakpoints>
 
-<app-top-bar></app-top-bar>
-<app-home></app-home>
+<app-top-navbar-content class="main-navbar-container" [notifications]="notifications" [messages]="messages"></app-top-navbar-content>
 
+<div class="main-content-container">
+  <mat-sidenav-container #drawerContainer class="">
+    <mat-sidenav #sideMenu mode="side" [opened]="open_menu" position="start" class="main-sidenav">
+      <app-side-menu-content></app-side-menu-content>
+    </mat-sidenav>
+
+    <div class="container-fluid main-content-outer">
+      <router-outlet></router-outlet>
+    </div>
+
+    <mat-sidenav #sideNotifications mode="over" opened="false" position="end" class="notificaitons-sidenav">
+      <app-notifications-menu-content [notifications]="notifications"></app-notifications-menu-content>
+    </mat-sidenav>
+  </mat-sidenav-container>
+</div>

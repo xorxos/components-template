@@ -1,0 +1,19 @@
+<div class="alert-modal">
+  <span *ngIf="icon" [ngClass]="'alert-modal-icon alert-modal-icon-' + iconColor + ' fa fa-' + icon"></span>
+  <h1 class="alert-modal-title">{{ title }}</h1>
+  <span class="alert-modal-text">{{ text }}</span>
+  <div *ngIf="input">
+    <input class="alert-modal-input form-control" [(ngModel)]="inputData">
+    <div class="alert-modal-buttons" *ngIf="input">
+      <button type="button" class="btn alert-modal-button alert-modal-button-success" [mat-dialog-close]="inputData">CONFIRM</button>
+      <button type="button" class="btn alert-modal-button alert-modal-button-failure" [mat-dialog-close]="false">CANCEL</button>
+    </div>
+  </div>
+  <div class="alert-modal-buttons" *ngIf="!input && options">
+    <button type="button" class="btn alert-modal-button alert-modal-button-success" [mat-dialog-close]="true">YES</button>
+    <button type="button" class="btn alert-modal-button alert-modal-button-failure" [mat-dialog-close]="false">NO</button>
+  </div>
+  <div class="alert-modal-buttons" *ngIf="!input && !options && button">
+    <button type="button" class="btn alert-modal-button" [mat-dialog-close]="false">{{ button }}</button>
+  </div>
+</div>

@@ -1,0 +1,10 @@
+<ng-container>
+  <div role="alert" [ngClass]="classes">
+    <button type="button" class="close" *ngIf="dismissible" (click)="dismiss()">
+      <i class="fa fa-times-circle" aria-hidden="true"></i>
+    </button>
+    <i *ngIf="icon" [ngClass]="'notification-icon fa fa-' + icon"></i>
+    <span *ngIf="message" class="notification-line">{{ message }}</span>
+    <p *ngIf="text" class="notification-text">{{ text }}</p>
+  </div>
+</ng-container>

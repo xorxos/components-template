@@ -1,0 +1,5 @@
+<button type="button" class="btn-notifications" mat-icon-button (click)="toggleNotificationsMenu()">
+  <i *ngIf="!notifications.length" class="fa fa-bell-o"></i>
+  <i *ngIf="notifications.length" class="fa fa-bell"></i>
+  <span *ngIf="notifications.length" class="notifications-count">{{ notifications.length }}</span>
+</button>

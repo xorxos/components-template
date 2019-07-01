@@ -25,10 +25,20 @@ import {
   MatSelectModule
 } from '@angular/material';
 
+import { PreloadImageComponent } from './preload-image/preload-image.component';
+import { AlertComponent } from './alert/alert.component';
+import { NotificationComponent } from './notification/notification.component';
+import { FileUploaderDirective } from './file-uploader/file-uploader.directive';
+
+
 
 @NgModule({
   declarations: [
     // Shared components
+    PreloadImageComponent,
+    AlertComponent,
+    NotificationComponent,
+    FileUploaderDirective
   ],
   imports: [
     CommonModule,
@@ -62,6 +72,11 @@ import {
 
   ],
   exports: [
+    // Shared components
+    PreloadImageComponent,
+    AlertComponent,
+    NotificationComponent,
+    FileUploaderDirective,
     // Re-export these modules to prevent repeated imports (see: https://angular.io/guide/ngmodule#re-exporting-other-modules)
     CommonModule,
     ReactiveFormsModule,

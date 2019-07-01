@@ -1,0 +1,250 @@
+@import '../../../../../shared/styles/_variables';
+
+$stock-bkg-color: rgba(78, 1, 146, .8);
+
+.notificaitons-sidenav {
+  &.mat-drawer {
+    max-width: 100%;
+    overflow-y: scroll;
+    width: 430px;
+  }
+}
+
+.notifications-menu {
+  min-height: 411px;
+
+  &.mat-tab-group {
+    &.mat-primary {
+      .mat-tab-header {
+        margin-bottom: 15px;
+      }
+    }
+  }
+
+  .day {
+    color: $purple;
+    font-size: $font-size-xlg;
+    font-weight: 300;
+    letter-spacing: $letter-spacing-lg;
+    margin: 0;
+  }
+
+  .sub-title {
+    color: $purple;
+    font-size: $font-size-xs;
+    font-weight: bold;
+    letter-spacing: $letter-spacing-xs;
+    margin-top: 0;
+  }
+
+  .weather-icon {
+    color: $grey;
+    font-size: 50px;
+    height: 50px;
+    width: 50px;
+  }
+
+  .weather-temp {
+    color: $purple;
+    font-size: $font-size-xxlg;
+    font-weight: 300;
+    line-height: 50px;
+    margin-left: 15px;
+    vertical-align: top;
+  }
+
+  .weather-city-time {
+    display: inline-block;
+    float: right;
+    margin-top: 7px;
+
+    .weather-city {
+      color: $grey;
+    }
+
+    .weather-time {
+      color: $purple;
+    }
+
+    span {
+      display: block;
+      font-weight: bold;
+      letter-spacing: $letter-spacing-xs;
+    }
+  }
+
+  .todo-task {
+    clear: left;
+    float: left;
+
+    .todo-task-title {
+      font-size: $font-size-xs;
+      font-weight: bold;
+      letter-spacing: $letter-spacing-xs;
+      margin-bottom: 0;
+    }
+
+    .todo-task-time {
+      color: $grey;
+      font-size: $font-size-xs;
+      font-weight: bold;
+      letter-spacing: $letter-spacing-xs;
+    }
+  }
+
+  .todo-check {
+    position: relative;
+
+    &.mat-checkbox-checked {
+      .mat-checkbox-frame {
+        border-color: $aqua;
+      }
+
+      .mat-checkbox-background {
+        background-color: $aqua;
+        height: 8px;
+        left: 9px;
+        position: absolute;
+        top: 9px;
+        width: 8px;
+      }
+    }
+
+    .mat-checkbox-layout {
+      width: 100%;
+    }
+
+    .mat-checkbox-inner-container {
+      height: 26px;
+      margin: 0;
+      position: absolute;
+      right: 0;
+      top: 13px;
+      width: 26px;
+    }
+
+    .mat-checkbox-frame,
+    .mat-checkbox-background {
+      border-radius: 50%;
+      border-width: 4px;
+
+      svg {
+        display: none;
+      }
+    }
+  }
+
+  .stock {
+    background-image: url('/assets/imgs/notifications/stock_background.png');
+    margin-bottom: 20px;
+
+    .stock-inner {
+      background-color: $stock-bkg-color;
+    }
+
+    .sub-title {
+      color: $white;
+      margin-top: 20px;
+      opacity: .8;
+    }
+
+    .table {
+      overflow: hidden;
+
+      tr {
+        &:first-child {
+          td {
+            border-top: 0;
+          }
+        }
+
+        &:hover {
+          background-color: inherit !important;
+        }
+
+        td {
+          color: $white;
+          font-size: $font-size-sm;
+          font-weight: bold;
+          letter-spacing: $letter-spacing-sm;
+          padding-left: 0;
+          padding-right: 0;
+
+          &:not(:first-child) {
+            text-align: right;
+          }
+
+          &:nth-child(2) {
+            opacity: .8;
+          }
+
+          &.color-red {
+            color: $red2;
+          }
+
+          &.color-aqua {
+            color: $aqua;
+          }
+        }
+      }
+    }
+  }
+
+  .meters {
+    .sub-title {
+      color: $grey5;
+    }
+
+    span {
+      color: $grey8;
+      display: block;
+      font-size: $font-size-xxs;
+      letter-spacing: $letter-spacing-xxxs;
+      margin-bottom: 40px;
+      margin-top: 10px;
+    }
+  }
+
+  .notification {
+    border-bottom: 1px solid $grey4;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+
+    .notification-icon {
+      color: $grey;
+      font-size: 30px;
+    }
+
+    .notification-data {
+      display: flex;
+      justify-content: space-between;
+      margin-left: 20px;
+      width: 100%;
+
+      .notification-title {
+        color: $purple;
+        font-size: $font-size-sm;
+        letter-spacing: $letter-spacing-xs;
+        margin: 0;
+      }
+
+      .notification-text {
+        color: $grey8;
+        font-size: $font-size-sm;
+        letter-spacing: $letter-spacing-md;
+      }
+    }
+
+    .notification-time {
+      color: $grey;
+      font-size: $font-size-xs;
+      letter-spacing: $letter-spacing-lg;
+
+      &.notification-time-now {
+        color: $purple;
+      }
+    }
+  }
+}
