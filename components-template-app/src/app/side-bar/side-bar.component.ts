@@ -37,10 +37,7 @@ export class SideBarComponent implements OnInit {
   layoutsExpanded: boolean = false;
   layoutsActive: boolean = false;
 
-  constructor(private navigationService: NavigationService, 
-              private router: Router, 
-              private activatedRoute: ActivatedRoute) 
-              { }
+  constructor(private router: Router) { }
 
   ngOnInit() {
     this.collapseAllMenus();
