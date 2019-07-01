@@ -1,6 +1,6 @@
 @import '../../../../../shared/styles/_variables';
 
-$stock-bkg-color: rgba(78, 1, 146, .8);
+$stock-bkg-color: $skyblue;
 
 .notificaitons-sidenav {
   &.mat-drawer {
@@ -22,7 +22,7 @@ $stock-bkg-color: rgba(78, 1, 146, .8);
   }
 
   .day {
-    color: $purple;
+    color: $skyblue;
     font-size: $font-size-xlg;
     font-weight: 300;
     letter-spacing: $letter-spacing-lg;
@@ -30,7 +30,7 @@ $stock-bkg-color: rgba(78, 1, 146, .8);
   }
 
   .sub-title {
-    color: $purple;
+    color: #252525;
     font-size: $font-size-xs;
     font-weight: bold;
     letter-spacing: $letter-spacing-xs;
@@ -45,7 +45,7 @@ $stock-bkg-color: rgba(78, 1, 146, .8);
   }
 
   .weather-temp {
-    color: $purple;
+    color: #252525;
     font-size: $font-size-xxlg;
     font-weight: 300;
     line-height: 50px;
@@ -63,7 +63,7 @@ $stock-bkg-color: rgba(78, 1, 146, .8);
     }
 
     .weather-time {
-      color: $purple;
+      color: #252525;
     }
 
     span {
@@ -179,11 +179,11 @@ $stock-bkg-color: rgba(78, 1, 146, .8);
           }
 
           &.color-red {
-            color: $red2;
+            color: $white;
           }
 
           &.color-aqua {
-            color: $aqua;
+            color: $green;
           }
         }
       }
@@ -224,7 +224,7 @@ $stock-bkg-color: rgba(78, 1, 146, .8);
       width: 100%;
 
       .notification-title {
-        color: $purple;
+        color: #252525;
         font-size: $font-size-sm;
         letter-spacing: $letter-spacing-xs;
         margin: 0;
@@ -243,7 +243,7 @@ $stock-bkg-color: rgba(78, 1, 146, .8);
       letter-spacing: $letter-spacing-lg;
 
       &.notification-time-now {
-        color: $purple;
+        color: #252525;
       }
     }
   }

@@ -104,7 +104,7 @@ mat-checkbox {
     &:hover,
     &:focus {
       &:not(.mat-option-disabled) {
-        background-color: $purple;
+        background-color: $skyblue;
         color: $white;
       }
     }
@@ -358,10 +358,10 @@ mat-tab-group {
       }
 
       .mat-tab-labels {
-        background-color: rgba(144, 19, 254, .09);
+        background-color: #dbdbdb;
 
         .mat-tab-label {
-          color: $purple;
+          color: #252525;
           flex-basis: 100%;
           font-size: 12px;
           font-weight: bold;
@@ -370,7 +370,7 @@ mat-tab-group {
 
           &:focus,
           &.mat-tab-label-active {
-            background-color: $purple;
+            background-color: $skyblue;
             color: $white;
           }
         }
