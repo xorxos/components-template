@@ -1,3 +1,217 @@
-<p>
-  controls-and-validation works!
-</p>
+<div class="card">
+
+  <header class="row title">
+    <div class="col-xs-12 text-center">
+      <h2 class="main-title">Some form controls with corresponding validations</h2>
+      <hr class="line">
+    </div>
+  </header>
+
+  <form class="form-horizontal" [formGroup]="form" (ngSubmit)="onSubmit()" (input)="updateProgress()" (change)="updateProgress()" (reset)="updateProgress()">
+
+    <div class="form-group" [ngClass]="{ 'has-error': ((form.get('requiredText').invalid) && (form.get('requiredText').touched)) }">
+      <label class="form-label form-label-big col-sm-2" [attr.for]="'requiredText'">REQUIRED TEXT<em>*</em></label>
+      <div class="col-sm-10">
+        <input type="text" class="form-control" formControlName="requiredText" [id]="'requiredText'" placeholder="Enter Text">
+      </div>
+      <div class="validation-errors col-sm-10 col-sm-offset-2">
+        <ng-container *ngFor="let validation of validationMessages.requiredText">
+          <div class="help-block" *ngIf="form.get('requiredText').hasError(validation.type) && (form.get('requiredText').dirty || form.get('requiredText').touched)">
+            {{ validation.message }}
+          </div>
+        </ng-container>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label class="form-label form-label-big col-sm-2" [attr.for]="'optionalText'">OPTIONAL TEXT</label>
+      <div class="col-sm-10">
+        <input type="text" class="form-control" formControlName="optionalText" [id]="'optionalText'" placeholder="Last Name">
+      </div>
+    </div>
+
+    <div class="form-group" [ngClass]="{ 'has-error': ((form.get('email').invalid) && (form.get('email').touched)) }">
+      <label class="form-label form-label-big col-sm-2" [attr.for]="'email'">EMAIL<em>*</em></label>
+      <div class="col-sm-10">
+        <input type="email" class="form-control" formControlName="email" [id]="'email'" placeholder="Email">
+      </div>
+      <div class="validation-errors col-sm-10 col-sm-offset-2">
+        <ng-container *ngFor="let validation of validationMessages.email">
+          <div class="help-block" *ngIf="form.get('email').hasError(validation.type) && (form.get('email').dirty || form.get('email').touched)">
+            {{ validation.message }}
+          </div>
+        </ng-container>
+      </div>
+    </div>
+
+    <div class="form-group" [ngClass]="{ 'has-error': ((form.get('password').invalid) && (form.get('password').touched)) }">
+      <label class="form-label form-label-big col-sm-2" [attr.for]="'password'">PASSWORD</label>
+      <div class="col-sm-10">
+        <input type="password" class="form-control" formControlName="password" [id]="'password'" placeholder="Password">
+      </div>
+      <div class="validation-errors col-sm-10 col-sm-offset-2">
+        <ng-container *ngFor="let validation of validationMessages.password">
+          <div class="help-block" *ngIf="form.get('password').hasError(validation.type) && (form.get('password').dirty || form.get('password').touched)">
+            {{ validation.message }}
+          </div>
+        </ng-container>
+      </div>
+    </div>
+
+    <div class="form-group" formGroupName="equal" [ngClass]="{ 'has-error': ((form.get('equal').invalid) && (form.get('equal').dirty)) }">
+      <label class="form-label form-label-big col-sm-2">EQUAL</label>
+      <div class="col-sm-5">
+        <input type="text" class="form-control" formControlName="equal1">
+        <div class="validation-errors">
+          <ng-container *ngFor="let validation of validationMessages.equal">
+            <div class="help-block" *ngIf="form.get('equal').hasError(validation.type) && (form.get('equal').dirty || form.get('equal').touched)">
+              {{ validation.message }}
+            </div>
+          </ng-container>
+        </div>
+      </div>
+      <div class="col-sm-5">
+        <input type="text" class="form-control" formControlName="equal2">
+      </div>
+    </div>
+
+    <div class="form-group">
+      <div class="col-sm-offset-2 col-sm-10">
+        <mat-checkbox disableRipple formControlName="remember" (input)="updateProgress()" (change)="updateProgress()">Remember me?</mat-checkbox>
+      </div>
+    </div>
+
+    <div class="form-group" [ngClass]="{ 'has-error': ((form.get('terms').invalid) && (form.get('terms').dirty)) }">
+      <div class="col-sm-offset-2 col-sm-10">
+        <mat-checkbox disableRipple formControlName="terms" (input)="updateProgress()" (change)="updateProgress()">I accept Terms & Conditions</mat-checkbox>
+      </div>
+      <div class="validation-errors col-sm-10 col-sm-offset-2">
+        <ng-container *ngFor="let validation of validationMessages.terms">
+          <div class="help-block" *ngIf="form.get('terms').hasError(validation.type) && (form.get('terms').dirty || form.get('terms').touched)">
+            {{ validation.message }}
+          </div>
+        </ng-container>
+      </div>
+    </div>
+
+    <div class="form-group" [ngClass]="{ 'has-error': ((form.get('country').invalid) && (form.get('country').touched)) }">
+      <label class="form-label form-label-big col-sm-2" [attr.for]="'country'">COUNTRY</label>
+      <div class="col-sm-10">
+        <select class="form-control" formControlName="country" [id]="'country'">
+          <option disabled selected hidden value=""> -- select an option -- </option>
+          <option *ngFor="let item of countries" [value]="item.iso">{{ item.name }}</option>
+        </select>
+      </div>
+      <div class="validation-errors col-sm-10 col-sm-offset-2">
+        <ng-container *ngFor="let validation of validationMessages.country">
+          <div class="help-block" *ngIf="form.get('country').hasError(validation.type) && (form.get('country').dirty || form.get('country').touched)">
+            {{ validation.message }}
+          </div>
+        </ng-container>
+      </div>
+    </div>
+
+    <div class="form-group" [ngClass]="{ 'has-error': ((form.get('phone').invalid) && (form.get('phone').dirty)) }">
+      <label class="form-label form-label-big col-sm-2" [attr.for]="'phone'">PHONE</label>
+      <div class="col-sm-10">
+        <input type="tel" class="form-control" formControlName="phone" [id]="'phone'" [placeholder]="samplePhone()">
+      </div>
+      <div class="validation-errors col-sm-10 col-sm-offset-2">
+        <ng-container *ngFor="let validation of validationMessages.phone">
+          <div class="help-block" *ngIf="form.get('phone').hasError(validation.type) && (form.get('phone').dirty || form.get('phone').touched)">
+            {{ validation.message }}
+          </div>
+        </ng-container>
+      </div>
+    </div>
+
+    <div class="form-group" [ngClass]="{ 'has-error': ((form.get('textNumber').invalid) && (form.get('textNumber').dirty)) }">
+      <label class="form-label form-label-big col-sm-2">NUMBER</label>
+      <div class="col-sm-5">
+        <input type="text" class="form-control" formControlName="textNumber">
+        <div class="validation-errors">
+          <ng-container *ngFor="let validation of validationMessages.textNumber">
+            <div class="help-block" *ngIf="form.get('textNumber').hasError(validation.type) && (form.get('textNumber').dirty || form.get('textNumber').touched)">
+              {{ validation.message }}
+            </div>
+          </ng-container>
+        </div>
+      </div>
+      <div class="col-sm-5">
+        <input type="number" class="form-control" formControlName="number">
+      </div>
+    </div>
+    <div class="form-group" [ngClass]="{ 'has-error': ((form.get('minLength').invalid) && (form.get('minLength').dirty)) }">
+      <label class="form-label form-label-big col-sm-2" [attr.for]="'minLength'">MIN LENGTH</label>
+      <div class="col-sm-10">
+        <input type="text" class="form-control" formControlName="minLength" [id]="'minLength'">
+        <div class="validation-errors">
+          <ng-container *ngFor="let validation of validationMessages.minLength">
+            <div class="help-block" *ngIf="form.get('minLength').hasError(validation.type) && (form.get('minLength').dirty || form.get('minLength').touched)">
+              {{ validation.message }}
+            </div>
+          </ng-container>
+        </div>
+      </div>
+    </div>
+    <div class="form-group" [ngClass]="{ 'has-error': ((form.get('maxLength').invalid) && (form.get('maxLength').dirty)) }">
+      <label class="form-label form-label-big col-sm-2" [attr.for]="'maxLength'">MAX LENGTH</label>
+      <div class="col-sm-10">
+        <input type="text" class="form-control" formControlName="maxLength" [id]="'maxLength'">
+        <div class="validation-errors">
+          <ng-container *ngFor="let validation of validationMessages.maxLength">
+            <div class="help-block" *ngIf="form.get('maxLength').hasError(validation.type) && (form.get('maxLength').dirty || form.get('maxLength').touched)">
+              {{ validation.message }}
+            </div>
+          </ng-container>
+        </div>
+      </div>
+    </div>
+    <div class="form-group" [ngClass]="{ 'has-error': ((form.get('range').invalid) && (form.get('range').dirty)) }">
+      <label class="form-label form-label-big col-sm-2" [attr.for]="'range'">RANGE</label>
+      <div class="col-sm-10">
+        <input type="number" class="form-control" formControlName="range" [id]="'range'">
+        <div class="validation-errors">
+          <ng-container *ngFor="let validation of validationMessages.range">
+            <div class="help-block" *ngIf="form.get('range').hasError(validation.type) && (form.get('range').dirty || form.get('range').touched)">
+              {{ validation.message }}
+            </div>
+          </ng-container>
+        </div>
+      </div>
+    </div>
+    <div class="form-group" [ngClass]="{ 'has-error': ((form.get('minValue').invalid) && (form.get('minValue').dirty)) }">
+      <label class="form-label form-label-big col-sm-2" [attr.for]="'minValue'">MIN VALUE</label>
+      <div class="col-sm-10">
+        <input type="number" class="form-control" formControlName="minValue" [id]="'minValue'">
+        <div class="validation-errors">
+          <ng-container *ngFor="let validation of validationMessages.minValue">
+            <div class="help-block" *ngIf="form.get('minValue').hasError(validation.type) && (form.get('minValue').dirty || form.get('minValue').touched)">
+              {{ validation.message }}
+            </div>
+          </ng-container>
+        </div>
+      </div>
+    </div>
+    <div class="form-group" [ngClass]="{ 'has-error': ((form.get('maxValue').invalid) && (form.get('maxValue').dirty)) }">
+      <label class="form-label form-label-big col-sm-2" [attr.for]="'maxValue'">MAX VALUE</label>
+      <div class="col-sm-10">
+        <input type="number" class="form-control" formControlName="maxValue" [id]="'maxValue'">
+        <div class="validation-errors">
+          <ng-container *ngFor="let validation of validationMessages.maxValue">
+            <div class="help-block" *ngIf="form.get('maxValue').hasError(validation.type) && (form.get('maxValue').dirty || form.get('maxValue').touched)">
+              {{ validation.message }}
+            </div>
+          </ng-container>
+        </div>
+      </div>
+    </div>
+
+    <div class="text-center">
+      <input class="btn btn-form" type="reset" value="Reset form">
+      <input class="btn btn-form" type="button" (click)="validateFields()" value="Validate">
+      <input class="btn btn-form" type="submit" [disabled]="!form.valid" value="Submit">
+    </div>
+  </form>
+
+</div>

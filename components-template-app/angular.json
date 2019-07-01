@@ -24,7 +24,7 @@
             ],
             "styles": [
               "./node_modules/@fortawesome/fontawesome-free/css/all.css",
-              "src/styles.css"
+              "src/app/shared/styles/main.scss"
             ],
             "scripts": [],
             "es5BrowserSupport": true
@@ -81,7 +81,7 @@
             "tsConfig": "src/tsconfig.spec.json",
             "karmaConfig": "src/karma.conf.js",
             "styles": [
-              "src/styles.css"
+              "src/styles.scss"
             ],
             "scripts": [],
             "assets": [

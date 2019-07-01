@@ -1,0 +1,90 @@
+// Colors
+$violet: #4e0192;
+$pink: #ff87f3;
+$pink2: #d5a5ff;
+$pink3: #f2e3ff;
+$beige: #f4f3ef;
+$beige2: #fff3f4;
+$aqua: #50e3c2;
+$purple: #9012fe;
+$purple2: #824e94;
+$grey: #9b9b9b;
+$grey2: #f6f6f6;
+$grey3: #dbdbdb;
+$grey4: #e1e1e1;
+$grey5: #555;
+$grey6: #f4f3ef;
+$grey7: #f0f0f0;
+$grey8: #4a4a4a;
+$darkgrey: #343434;
+$red: #ff001f;
+$red2: #d0011b;
+$yellow: #f8e81c;
+$orange: #f6a623;
+$orange2: #f5a623;
+$green: #b8e986;
+$green2: #7ed321;
+$white: #fff;
+$black: #000;
+$blue: #2604af;
+$blue-fb: #3b5998;
+$skyblue: #04abff;
+
+$body-bg-color: $beige;
+
+$nav-bg-top-color: $violet;
+$nav-bg-btm-color: $pink;
+
+$inactive-bg-color: $grey3;
+
+$card-bg-color: $white;
+$card-txt-color: $darkgrey;
+
+$form-label-big-color: $darkgrey;
+$form-label-color: $darkgrey;
+$form-input-color: $grey8;
+$form-input-broder-color: $grey4;
+$form-input-broder-radius: 4px;
+$form-checkbox-radio-color: $darkgrey;
+$form-error-color: $red2;
+$form-error-bkg-color: $beige2;
+$form-tag-color: $darkgrey;
+$form-slider-color: $darkgrey;
+
+$shadow: 0 2px 9px 0 rgba(0, 0, 0, .06);
+$shadow-hover: 0 2px 9px 0 rgba(0, 0, 0, .5);
+$shadow-container: 0 2px 4px 0 rgba(0, 0, 0, .32);
+$shadow-inset: inset 0 0 15px 0 rgba(0, 0, 0, .2);
+
+// Texts
+$font-family: 'Lato', 'Helvetica', sans-serif;
+
+$font-size-xxxlg: 57px;
+$font-size-xxlg: 40px;
+$font-size-xlg: 32px;
+$font-size-lg: 22px;
+$font-size-md: 17px;
+$font-size-sm: 14px;
+$font-size-xs: 12px;
+$font-size-xxs: 9px;
+
+$letter-spacing-lg: 2.3px;
+$letter-spacing-md: 2.1px;
+$letter-spacing-sm: 1.8px;
+$letter-spacing-xs: 1.5px;
+$letter-spacing-xxs: 1.3px;
+$letter-spacing-xxxs: 1.1px;
+
+// Measures
+$checkbox-radio-size: 12px;
+$input-height: 38px;
+$separation: 15px;
+$side-menu-width: 260px;
+$top-navbar-breakpoint: 910px;
+
+// Images - Preload images
+$preload-image-bg: rgba(darken($white, 10), .25);
+
+// Images - Preload images - Spinner on load
+$spinner-size: 28px;
+$spinner-color: $grey;

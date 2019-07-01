@@ -1,0 +1,46 @@
+@import './_nouislider';
+
+// NoUISlider override
+nouislider {
+  display: inline-block !important;
+  margin: 0;
+  vertical-align: middle;
+  width: 100%;
+
+  .noUi-horizontal {
+    background-color: $grey4;
+    border: 0;
+    box-shadow: none;
+    height: 3px;
+
+    .noUi-handle {
+      border-color: $purple;
+      border-radius: 50%;
+      height: 15px;
+      right: -15px !important;
+      width: 15px;
+
+      &::before,
+      &::after {
+        content: none;
+      }
+
+      .noUi-tooltip {
+        display: none;
+      }
+
+      &:hover .noUi-tooltip,
+      &:active .noUi-tooltip {
+        display: block;
+      }
+    }
+  }
+
+  .noUi-base {
+    height: 3px;
+  }
+
+  .noUi-connect {
+    background-color: $purple;
+  }
+}

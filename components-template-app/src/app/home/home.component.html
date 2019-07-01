@@ -8,7 +8,9 @@
           </div>
         </div>
         <div [ngClass]="{'main-content': !sidebarCollapsed, 'main-content-full' : sidebarCollapsed}">
-          <router-outlet></router-outlet>
+          <div class="main-inner">
+            <router-outlet></router-outlet>
+          </div>
         </div>
       </div>
     </div>

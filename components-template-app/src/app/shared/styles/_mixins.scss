@@ -1,0 +1,111 @@
+//preload image
+@mixin spinner-size($size){
+	.spinner
+  {
+    position: absolute;
+		width: $size;
+    height: $size;
+    font-size: $size;
+		line-height: $size;
+		@include cssCalc(top, "50% - #{($size/2)}");
+  	@include cssCalc(left, "50% - #{($size/2)}");
+  }
+};
+
+@mixin spinner-color($color){
+  .spinner
+  {
+    color: $color;
+  }
+};
+
+@mixin cssCalc($property, $expression) {
+  #{$property}: calc(#{$expression});
+}
+
+@mixin transition($transitions...)
+{
+  -webkit-transition: $transitions;
+  -moz-transition: $transitions;
+  -ms-transition: $transitions;
+  -o-transition: $transitions;
+  transition: $transitions;
+}
+
+// Placeholder shadow DOM
+@mixin _placeholder {
+  &::-webkit-input-placeholder {
+    @content;
+  }
+
+  // Firefox 18-
+  &:-moz-placeholder {
+    @content;
+  }
+
+  // Firefox 19+
+  &::-moz-placeholder {
+    @content;
+  }
+
+  &:-ms-input-placeholder {
+    @content;
+  }
+}
+
+@mixin button($color, $background, $border, $important: null) {
+  background-color: $background;
+  border-color: $border;
+  border-radius: 5px;
+  border-style: solid;
+  border-width: 1px;
+  color: $color;
+  font-size: $font-size-xs;
+  font-weight: bold;
+  letter-spacing: $letter-spacing-xxs;
+  padding: 10px;
+  transition: border-color .5s, color .5s, background-color .5s;
+
+  &:hover {
+    background-color: rgba($background, .6) $important;
+    border-color: rgba($border, .7) $important;
+    color: $color $important;
+  }
+
+  &:active,
+  &.active,
+  &:focus,
+  &.focus {
+    background-color: $background $important;
+    border-color: $border $important;
+    color: $color $important;
+  }
+}
+@mixin button-outline($color, $background, $border, $important: null) {
+  background-color: $background;
+  border-color: $border;
+  border-radius: 5px;
+  border-style: solid;
+  border-width: 1px;
+  color: $color;
+  font-size: $font-size-xs;
+  font-weight: bold;
+  letter-spacing: $letter-spacing-xxs;
+  padding: 10px;
+  transition: border-color .5s, color .5s, background-color .5s;
+
+  &:hover {
+    background-color: rgba($color, .6) $important;
+    border-color: rgba($border, .7) $important;
+    color: $background $important;
+  }
+
+  &:active,
+  &.active,
+  &:focus,
+  &.focus {
+    background-color: $color $important;
+    border-color: $border $important;
+    color: $background $important;
+  }
+}

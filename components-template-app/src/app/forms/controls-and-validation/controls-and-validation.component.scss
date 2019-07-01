@@ -1,0 +1,9 @@
+@import '../../shared/styles/_variables.scss';
+
+.btn-form {
+  margin: 0px 5px;
+}
+
+select.form-control:not([size]):not([multiple]) {
+  height: 38px!important;
+}

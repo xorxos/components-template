@@ -51,6 +51,12 @@
     transition: all 0.2s ease-in-out;
 }
 
+.main-inner {
+    padding-left: 15px;
+    padding-right: 30px;
+    margin: 20px auto;
+}
+
 .inner-container {
     width: 100%;
     height: 100%;

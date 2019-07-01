@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css?family=Lato:300,400,500,700,900');
+
+@import 'bootstrap';
+@import 'variables';
+@import 'mixins';
+@import 'md-override';
+@import 'forms';
+
+body {
+  background-color: $body-bg-color;
+  font-family: $font-family;
+}
+
+.main-navbar-container {
+  align-items: center;
+  background-color: $violet;
+  box-shadow: $shadow-container;
+  display: flex;
+  position: fixed;
+}
+
+.main-content-container {
+
+  padding-top: 60px;
+
+  .mat-sidenav-container {
+
+    .mat-drawer.mat-drawer-push {
+      background-color: transparent;
+    }
+  }
+
+  // mat-sidenav-content {
+  //   margin-left: 275px;
+  // }
+
+  .main-content-outer {
+    // Because we already have 15px from the condense menu toggle
+    padding-left: 15px;
+    padding-right: 30px;
+
+    @media only screen and (max-width: $screen-xs-max) {
+      padding-right: 15px;
+    }
+  }
+}
+
+
+// Other stuff
+
+.mat-sidenav-container {
+  background-color: transparent;
+}
+
+.card {
+  background-color: $card-bg-color;
+  border-radius: 5px;
+  box-shadow: $shadow;
+  color: $card-txt-color;
+  margin-bottom: 20px;
+  padding: 20px;
+
+  &.card-no-padding {
+    padding: 0;
+  }
+
+  .title {
+    margin-bottom: 20px;
+
+    .main-title {
+      font-size: $font-size-lg;
+      font-weight: 300;
+      letter-spacing: $letter-spacing-lg;
+      margin: 0;
+      text-align: left;
+    }
+
+    .sub-title {
+      color: $grey;
+      display: block;
+      font-size: $font-size-sm;
+      letter-spacing: $letter-spacing-sm;
+      margin-top: 7px;
+    }
+
+    .line {
+      border-color: $grey4;
+      margin-bottom: 0;
+      margin-top: 10px;
+    }
+  }
+}
+
+.color-red {
+  color: $red;
+}
+
+.color-green {
+  color: $green2;
+}
+
+.color-aqua {
+  color: $aqua;
+}
+
+.color-orange {
+  color: $orange2;
+}

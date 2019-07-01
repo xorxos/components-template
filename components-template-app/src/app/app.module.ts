@@ -1,10 +1,16 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { routing } from './routes';
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
+import { APP_BASE_HREF } from '@angular/common';
+import { environment } from './../environments/environment';
 
 import { NavigationService } from './shared/services/navigation.service';
+
+// Material modules
+import {
+  MatCheckboxModule, MatInputModule, MatSelectModule
+} from '@angular/material';
 
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
@@ -34,6 +40,9 @@ import { AccordionsComponent } from './misc-utilities/accordions/accordions.comp
 import { TopBarComponent } from './top-bar/top-bar.component';
 import { SideBarComponent } from './side-bar/side-bar.component';
 import { SpinnersComponent } from './misc-utilities/spinners/spinners.component';
+import { FormsValidationsResolver, FormsExtendedControlsResolver, FormsLayoutsResolver, MaterialFormsResolver } from './forms/forms.resolver';
+import { ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -68,12 +77,24 @@ import { SpinnersComponent } from './misc-utilities/spinners/spinners.component'
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
     BrowserAnimationsModule,
-    NgbModule,
+    ReactiveFormsModule,
+    MatCheckboxModule,
+    MatInputModule,
+    MatSelectModule,
     routing
   ],
   providers: [
-    NavigationService
+    NavigationService,
+    FormsValidationsResolver,
+    FormsExtendedControlsResolver,
+    FormsLayoutsResolver,
+    MaterialFormsResolver,
+    {
+      provide: APP_BASE_HREF,
+      useValue: `${environment.BASE_URL}`
+    }
   ],
   bootstrap: [AppComponent]
 })
