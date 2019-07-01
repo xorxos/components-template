@@ -1,0 +1,16 @@
+@import '~bootstrap-sass/assets/stylesheets/bootstrap/variables';
+
+app-responsive-breakpoints {
+	display: block;
+
+	// XS || SM to show push menu
+	.visible-xs-or-sm-block {
+		display: none !important;
+	}
+	@media (max-width: $screen-sm-max) {
+	 .visible-xs-or-sm-block {
+	   display: block !important;
+	 }
+	}
+
+}

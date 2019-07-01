@@ -1,24 +1,14 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { routing } from './routes';
+import { rootRoutes } from './routes';
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { APP_BASE_HREF } from '@angular/common';
 import { environment } from './../environments/environment';
 
 import { NavigationService } from './shared/services/navigation.service';
 
-// Material modules
-import {
-  MatCheckboxModule, MatInputModule, MatSelectModule
-} from '@angular/material';
-
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
-import { ControlsAndValidationComponent } from './forms/controls-and-validation/controls-and-validation.component';
-import { ControlsExtendedComponent } from './forms/controls-extended/controls-extended.component';
-import { SampleRegistrationsComponent } from './forms/sample-registrations/sample-registrations.component';
-import { SampleLoginsComponent } from './forms/sample-logins/sample-logins.component';
-import { MaterialFormsComponent } from './forms/material-forms/material-forms.component';
 import { RegularTablesComponent } from './tables/regular-tables/regular-tables.component';
 import { CustomTablesComponent } from './tables/custom-tables/custom-tables.component';
 import { FilteredTablesComponent } from './tables/filtered-tables/filtered-tables.component';
@@ -40,19 +30,16 @@ import { AccordionsComponent } from './misc-utilities/accordions/accordions.comp
 import { TopBarComponent } from './top-bar/top-bar.component';
 import { SideBarComponent } from './side-bar/side-bar.component';
 import { SpinnersComponent } from './misc-utilities/spinners/spinners.component';
-import { FormsValidationsResolver, FormsExtendedControlsResolver, FormsLayoutsResolver, MaterialFormsResolver } from './forms/forms.resolver';
-import { ReactiveFormsModule } from '@angular/forms';
+import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { CoreModule } from './core/core.module';
+import { PreloadAllModules, RouterModule } from '@angular/router';
+import { SharedModule } from './shared/shared.module';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    ControlsAndValidationComponent,
-    ControlsExtendedComponent,
-    SampleRegistrationsComponent,
-    SampleLoginsComponent,
-    MaterialFormsComponent,
     RegularTablesComponent,
     CustomTablesComponent,
     FilteredTablesComponent,
@@ -79,18 +66,16 @@ import { HttpClientModule } from '@angular/common/http';
     BrowserModule,
     HttpClientModule,
     BrowserAnimationsModule,
-    ReactiveFormsModule,
-    MatCheckboxModule,
-    MatInputModule,
-    MatSelectModule,
-    routing
+    CoreModule,
+    SharedModule,
+    RouterModule.forRoot(rootRoutes, {
+      preloadingStrategy: PreloadAllModules,
+      initialNavigation: 'enabled',
+      useHash: false
+    })
   ],
   providers: [
     NavigationService,
-    FormsValidationsResolver,
-    FormsExtendedControlsResolver,
-    FormsLayoutsResolver,
-    MaterialFormsResolver,
     {
       provide: APP_BASE_HREF,
       useValue: `${environment.BASE_URL}`

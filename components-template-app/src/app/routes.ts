@@ -25,32 +25,26 @@ import { ListsComponent } from './layouts/lists/lists.component';
 import { CardsComponent } from './layouts/cards/cards.component';
 import { TabsComponent } from './layouts/tabs/tabs.component';
 
-const appRoutes: Routes = [
-    { path: 'forms/controls_and_validation', component: ControlsAndValidationComponent },
-    { path: 'forms/extended_controls', component: ControlsExtendedComponent },
-    { path: 'forms/material_forms', component: MaterialFormsComponent },
-    { path: 'forms/sample_logins', component: SampleLoginsComponent },
-    { path: 'forms/sample_registrations', component: SampleRegistrationsComponent },
-    { path: 'tables/regular_tables', component: RegularTablesComponent },
-    { path: 'tables/custom_tables', component: CustomTablesComponent },
-    { path: 'tables/paginated_tables', component: PaginatedTablesComponent },
-    { path: 'tables/filtered_tables', component: FilteredTablesComponent },
-    { path: 'charts/ng2_charts', component: Ng2ChartsComponent },
-    { path: 'charts/nvd3_charts', component: Nvd3ChartsComponent },
-    { path: 'miscellaneous/accordions', component: AccordionsComponent },
-    { path: 'miscellaneous/alerts', component: AlertsComponent },
-    { path: 'miscellaneous/auto_complete', component: AutoCompleteComponent },
-    { path: 'miscellaneous/carousels', component: CarouselsComponent },
-    { path: 'miscellaneous/date_time_pickers', component: DateTimePickersComponent },
-    { path: 'miscellaneous/file_upload', component: FileUploadComponent },
-    { path: 'miscellaneous/modals', component: ModalsComponent },
-    { path: 'miscellaneous/notifications', component: NotificationsComponent },
-    { path: 'miscellaneous/spinners', component: SpinnersComponent },
-    { path: 'layouts/grids', component: GridsComponent },
-    { path: 'layouts/lists', component: ListsComponent },
-    { path: 'layouts/cards', component: CardsComponent },
-    { path: 'layouts/tabs', component: TabsComponent },
-    { path: '', redirectTo: '/forms/controls_and_validation', pathMatch: 'full'}
-  ];
-  
-  export const routing: ModuleWithProviders = RouterModule.forRoot(appRoutes)
+export const rootRoutes: Routes = [
+  { path: '', redirectTo: 'forms/controls-and-validations', pathMatch: 'full' },
+  { path: 'forms', loadChildren: './forms/forms.module#FormsModule' },
+  { path: 'tables/regular_tables', component: RegularTablesComponent },
+  { path: 'tables/custom_tables', component: CustomTablesComponent },
+  { path: 'tables/paginated_tables', component: PaginatedTablesComponent },
+  { path: 'tables/filtered_tables', component: FilteredTablesComponent },
+  { path: 'charts/ng2_charts', component: Ng2ChartsComponent },
+  { path: 'charts/nvd3_charts', component: Nvd3ChartsComponent },
+  { path: 'miscellaneous/accordions', component: AccordionsComponent },
+  { path: 'miscellaneous/alerts', component: AlertsComponent },
+  { path: 'miscellaneous/auto_complete', component: AutoCompleteComponent },
+  { path: 'miscellaneous/carousels', component: CarouselsComponent },
+  { path: 'miscellaneous/date_time_pickers', component: DateTimePickersComponent },
+  { path: 'miscellaneous/file_upload', component: FileUploadComponent },
+  { path: 'miscellaneous/modals', component: ModalsComponent },
+  { path: 'miscellaneous/notifications', component: NotificationsComponent },
+  { path: 'miscellaneous/spinners', component: SpinnersComponent },
+  { path: 'layouts/grids', component: GridsComponent },
+  { path: 'layouts/lists', component: ListsComponent },
+  { path: 'layouts/cards', component: CardsComponent },
+  { path: 'layouts/tabs', component: TabsComponent }
+];

@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { NavigationService } from '../shared/services/navigation.service';
 import { trigger, state, style, transition, animate } from '@angular/animations';
-import { Router } from '@angular/router';
+import { Router, ActivatedRoute, Event, NavigationStart, NavigationEnd, NavigationError } from '@angular/router';
+import { Observable, pipe } from 'rxjs';
 
 @Component({
   selector: 'app-side-bar',
@@ -20,7 +21,6 @@ import { Router } from '@angular/router';
   ]
 })
 export class SideBarComponent implements OnInit {
-  activatedUrl: string
 
   formsExpanded: boolean = false;
   formsActive: boolean = false;
@@ -37,12 +37,18 @@ export class SideBarComponent implements OnInit {
   layoutsExpanded: boolean = false;
   layoutsActive: boolean = false;
 
-  constructor(private navigationService: NavigationService) { }
+  constructor(private navigationService: NavigationService, 
+              private router: Router, 
+              private activatedRoute: ActivatedRoute) 
+              { }
 
   ngOnInit() {
-    this.activatedUrl = location.pathname;
     this.collapseAllMenus();
-    this.expandMenu(this.activatedUrl);
+    this.router.events.subscribe((_: NavigationEnd) =>  {
+      if(_.url !== undefined) {
+        this.expandMenu(_.url);
+      }
+    })
   }
 
   public collapseAllMenus() {
