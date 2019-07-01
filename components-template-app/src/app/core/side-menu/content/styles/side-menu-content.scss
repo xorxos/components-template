@@ -28,7 +28,7 @@ app-side-menu-content {
 		&:hover,
 		&:focus
 		{
-  		outline: 0;
+  			outline: 0;
 			background: rgba(#000, 0.08);
 		}
 
@@ -87,10 +87,9 @@ app-side-menu-content {
 			.mat-expansion-panel-header
 			{
 				// Resets
-				&:hover,
-				&:focus
+				&:hover
 				{
-					background: rgba(#000, 0.08);
+					background: rgba(#252525, 0.5) !important;
 				}
 			}
 			.mat-expansion-indicator::after {
