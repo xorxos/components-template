@@ -47,7 +47,7 @@ app-condense {
 			line-height: 20px;
 			text-align: center;
 			font-size: 18px;
-			color: #2684FF;
+			color: white;
 			content: '|';
 		}
 
@@ -63,12 +63,14 @@ app-condense {
 
 		&::before
 		{
-		  background: #2684FF;
+		  background: #343434;
 		}
 
 		.condense-toogle
 		{
 			visibility: visible;
+			background-color: #343434;
+			border-radius: 0 3px 3px 0;
 		}
 	}
 
