@@ -45,13 +45,13 @@ app-side-menu-content {
 		box-shadow: none !important;
 		background: transparent;
 		color: #FFF;
-    border-radius: 0px;
+    	border-radius: 0px;
 
 		&.active
 		{
 			.mat-expansion-panel-header
 			{
-				background: #FFF;
+				background: #FFF !important;
 
 				// Resets
 				&:hover
@@ -77,8 +77,9 @@ app-side-menu-content {
 					}
 				}
 			}
-
-			/deep/ .mat-expansion-indicator::after, .mat-expansion-panel-header-description { color: #343434}
+			.mat-expansion-indicator::after {
+				color: #343434;
+			  }
 		}
 
 		&:not(.active)
@@ -92,8 +93,9 @@ app-side-menu-content {
 					background: rgba(#000, 0.08);
 				}
 			}
-			
-			/deep/ .mat-expansion-indicator::after, .mat-expansion-panel-header-description { color: white}
+			.mat-expansion-indicator::after {
+				color: white;
+			  }
 		}
 
 		.mat-expansion-panel-header

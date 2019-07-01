@@ -39,17 +39,21 @@
         <mat-panel-title class="expandable-item-title">Tables</mat-panel-title>
       </div>
     </mat-expansion-panel-header>
-    <a class="expandable-sub-item" [routerLinkActive]="['active']" [routerLink]="['/tables/regular']">
+    <a class="expandable-sub-item" [routerLinkActive]="['active']" [routerLink]="['/tables/regular-tables']">
       <span class="icon-abbr">RT</span>
       <span class="menu-item-title">Regular Tables</span>
     </a>
-    <a class="expandable-sub-item" [routerLinkActive]="['active']" [routerLink]="['/tables/extended']">
-      <span class="icon-abbr">ET</span>
-      <span class="menu-item-title">Extended Tables</span>
+    <a class="expandable-sub-item" [routerLinkActive]="['active']" [routerLink]="['/tables/custom-tables']">
+      <span class="icon-abbr">CT</span>
+      <span class="menu-item-title">Custom Tables</span>
     </a>
-    <a class="expandable-sub-item" [routerLinkActive]="['active']" [routerLink]="['/tables/smart']">
-      <span class="icon-abbr">ST</span>
-      <span class="menu-item-title">Smart Tables</span>
+    <a class="expandable-sub-item" [routerLinkActive]="['active']" [routerLink]="['/tables/paginated-tables']">
+      <span class="icon-abbr">PT</span>
+      <span class="menu-item-title">Paginated Tables</span>
+    </a>
+    <a class="expandable-sub-item" [routerLinkActive]="['active']" [routerLink]="['/tables/filtered-tables']">
+      <span class="icon-abbr">FT</span>
+      <span class="menu-item-title">Filtered Tables</span>
     </a>
   </mat-expansion-panel>
 
@@ -61,11 +65,11 @@
         <mat-panel-title class="expandable-item-title">Charts</mat-panel-title>
       </div>
     </mat-expansion-panel-header>
-    <a class="expandable-sub-item" [routerLinkActive]="['active']" [routerLink]="['/charts/ng2Nvd3']">
+    <a class="expandable-sub-item" [routerLinkActive]="['active']" [routerLink]="['/charts/nvd3-charts']">
       <span class="icon-abbr">NVD</span>
       <span class="menu-item-title">Nvd3</span>
     </a>
-    <a class="expandable-sub-item" [routerLinkActive]="['active']" [routerLink]="['/charts/ng2Charts']">
+    <a class="expandable-sub-item" [routerLinkActive]="['active']" [routerLink]="['/charts/ng2-charts']">
       <span class="icon-abbr">NG2</span>
       <span class="menu-item-title">Ng2 Charts</span>
     </a>
@@ -79,25 +83,33 @@
         <mat-panel-title class="expandable-item-title">Misc Utilities</mat-panel-title>
       </div>
     </mat-expansion-panel-header>
-    <a class="expandable-sub-item" [routerLinkActive]="['active']" [routerLink]="['/utils/modals']">
-      <span class="icon-abbr">MO</span>
-      <span class="menu-item-title">Modals</span>
+    <a class="expandable-sub-item" [routerLinkActive]="['active']" [routerLink]="['/miscellaneous/accordions']">
+      <span class="icon-abbr">AC</span>
+      <span class="menu-item-title">Accordions</span>
     </a>
-    <a class="expandable-sub-item" [routerLinkActive]="['active']" [routerLink]="['/utils/alerts']">
+    <a class="expandable-sub-item" [routerLinkActive]="['active']" [routerLink]="['/miscellaneous/alerts']">
       <span class="icon-abbr">AL</span>
       <span class="menu-item-title">Alerts</span>
     </a>
-    <a class="expandable-sub-item" [routerLinkActive]="['active']" [routerLink]="['/utils/file-uploader']">
+    <a class="expandable-sub-item" [routerLinkActive]="['active']" [routerLink]="['/miscellaneous/file-upload']">
       <span class="icon-abbr">FU</span>
-      <span class="menu-item-title">File uploader</span>
+      <span class="menu-item-title">File Upload</span>
     </a>
-    <a class="expandable-sub-item" [routerLinkActive]="['active']" [routerLink]="['/utils/auto-completer']">
+    <a class="expandable-sub-item" [routerLinkActive]="['active']" [routerLink]="['/miscellaneous/auto-complete']">
       <span class="icon-abbr">AC</span>
-      <span class="menu-item-title">Auto completer</span>
+      <span class="menu-item-title">Auto Complete</span>
     </a>
-    <a class="expandable-sub-item" [routerLinkActive]="['active']" [routerLink]="['/utils/notifications']">
+    <a class="expandable-sub-item" [routerLinkActive]="['active']" [routerLink]="['/miscellaneous/modals']">
+      <span class="icon-abbr">MO</span>
+      <span class="menu-item-title">Modals</span>
+    </a>
+    <a class="expandable-sub-item" [routerLinkActive]="['active']" [routerLink]="['/miscellaneous/notifications']">
       <span class="icon-abbr">NO</span>
       <span class="menu-item-title">Notifications</span>
+    </a>
+    <a class="expandable-sub-item" [routerLinkActive]="['active']" [routerLink]="['/miscellaneous/spinners']">
+      <span class="icon-abbr">SP</span>
+      <span class="menu-item-title">Spinners</span>
     </a>
   </mat-expansion-panel>
 
