@@ -43,6 +43,7 @@ export class SideBarComponent implements OnInit {
     this.collapseAllMenus();
     this.router.events.subscribe((_: NavigationEnd) =>  {
       if(_.url !== undefined) {
+        console.log(_.url)
         this.expandMenu(_.url);
       }
     })
@@ -57,7 +58,7 @@ export class SideBarComponent implements OnInit {
   }
 
   public expandMenu(url: string) {
-    if (url.includes('/forms/')) {
+    if ((url.includes('/forms/')) || (url === '/')) {
       this.formsExpanded = true;
       this.formsActive = true;
     }
