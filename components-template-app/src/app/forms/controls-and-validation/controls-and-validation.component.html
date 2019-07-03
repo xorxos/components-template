@@ -7,7 +7,7 @@
     </div>
   </header>
 
-  <form class="form-horizontal" [formGroup]="form" (ngSubmit)="onSubmit()" (input)="updateProgress()" (change)="updateProgress()" (reset)="updateProgress()">
+  <form class="form-horizontal" [formGroup]="form" (ngSubmit)="onSubmit()">
 
     <div class="form-group" [ngClass]="{ 'has-error': ((form.get('requiredText').invalid) && (form.get('requiredText').touched)) }">
       <label class="form-label form-label-big col-sm-2" [attr.for]="'requiredText'">REQUIRED TEXT<em>*</em></label>

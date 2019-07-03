@@ -25,7 +25,8 @@ export class ControlsAndValidationComponent {
       { type: 'email', message: 'Email must be valid.' }
     ],
     password: [
-      { type: 'required', message: 'Password is required.' }
+      { type: 'required', message: 'Password is required.' },
+      { type: 'minlength', message: 'Password must be 8 characters long.'}
     ],
     equal: [
       { type: 'areEqual', message: 'These fields do not match.' }
@@ -62,7 +63,6 @@ export class ControlsAndValidationComponent {
 
   // Full form
   form: FormGroup;
-  progress = '0';
 
   constructor(
     public formBuilder: FormBuilder,
@@ -88,7 +88,10 @@ export class ControlsAndValidationComponent {
         Validators.email,
         Validators.required
       ])),
-      password: new FormControl('', Validators.required),
+      password: new FormControl('', Validators.compose([
+        Validators.minLength(8),
+        Validators.required
+      ])),
       equal: formBuilder.group(
         {
           equal1: new FormControl('first'),
@@ -157,24 +160,6 @@ export class ControlsAndValidationComponent {
         }
       }
     }
-  }
-
-  updateProgress(): void {
-    const controls = this.form.controls;
-    let size = 0;
-    let completed = 0;
-    for (const key in controls) {
-      if (controls.hasOwnProperty(key)) {
-        size++;
-        const control = controls[key];
-        if ((control.value) && (control.dirty) && (control.valid)) {
-          completed++;
-        }
-      }
-    }
-
-    // Size - 4 to not consider the optional fields
-    this.progress = (Math.floor((completed / (size - 4)) * 100)).toString();
   }
 
   onSubmit(): void {

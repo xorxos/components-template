@@ -1,3 +1,69 @@
-<p>
-  sample-logins works!
-</p>
+<div class="row">
+  <div class="col-md-6">
+    <div class="card">
+      <header class="row title">
+        <div class="col-xs-12 text-center">
+          <h2 class="main-title">Stacked Login Form</h2>
+        </div>
+      </header>
+      <form class="form-horizontal form-stacked" [formGroup]="loginFormStacked">
+        <div class="form-group">
+          <label class="form-label col-xs-12" [attr.for]="'email_1'">EMAIL ADDRESS</label>
+          <div class="col-xs-12">
+            <input type="email" class="form-control" formControlName="email" [id]="'email_1'" placeholder="Email">
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="form-label col-xs-12" [attr.for]="'password_1'">PASSWORD</label>
+          <div class="col-xs-12">
+            <input type="password" class="form-control" formControlName="password" [id]="'password_1'" placeholder="Password">
+          </div>
+        </div>
+        <div class="form-group">
+          <div class="col-xs-12">
+            <mat-checkbox disableRipple formControlName="remember">Remember me?</mat-checkbox>
+          </div>
+        </div>
+        <div class="form-group">
+          <div class="col-xs-12">
+            <input class="btn btn-form" type="submit" [disabled]="!loginFormStacked.valid" value="LOGIN">
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <div class="col-md-6">
+    <div class="card">
+      <header class="row title">
+        <div class="col-xs-12 text-center">
+          <h2 class="main-title">Horizontal Form</h2>
+        </div>
+      </header>
+      <form class="form-horizontal" [formGroup]="loginFormHorizontal">
+        <div class="form-group">
+          <label class="form-label col-sm-3" [attr.for]="'email_2'">EMAIL ADDRESS</label>
+          <div class="col-sm-8">
+            <input type="email" class="form-control" formControlName="email" [id]="'email_2'" placeholder="Email">
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="form-label col-sm-3" [attr.for]="'password_2'">PASSWORD</label>
+          <div class="col-sm-8">
+            <input type="password" class="form-control" formControlName="password" [id]="'password_2'" placeholder="Password">
+          </div>
+        </div>
+        <div class="form-group">
+          <div class="col-sm-offset-3 col-sm-8">
+            <mat-checkbox disableRipple formControlName="remember">Remember me</mat-checkbox>
+          </div>
+        </div>
+        <div class="form-group">
+          <div class="col-xs-12 text-right">
+            <input class="btn btn-form" type="submit" [disabled]="!loginFormHorizontal.valid" value="LOGIN">
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

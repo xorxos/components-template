@@ -9,31 +9,20 @@ import { SampleRegistrationsComponent } from './sample-registrations/sample-regi
 import { SampleLoginsComponent } from './sample-logins/sample-logins.component';
 import { MaterialFormsComponent } from './material-forms/material-forms.component';
 
-import { FormsValidationsResolver, FormsExtendedControlsResolver, FormsLayoutsResolver, MaterialFormsResolver } from './forms.resolver';
-
 import { SharedModule } from '../shared/shared.module';
 
 export const formsRoutes = [
     {
       path: 'controls-and-validations',
-      component: ControlsAndValidationComponent,
-      resolve: {
-        data: FormsValidationsResolver
-      }
+      component: ControlsAndValidationComponent
     },
     {
       path: 'extended-controls',
-      component: ControlsExtendedComponent,
-      resolve: {
-        data: FormsExtendedControlsResolver
-      }
+      component: ControlsExtendedComponent
     },
     {
       path: 'sample-logins',
-      component: SampleLoginsComponent,
-      resolve: {
-        data: FormsLayoutsResolver
-      }
+      component: SampleLoginsComponent
     },
     {
       path: 'sample-registrations',
@@ -41,10 +30,7 @@ export const formsRoutes = [
     },
     {
       path: 'material-forms',
-      component: MaterialFormsComponent,
-      resolve: {
-        data: MaterialFormsResolver
-      }
+      component: MaterialFormsComponent
     }
   ];
 
@@ -62,10 +48,7 @@ export const formsRoutes = [
     NouisliderModule
   ],
   providers: [
-    FormsValidationsResolver,
-    FormsExtendedControlsResolver,
-    FormsLayoutsResolver,
-    MaterialFormsResolver,
+    
   ],
   exports: []
 })
