@@ -14,28 +14,28 @@ export class MessagesMenuService {
   messages = [
     {
       image: this.baseUrl + '/assets/imgs/profiles/profile1.jpeg',
-      username: 'Juana de Arco',
+      username: 'Olga Homestead',
       title: 'New Lead',
       text: 'Add this new lead to your list.',
       time: 'JUST NOW'
     },
     {
       image: this.baseUrl + '/assets/imgs/profiles/profile4.jpeg',
-      username: 'Harley Wapasha',
+      username: 'Hope Wakanda',
       title: 'Congrats! 100 users',
       text: 'You reached your monthly goal.',
       time: 'Yesterday'
     },
     {
       image: this.baseUrl + '/assets/imgs/profiles/profile3.jpeg',
-      username: 'Sandra Adams',
+      username: 'Sara Smith',
       title: 'New message',
-      text: 'Hi Henry, remember to add...',
+      text: 'Hi Parker, remember to add...',
       time: 'June 4'
     },
     {
       image: this.baseUrl + '/assets/imgs/profiles/profile2.jpeg',
-      username: 'Ali Connors',
+      username: 'Bob Connors',
       title: 'Important message',
       text: 'Hello there',
       time: 'June 2'

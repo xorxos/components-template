@@ -41,34 +41,17 @@ app-top-navbar-content {
 
     .menu-toggle {
       bottom: 0;
-      padding-right: 12px;
+      left: 5px;
       position: absolute;
       top: 0;
-      transition: left .2s;
       width: 36px;
+      outline: none;
 
       .fa {
         font-size: 20px;
       }
 
-      &.menu-hidden {
-        left: -14px;
-
-        &:not(:focus) {
-          &:hover {
-            left: -6px;
-          }
-        }
-      }
-
       &.menu-visible {
-        left: -6px;
-
-        &:not(:focus) {
-          &:hover {
-            left: -14px;
-          }
-        }
 
         .fa {
           color: $white;

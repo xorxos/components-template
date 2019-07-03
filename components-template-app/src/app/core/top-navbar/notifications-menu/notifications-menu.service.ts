@@ -31,7 +31,7 @@ export class NotificationsMenuService {
     },
     {
       type: 'done',
-      title: 'Completed 2 proyects',
+      title: 'Completed 2 projects',
       text: 'Important Message',
       time: 'May 28'
     },

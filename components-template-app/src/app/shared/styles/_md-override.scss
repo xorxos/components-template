@@ -277,7 +277,7 @@ mat-slide-toggle {
         }
 
         .mat-slide-toggle-bar {
-          background-color: $purple;
+          background-color: #04abff;
         }
       }
     }
@@ -395,7 +395,7 @@ mat-tab-group {
       margin: 0px;
 
       .mat-chip {
-        border: 1px solid $purple;
+        border: 1px solid #04abff;
         border-radius: 4px;
         box-shadow: none;
         font-size: $font-size-sm;
@@ -405,7 +405,7 @@ mat-tab-group {
         // padding: 4px 7px;
 
         &.filled {
-          background-color: $purple;
+          background-color: #04abff;
           color: $white;
 
           .fa {
@@ -415,10 +415,10 @@ mat-tab-group {
 
         &.regular {
           background-color: transparent;
-          color: $purple;
+          color: #04abff;
 
           .fa {
-            color: $purple;
+            color: #04abff;
           }
         }
 

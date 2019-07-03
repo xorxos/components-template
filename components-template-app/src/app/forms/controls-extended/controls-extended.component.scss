@@ -1,0 +1,60 @@
+@import '../../shared/styles/_variables';
+@import '../../shared/styles/_nouislider-override';
+
+.date-input {
+  display: inline;
+  width: 60%;
+}
+
+mat-chip-list {
+  .mat-chip {
+    overflow: visible;
+    margin-left: 0 !important;
+    margin-right: 8px !important;
+
+    &.mat-chip-with-trailing-icon {
+      padding: 4px 7px;
+    }
+
+    .mat-chip-trailing-icon {
+      width: 18px;
+      height: 18px;
+      line-height: 18px;
+    }
+  }
+}
+
+mat-slide-toggle {
+  & + mat-slide-toggle {
+    margin-left: 5px;
+  }
+}
+
+mat-button-toggle-group {
+  &.mat-button-toggle-group {
+    // We have to go deeper in the hierarchy to override material styles
+    &.mat-button-toggle-vertical {
+      .mat-button-toggle + .mat-button-toggle {
+        border: solid 1px $form-label-color;
+      }
+    }
+  }
+}
+
+mat-button-toggle {
+  &.mat-button-toggle-checked {
+    background-color: $form-tag-color;
+    // We need to add !important to to override the deep hierarchy of material styles
+    border-color: $form-tag-color !important;
+
+    .mat-button-toggle-label-content {
+      color: $white;
+    }
+  }
+
+  .mat-button-toggle-label,
+  .mat-button-toggle-label-content {
+    color: $form-label-color;
+    letter-spacing: 1.8px;
+  }
+}

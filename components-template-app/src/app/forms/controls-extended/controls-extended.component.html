@@ -1,3 +1,351 @@
-<p>
-  controls-extended works!
-</p>
+<div class="row">
+  <div class="col-xs-12">
+    <div class="card">
+
+      <header class="row title">
+        <div class="col-xs-12 text-center">
+          <h2 class="main-title">More form controls</h2>
+          <hr class="line">
+        </div>
+      </header>
+
+      <form class="form-horizontal" [formGroup]="controlsForm">
+        <div class="form-group">
+          <label class="form-label form-label-big col-sm-2" [attr.for]="'help'">TEXT</label>
+          <div class="col-sm-10">
+            <input type="text" class="form-control" formControlName="help" [id]="'help'" placeholder="Enter text">
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="form-label form-label-big col-sm-2" [attr.for]="'password'">PASSWORD</label>
+          <div class="col-sm-10">
+            <input type="password" class="form-control" formControlName="password" [id]="'password'">
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="form-label form-label-big col-sm-2" [attr.for]="'placeholder'">PLACEHOLDER</label>
+          <div class="col-sm-10">
+            <input type="text" class="form-control" formControlName="placeholder" [id]="'placeholder'" placeholder="PLACEHOLDER">
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="form-label form-label-big col-sm-2" [attr.for]="'disabled'">DISABLED</label>
+          <div class="col-sm-10">
+            <input type="text" class="form-control" formControlName="disabled" [id]="'disabled'">
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="form-label form-label-big col-sm-2" [attr.for]="'static'">STATIC TEXT</label>
+          <div class="col-sm-10">
+            <p class="form-control-static">someone@example.com</p>
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="form-label form-label-big col-sm-2" [attr.for]="'color'">COLOR</label>
+          <div class="col-sm-1">
+            <input type="color" class="form-control" formControlName="color" [id]="'color'">
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="form-label form-label-big col-sm-2" [attr.for]="'message'">MESSAGE</label>
+          <div class="col-sm-10">
+            <textarea class="form-control" formControlName="message" [id]="'message'" placeholder="Message" rows="3"></textarea>
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="form-label form-label-big col-sm-2">RADIO BUTTONS</label>
+          <div class="col-sm-10">
+            <mat-radio-group formControlName="radio">
+              <mat-radio-button disableRipple value="first">
+                First
+              </mat-radio-button>
+              <mat-radio-button disableRipple value="second">
+                Second
+              </mat-radio-button>
+              <mat-radio-button disableRipple value="third">
+                Third
+              </mat-radio-button>
+            </mat-radio-group>
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="form-label form-label-big col-sm-2">CHECKBOXES</label>
+          <div class="col-sm-10">
+            <mat-checkbox disableRipple class="checkbox-inline" formControlName="checkbox1">One</mat-checkbox>
+            <mat-checkbox disableRipple class="checkbox-inline" formControlName="checkbox2">Two</mat-checkbox>
+            <mat-checkbox disableRipple class="checkbox-inline" formControlName="checkbox3">Three</mat-checkbox>
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="form-label form-label-big col-sm-2">CUSTOM CHECKBOXES & RADIO BUTTONS</label>
+          <div class="col-sm-3">
+            <mat-checkbox disableRipple formControlName="checkbox4">{{ controlsForm.controls.checkbox4.value ? 'Checked' : 'Unchecked' }}</mat-checkbox>
+            <mat-checkbox disableRipple formControlName="checkbox5">{{ controlsForm.controls.checkbox5.value ? 'Checked' : 'Unchecked' }}</mat-checkbox>
+            <mat-checkbox disableRipple formControlName="checkbox6">Unchecked disabled</mat-checkbox>
+            <mat-checkbox disableRipple formControlName="checkbox7">Checked disabled</mat-checkbox>
+          </div>
+          <div class="col-sm-5">
+            <mat-radio-group formControlName="radio1">
+              <mat-radio-button disableRipple value="first">
+                Radio is {{ controlsForm.controls.radio1.value === 'first' ? 'on' : 'off' }}
+              </mat-radio-button>
+              <mat-radio-button disableRipple value="second">
+                Radio is {{ controlsForm.controls.radio1.value === 'second' ? 'on' : 'off' }}
+              </mat-radio-button>
+            </mat-radio-group>
+            <mat-radio-group formControlName="radio2">
+              <mat-radio-button disableRipple value="third">
+                Radio is off disabled
+              </mat-radio-button>
+              <mat-radio-button disableRipple value="fourth">
+                Radio is on disabled
+              </mat-radio-button>
+            </mat-radio-group>
+          </div>
+        </div>
+        <div class="form-group has-success">
+          <label class="form-label form-label-big col-sm-2" [attr.for]="'success'">SUCCESS</label>
+          <div class="col-sm-10">
+            <input type="text" class="form-control" formControlName="success" [id]="'success'">
+          </div>
+        </div>
+        <div class="form-group has-error">
+          <label class="form-label form-label-big col-sm-2" [attr.for]="'error'">FAILURE</label>
+          <div class="col-sm-10">
+            <input type="text" class="form-control" formControlName="error" [id]="'error'">
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="form-label form-label-big col-sm-2">ADD ONS</label>
+          <div class="col-sm-5">
+            <div class="input-group">
+              <div class="input-group-addon">@</div>
+              <input type="text" class="form-control" formControlName="addon1">
+            </div>
+          </div>
+          <div class="col-sm-5">
+            <div class="input-group">
+              <div class="input-group-addon">$</div>
+              <input type="text" class="form-control" formControlName="addon2">
+                <div class="input-group-addon">.00</div>
+            </div>
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="form-label form-label-big col-sm-2">COLUMNS</label>
+          <div class="col-sm-2">
+            <input type="text" class="form-control" formControlName="column1">
+          </div>
+          <div class="col-sm-2">
+            <input type="text" class="form-control" formControlName="column2">
+          </div>
+          <div class="col-sm-2">
+            <input type="text" class="form-control" formControlName="column3">
+          </div>
+          <div class="col-sm-2">
+            <input type="text" class="form-control" formControlName="column4">
+          </div>
+          <div class="col-sm-2">
+            <input type="text" class="form-control" formControlName="column5">
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="form-label form-label-big col-sm-2">FAVORITE ANIMAL</label>
+          <div  class="col-sm-10">
+            <select class="form-control" formControlName="animal">
+              <option disabled selected hidden value=""> -- select an option -- </option>
+              <optgroup label="Farm">
+                <option value="Chicken">Chicken</option>
+                <option value="Cow">Cow</option>
+                <option value="Horse">Horse</option>
+                <option value="Pig">Pig</option>
+              </optgroup>
+              <optgroup label="House">
+                <option value="Cat">Cat</option>
+                <option value="Dog">Dog</option>
+                <option value="Hamster">Hamster</option>
+              </optgroup>
+              <optgroup label="Wild">
+                <option value="Lion">Lion</option>
+                <option value="Gorilla">Gorilla</option>
+                <option value="Crab">Crab</option>
+                <option value="Monkey">Monkey</option>
+              </optgroup>
+            </select>
+          </div>
+        </div>
+      </form>
+
+    </div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-xs-12">
+    <div class="card">
+      <form class="form-horizontal form-stacked" [formGroup]="formElements">
+        <div class="form-group">
+          <div class="col-sm-6">
+            <header class="form-group title">
+              <div class="col-xs-12 text-center">
+                <h2 class="main-title">Tags</h2>
+                <hr class="line">
+              </div>
+            </header>
+            <div class="form-group">
+              <label class="form-label col-xs-12">Regular:</label>
+              <div class="col-xs-12">
+                <mat-form-field>
+                  <mat-chip-list mdPrefix #chipListRegular>
+                    <mat-chip *ngFor="let chip of chips.regular"
+                      class="regular"
+                      [selectable]="selectable"
+                      [removable]="removable"
+                      (removed)="remove(chip, 'regular')">
+                      {{ chip }}
+                      <i matChipRemove class="fa fa-times" *ngIf="removable"></i>
+                    </mat-chip>
+                    <input mdInput
+                      [matChipInputFor]="chipListRegular"
+                      [matChipInputSeparatorKeyCodes]="separatorKeysCodes"
+                      [matChipInputAddOnBlur]="addOnBlur"
+                      (matChipInputTokenEnd)="add($event, 'regular')" />
+                  </mat-chip-list>
+                </mat-form-field>
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="form-label col-xs-12">Filled:</label>
+              <div class="col-xs-12">
+                <mat-form-field>
+                  <mat-chip-list mdPrefix #chipListFilled>
+                    <mat-chip *ngFor="let chip of chips.filled"
+                      class="filled"
+                      [selectable]="selectable"
+                      [removable]="removable"
+                      (removed)="remove(chip, 'filled')">
+                      {{ chip }}
+                      <i matChipRemove class="fa fa-times" *ngIf="removable"></i>
+                    </mat-chip>
+                    <input mdInput
+                      [matChipInputFor]="chipListFilled"
+                      [matChipInputSeparatorKeyCodes]="separatorKeysCodes"
+                      [matChipInputAddOnBlur]="addOnBlur"
+                      (matChipInputTokenEnd)="add($event, 'filled')" />
+                  </mat-chip-list>
+                </mat-form-field>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-6">
+            <header class="form-group title">
+              <div class="col-xs-12 text-center">
+                <h2 class="main-title">Selects</h2>
+                <hr class="line">
+              </div>
+            </header>
+            <div class="form-group">
+              <label class="form-label col-xs-6">Single:</label>
+              <label class="form-label col-xs-6">Multiple:</label>
+              <div class="col-xs-6">
+                <mat-button-toggle-group name="singleSelect" vertical="true">
+                  <mat-button-toggle checked="true">Single select</mat-button-toggle>
+                  <mat-button-toggle checked="false">Single select</mat-button-toggle>
+                  <mat-button-toggle checked="false">Single select</mat-button-toggle>
+                </mat-button-toggle-group>
+              </div>
+              <div class="col-xs-6">
+                <mat-button-toggle-group name="multipleSelect" vertical="true" multiple>
+                  <mat-button-toggle>Multiple select</mat-button-toggle>
+                  <mat-button-toggle>Multiple select</mat-button-toggle>
+                  <mat-button-toggle>Multiple select</mat-button-toggle>
+                </mat-button-toggle-group>
+              </div>
+            </div>
+          </div>
+        </div>
+        <header class="form-group title">
+          <div class="col-xs-12 text-center">
+            <h2 class="main-title">Switches</h2>
+            <hr class="line">
+          </div>
+        </header>
+        <div class="form-group">
+          <label class="form-label col-sm-4 hidden-xs">Default</label>
+          <label class="form-label col-sm-4 hidden-xs">Plain</label>
+          <label class="form-label col-sm-4 hidden-xs">With Icons</label>
+        </div>
+        <div class="form-group">
+          <div class="col-sm-4">
+            <mat-slide-toggle disableRipple class="mat-override" [checked]="true">
+              <span class="mat-slide-toggle-label-on">ON</span>
+              <span class="mat-slide-toggle-label-off">OFF</span>
+            </mat-slide-toggle>
+            <mat-slide-toggle disableRipple class="mat-override">
+              <span class="mat-slide-toggle-label-on">ON</span>
+              <span class="mat-slide-toggle-label-off">OFF</span>
+            </mat-slide-toggle>
+          </div>
+          <div class="col-sm-4">
+            <mat-slide-toggle disableRipple class="mat-override" [checked]="true"></mat-slide-toggle>
+            <mat-slide-toggle disableRipple class="mat-override"></mat-slide-toggle>
+          </div>
+          <div class="col-sm-4">
+            <mat-slide-toggle disableRipple class="mat-override" [checked]="true">
+              <span class="mat-slide-toggle-label-on"><i class="fa fa-check"></i></span>
+              <span class="mat-slide-toggle-label-off"><i class="fa fa-times"></i></span>
+            </mat-slide-toggle>
+            <mat-slide-toggle disableRipple class="mat-override">
+              <span class="mat-slide-toggle-label-on"><i class="fa fa-check"></i></span>
+              <span class="mat-slide-toggle-label-off"><i class="fa fa-times"></i></span>
+            </mat-slide-toggle>
+          </div>
+        </div>
+        <div class="form-group">
+          <div class="col-sm-6">
+            <header class="form-group title">
+              <div class="col-xs-12 text-center">
+                <h2 class="main-title">Progress Bars</h2>
+                <hr class="line">
+              </div>
+            </header>
+            <div class="form-group">
+              <div class="col-xs-12">
+                <mat-progress-bar mode="indeterminate"></mat-progress-bar>
+              </div>
+            </div>
+            <div class="form-group">
+              <div class="col-xs-12">
+                <mat-progress-bar mode="buffer" value="15" bufferValue="30"></mat-progress-bar>
+              </div>
+            </div>
+            <div class="form-group">
+              <div class="col-xs-12">
+                <mat-progress-bar value="55"></mat-progress-bar>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-6">
+            <header class="form-group title">
+              <div class="col-xs-12 text-center">
+                <h2 class="main-title">Sliders</h2>
+                <hr class="line">
+              </div>
+            </header>
+            <div class="form-group">
+              <div class="col-xs-12">
+                <!-- http://tb.github.io/ng2-nouislider/ -->
+                <nouislider *ngIf="isBrowser" [connect]="true" [min]="0" [max]="100" [step]="1" [tooltips]="[true,true]" [formControl]="formElements.controls.nouislider"></nouislider>
+              </div>
+            </div>
+            <div class="form-group">
+              <div class="col-xs-12">
+                <mat-slider formControlName='slider'></mat-slider>
+              </div>
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

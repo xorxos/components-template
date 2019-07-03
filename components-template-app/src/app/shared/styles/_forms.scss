@@ -92,7 +92,7 @@
     background-color: transparent;
     color: $form-input-color;
     font-size: $font-size-sm;
-    height: $input-height;
+    height: $input-height !important;
     letter-spacing: $letter-spacing-sm;
   }
   
