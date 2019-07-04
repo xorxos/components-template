@@ -16,7 +16,8 @@
         <div class="form-group">
           <label class="form-label col-xs-12" [attr.for]="'password_1'">PASSWORD</label>
           <div class="col-xs-12">
-            <input type="password" class="form-control" formControlName="password" [id]="'password_1'" placeholder="Password">
+            <input type="password" class="form-control" formControlName="password" [id]="'password_1'"
+              placeholder="Password">
           </div>
         </div>
         <div class="form-group">
@@ -50,7 +51,8 @@
         <div class="form-group">
           <label class="form-label col-sm-3" [attr.for]="'password_2'">PASSWORD</label>
           <div class="col-sm-8">
-            <input type="password" class="form-control" formControlName="password" [id]="'password_2'" placeholder="Password">
+            <input type="password" class="form-control" formControlName="password" [id]="'password_2'"
+              placeholder="Password">
           </div>
         </div>
         <div class="form-group">
@@ -66,4 +68,75 @@
       </form>
     </div>
   </div>
+</div>
+
+<div class="row">
+  <div class="col-md-6">
+    <div class="card">
+      <header class="row title">
+        <div class="col-xs-12 text-center">
+          <h2 class="main-title">Login Form w/ 3rd Party</h2>
+        </div>
+      </header>
+      <form class="form-horizontal form-stacked" [formGroup]="loginFormGoogleEtc">
+        <div class="form-group fb-gg-group">
+          <div class="col-xs-12 col-md-6">
+            <button type="button" class="btn btn-block btn-face"><i class="fa fa-facebook-official" style="font-size:24px; padding-bottom: 2px;"></i><span style="padding-left:5px;">Facebook</span></button>
+          </div>
+          <div class="col-xs-12 col-md-6">
+            <button type="button" class="btn btn-block btn-google"><img src="assets/imgs/icon-google.png" style="width:20px;" alt="google"><span style="padding-left:5px;">Google</span></button>
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="form-label col-xs-12" [attr.for]="'email_4'">EMAIL ADDRESS</label>
+          <div class="col-xs-12">
+            <input type="email" class="form-control" formControlName="email" [id]="'email_4'" placeholder="Email">
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="form-label col-xs-12" [attr.for]="'password_4'">PASSWORD</label>
+          <div class="col-xs-12">
+            <input type="password" class="form-control" formControlName="password" [id]="'password_4'"
+              placeholder="Password">
+          </div>
+        </div>
+        <div class="form-group">
+          <div class="col-xs-12">
+            <input class="btn btn-form btn-block" type="submit" [disabled]="!loginFormGoogleEtc.valid" value="LOGIN">
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <div class="col-md-6">
+    <div class="card">
+      <header class="row title">
+        <div class="col-xs-12 text-center">
+          <h2 class="main-title">Login Form - No Labels</h2>
+        </div>
+      </header>
+      <form class="form-horizontal form-stacked" [formGroup]="loginFormGoogleEtc">
+        <div class="form-group">
+          <div class="col-xs-12">
+            <input type="email" class="form-control dark-placeholder" formControlName="email" [id]="'email_3'"
+              placeholder="Email">
+          </div>
+        </div>
+        <div class="form-group">
+          <div class="col-xs-12">
+            <input type="password" class="form-control dark-placeholder" formControlName="password" [id]="'password_3'"
+              placeholder="Password">
+          </div>
+        </div>
+        <div class="form-group">
+          <div class="col-xs-12">
+            <input class="btn btn-form btn-block" type="submit" [disabled]="!loginFormGoogleEtc.valid" value="LOGIN">
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+
+
 </div>

@@ -27,13 +27,11 @@ export class SampleLoginsComponent {
     });
     this.loginFormNoLabels = fb.group({
       email: new FormControl(''),
-      password: new FormControl(''),
-      remember: new FormControl(true)
+      password: new FormControl('')
     });
     this.loginFormGoogleEtc = fb.group({
       email: new FormControl(''),
-      password: new FormControl(''),
-      remember: new FormControl(true)
+      password: new FormControl('')
     });
   }
 

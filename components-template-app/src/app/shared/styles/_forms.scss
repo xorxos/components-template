@@ -85,6 +85,14 @@
       }
     }
   }
+
+  .form-group.fb-gg-group {
+    margin-bottom: 30px;
+
+    @media only screen and (max-width: $screen-xs-max) {
+      margin-bottom: 0px;
+    }
+  }
   
   .input-group-addon,
   .form-control,
@@ -108,7 +116,46 @@
     border-width: 1px;
     box-shadow: none;
   }
+
+  .dark-placeholder {
+    @include _placeholder {
+      color: #343434;
+    }
+  }
   
   .btn-form {
     @include button($white, $darkgrey, $darkgrey);
+  }
+
+  .btn-face {
+    background-color: #3b5998;
+    color: #fff;
+
+    &:hover, &:focus {
+      color: white;
+    }
+  }
+  
+  .btn-google {
+    color: #555555;
+    background-color: #fff;
+  }
+
+  .btn-google, .btn-face {
+    font-size: 18px;
+    height: 55px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 1px 5px 0px rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: 0 1px 5px 0px rgba(0, 0, 0, 0.2);
+    -webkit-box-shadow: 0 1px 5px 0px rgba(0, 0, 0, 0.2);
+    -o-box-shadow: 0 1px 5px 0px rgba(0, 0, 0, 0.2);
+    -ms-box-shadow: 0 1px 5px 0px rgba(0, 0, 0, 0.2);
+
+    
+    @media only screen and (max-width: $screen-xs-max) {
+      margin-bottom: 30px;
+    }
+    
   }
