@@ -79,14 +79,6 @@
         </div>
       </header>
       <form class="form-horizontal form-stacked" [formGroup]="loginFormGoogleEtc">
-        <div class="form-group fb-gg-group">
-          <div class="col-xs-12 col-md-6">
-            <button type="button" class="btn btn-block btn-face"><i class="fa fa-facebook-official" style="font-size:24px; padding-bottom: 2px;"></i><span style="padding-left:5px;">Facebook</span></button>
-          </div>
-          <div class="col-xs-12 col-md-6">
-            <button type="button" class="btn btn-block btn-google"><img src="assets/imgs/icon-google.png" style="width:20px;" alt="google"><span style="padding-left:5px;">Google</span></button>
-          </div>
-        </div>
         <div class="form-group">
           <label class="form-label col-xs-12" [attr.for]="'email_4'">EMAIL ADDRESS</label>
           <div class="col-xs-12">
@@ -98,6 +90,14 @@
           <div class="col-xs-12">
             <input type="password" class="form-control" formControlName="password" [id]="'password_4'"
               placeholder="Password">
+          </div>
+        </div>
+        <div class="form-group fb-gg-group">
+          <div class="col-xs-12 col-md-6">
+            <button type="button" class="btn btn-block btn-face"><i class="fa fa-facebook-official" style="font-size:24px; padding-bottom: 2px;"></i><span style="padding-left:5px;">Facebook</span></button>
+          </div>
+          <div class="col-xs-12 col-md-6">
+            <button type="button" class="btn btn-block btn-google"><img src="assets/imgs/icon-google.png" style="width:20px;" alt="google"><span style="padding-left:5px;">Google</span></button>
           </div>
         </div>
         <div class="form-group">
