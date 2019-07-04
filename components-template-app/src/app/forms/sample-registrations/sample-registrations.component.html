@@ -1,3 +1,94 @@
-<p>
-  sample-registrations works!
-</p>
+<div class="row">
+  <div class="col-md-6">
+    <div class="card">
+      <header class="row title">
+        <div class="col-xs-12 text-center">
+          <h2 class="main-title">Stacked Registration Form</h2>
+        </div>
+      </header>
+      <form class="form-horizontal form-stacked" [formGroup]="stackedRegistration">
+        <div class="form-group" [ngClass]="{ 'has-error': ((stackedRegistration.get('email').invalid) && (stackedRegistration.get('email').touched)) }">
+          <label class="form-label col-xs-12" [attr.for]="'email_1'">EMAIL ADDRESS *</label>
+          <div class="col-xs-12">
+            <input type="email" class="form-control" formControlName="email" [id]="'email_1'" placeholder="Email">
+          </div>
+          <div class="validation-errors col-sm-12">
+            <ng-container *ngFor="let validation of validationMessages.email">
+              <div class="help-block" *ngIf="stackedRegistration.get('email').hasError(validation.type) && (stackedRegistration.get('email').dirty || stackedRegistration.get('email').touched)">
+                {{ validation.message }}
+              </div>
+            </ng-container>
+          </div>
+        </div>
+        <div class="form-group" formGroupName="equal" [ngClass]="{ 'has-error': ((stackedRegistration.get('equal').invalid) && (stackedRegistration.get('equal').dirty)) }">
+          <div formGroupName="passGroup">
+            <label class="form-label col-xs-12" [attr.for]="'password_1'">PASSWORD *</label>
+            <div class="col-xs-12" style="margin-bottom: 30px;">
+              <input type="password" class="form-control" formControlName="password" [id]="'password_1'"
+                placeholder="Password">
+              <ng-container *ngFor="let validation of validationMessages.password">
+                <div class="help-block" *ngIf="stackedRegistration.get('equal').get('passGroup').get('password').hasError(validation.type) && (stackedRegistration.get('equal').get('passGroup').get('password').dirty || stackedRegistration.get('equal').get('passGroup').get('password').touched)">
+                  {{ validation.message }}
+                </div>
+              </ng-container>
+            </div>
+          </div>
+          <label class="form-label col-xs-12" [attr.for]="'confirm_password_1'">CONFIRM PASSWORD *</label>
+          <div class="col-xs-12">
+            <input type="password" class="form-control" formControlName="confirmPassword" [id]="'confirm_password_1'"
+              placeholder="Confirm Password">
+          </div>
+          <div class="validation-errors col-sm-12">
+            <ng-container *ngFor="let validation of validationMessages.equal">
+              <div class="help-block" *ngIf="stackedRegistration.get('equal').hasError(validation.type) && (stackedRegistration.get('equal').dirty || stackedRegistration.get('equal').touched)">
+                {{ validation.message }}
+              </div>
+            </ng-container>
+          </div>
+        </div>
+        <div class="form-group">
+          <div class="col-xs-12">
+            <input class="btn btn-form" type="submit" [disabled]="!stackedRegistration.valid" value="CREATE ACCOUNT">
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <div class="col-md-6">
+    <div class="card">
+      <header class="row title">
+        <div class="col-xs-12 text-center">
+          <h2 class="main-title">Horizontal Registration Form</h2>
+        </div>
+      </header>
+      <form class="form-horizontal" [formGroup]="horizontalRegistration">
+        <div class="form-group">
+          <label class="form-label col-sm-4" [attr.for]="'email_2'">EMAIL *</label>
+          <div class="col-sm-8">
+            <input type="email" class="form-control" formControlName="email" [id]="'email_2'" placeholder="Email">
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="form-label col-sm-4" [attr.for]="'password_2'">PASSWORD *</label>
+          <div class="col-sm-8">
+            <input type="password" class="form-control" formControlName="password" [id]="'password_2'"
+              placeholder="Password">
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="form-label col-sm-4" [attr.for]="'confirm_password_2'">CONFIRM *</label>
+          <div class="col-sm-8">
+            <input type="password" class="form-control" formControlName="confirmPassword" [id]="'confirm_password_2'"
+              placeholder="Confirm Password">
+          </div>
+        </div>
+        <div class="form-group">
+          <div class="col-xs-12 text-right">
+            <input class="btn btn-form" type="submit" [disabled]="!horizontalRegistration.valid" value="CREATE ACCOUNT">
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
