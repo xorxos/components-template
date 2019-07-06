@@ -1,3 +1,61 @@
-<p>
-  custom-tables works!
-</p>
+<div id="extended-tables">
+
+  <div class="row">
+    <div class="col-xs-12">
+      <div class="card">
+
+        <header class="row title">
+          <div class="col-xs-12">
+            <h2 class="main-title">Extended table with awesome columns</h2>
+            <span class="sub-title">A description of this table can be shown here</span>
+          </div>
+        </header>
+
+        <div class="row">
+          <div class="col-xs-12 table-wrapper">
+            <table mat-table [dataSource]="dataSource" class="table table-stripes">
+              <ng-container matColumnDef="picture">
+                <th mat-header-cell *matHeaderCellDef> </th>
+                <td mat-cell *matCellDef="let element">
+                  <img class="profile-pic" [src]="element.picture">
+                </td>
+              </ng-container>
+              <ng-container matColumnDef="name">
+                <th mat-header-cell *matHeaderCellDef> Name </th>
+                <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+              </ng-container>
+              <ng-container matColumnDef="status">
+                <th mat-header-cell *matHeaderCellDef> Status </th>
+                <td [attr.cell-name]="'status'" [attr.cell-value]="element.status" mat-cell *matCellDef="let element"> {{element.status}} </td>
+              </ng-container>
+              <ng-container matColumnDef="progress">
+                <th mat-header-cell *matHeaderCellDef> Progress </th>
+                <td [attr.cell-name]="'progress'" [attr.cell-value]="element.progress" mat-cell *matCellDef="let element">
+                  <mat-progress-bar [value]="element.progress" class="mat-progress-bar-round"
+                    [ngClass]="'color ' + ((element.progress <= 30) ? 'color-red' : (element.progress < 70) ? 'color-yellow' : 'color-green')">
+                  </mat-progress-bar>
+                </td>
+              </ng-container>
+              <ng-container matColumnDef="comments">
+                <th class="comments-title" mat-header-cell *matHeaderCellDef> Comments </th>
+                <td [attr.cell-name]="'comments'" [attr.cell-value]="element.comments" mat-cell *matCellDef="let element"> {{element.comments}} </td>
+              </ng-container>
+              <ng-container matColumnDef="policy">
+                <th mat-header-cell *matHeaderCellDef> Policy </th>
+                <td [attr.cell-name]="'policy'" [attr.cell-value]="element.policy" mat-cell *matCellDef="let element">
+                  <span class="policy-value">${{ element.policy }}</span>
+                  <span *ngIf="element.policy === 0" class="policy-plan policy-plan-free">Free Trial</span>
+                  <span *ngIf="element.policy >= 5000 && element.policy < 10000" class="policy-plan policy-plan-basic">Basic Plan</span>
+                  <span *ngIf="element.policy >= 10000 && element.policy < 20000 " class="policy-plan policy-plan-pro">Pro Plan</span>
+                  <span *ngIf="element.policy >= 20000" class="policy-plan policy-plan-king">Gods Plan</span>
+                </td>
+              </ng-container>
+               <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+               <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

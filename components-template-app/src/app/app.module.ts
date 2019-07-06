@@ -8,10 +8,6 @@ import { environment } from './../environments/environment';
 import { NavigationService } from './shared/services/navigation.service';
 
 import { AppComponent } from './app.component';
-import { RegularTablesComponent } from './tables/regular-tables/regular-tables.component';
-import { CustomTablesComponent } from './tables/custom-tables/custom-tables.component';
-import { FilteredTablesComponent } from './tables/filtered-tables/filtered-tables.component';
-import { PaginatedTablesComponent } from './tables/paginated-tables/paginated-tables.component';
 import { Nvd3ChartsComponent } from './charts/nvd3-charts/nvd3-charts.component';
 import { Ng2ChartsComponent } from './charts/ng2-charts/ng2-charts.component';
 import { GridsComponent } from './layouts/grids/grids.component';
@@ -35,10 +31,6 @@ import { SharedModule } from './shared/shared.module';
 @NgModule({
   declarations: [
     AppComponent,
-    RegularTablesComponent,
-    CustomTablesComponent,
-    FilteredTablesComponent,
-    PaginatedTablesComponent,
     Nvd3ChartsComponent,
     Ng2ChartsComponent,
     GridsComponent,

@@ -1,0 +1,66 @@
+[
+  {
+    "picture": "../../../../assets/imgs/profiles/profile1.jpeg",
+    "name": "Lisa Graham",
+    "status": "ACTIVE",
+    "progress": 30,
+    "comments": 2,
+    "policy": 0
+  },
+  {
+    "picture": "../../../../assets/imgs/profiles/profile2.jpeg",
+    "name": "Mike Howell",
+    "status": "INACTIVE",
+    "progress": 80,
+    "comments": 3,
+    "policy": 5000
+  },
+  {
+    "picture": "../../../../assets/imgs/profiles/profile8.jpeg",
+    "name": "Peter DuBuque",
+    "status": "ACTIVE",
+    "progress": 60,
+    "comments": 11,
+    "policy": 15000
+  },
+  {
+    "picture": "../../../../assets/imgs/profiles/profile4.jpeg",
+    "name": "Jenny Collins",
+    "status": "ACTIVE",
+    "progress": 50,
+    "comments": 9,
+    "policy": 30000
+  },
+  {
+    "picture": "../../../../assets/imgs/profiles/profile7.jpeg",
+    "name": "John Carlson",
+    "status": "INACTIVE",
+    "progress": 20,
+    "comments": 1,
+    "policy": 15000
+  },
+  {
+    "picture": "../../../../assets/imgs/profiles/profile6.jpeg",
+    "name": "Mike Reed",
+    "status": "ACTIVE",
+    "progress": 100,
+    "comments": 5,
+    "policy": 8000
+  },
+  {
+    "picture": "../../../../assets/imgs/profiles/profile5.jpeg",
+    "name": "Lucy Cameron",
+    "status": "INACTIVE",
+    "progress": 10,
+    "comments": 4,
+    "policy": 30000
+  },
+  {
+    "picture": "../../../../assets/imgs/profiles/profile3.jpeg",
+    "name": "Martha Owen",
+    "status": "INACTIVE",
+    "progress": 40,
+    "comments": 8,
+    "policy": 18000
+  }
+]

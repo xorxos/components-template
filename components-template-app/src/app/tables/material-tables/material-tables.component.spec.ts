@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { PaginatedTablesComponent } from './paginated-tables.component';
+import { MaterialTablesComponent } from './material-tables.component';
 
-describe('PaginatedTablesComponent', () => {
-  let component: PaginatedTablesComponent;
-  let fixture: ComponentFixture<PaginatedTablesComponent>;
+describe('FilteredTablesComponent', () => {
+  let component: MaterialTablesComponent;
+  let fixture: ComponentFixture<MaterialTablesComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ PaginatedTablesComponent ]
+      declarations: [ MaterialTablesComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(PaginatedTablesComponent);
+    fixture = TestBed.createComponent(MaterialTablesComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

@@ -1,0 +1,220 @@
+<div id="material-tables">
+
+  <div class="row">
+    <div class="col-xs-12">
+
+<!-- Table 1 -->
+      <div class="card table-1">
+
+        <header class="row title">
+          <div class="col-xs-12">
+            <h2 class="main-title">Material Table with external filters</h2>
+            <span class="sub-title">Filtering, sorting, pagination functionality provided by the Angular Materials Table and extended with the custom filters.</span>
+          </div>
+        </header>
+
+        <div class="row">
+          <div class="col-xs-12">
+            <div *ngIf="filtersVisible" class="table-1-filters">
+              <form [formGroup]="filtersForm">
+
+                <div class="row row-input">
+                  <div class="col-sm-2">
+                    <label class="control-label">Search</label>
+                  </div>
+                  <div class="col-sm-10">
+                    <input class="form-control" type="text" (keyup)="applyFilterTable1($event.target.value)" formControlName="search">
+                  </div>
+                </div>
+
+                <div class="row row-input">
+                  <div class="col-sm-2">
+                    <label class="control-label">Age range</label>
+                  </div>
+                  <div class="col-sm-10">
+                    <nouislider *ngIf="isBrowser" [connect]="true" [min]="0" [max]="100" [step]="1" [tooltips]="[true,true]" [formControl]="filtersForm.controls.ageRange"></nouislider>
+                  </div>
+                </div>
+
+                <div class="row row-input">
+                  <div class="col-sm-2">
+                    <label class="control-label">Interests</label>
+                  </div>
+                  <div class="col-sm-10 interests-wrapper">
+                    <mat-form-field>
+                      <mat-chip-list #interestsList class="form-control interests-list">
+                        <mat-chip *ngFor="let interest of interests"
+                          class="regular"
+                          [selectable]="selectable"
+                          [removable]="removable"
+                          (removed)="removeInterest(interest)">
+                          {{ interest }}
+                          <i matChipRemove class="fa fa-times" *ngIf="removable"></i>
+                        </mat-chip>
+                        <input disableRipple
+                           #interestsInput
+                           [matChipInputFor]="interestsList"
+                           [matChipInputSeparatorKeyCodes]="separatorKeysCodes"
+                           [matChipInputAddOnBlur]="addOnBlur"
+                           (matChipInputTokenEnd)="addInterest($event)">
+                      </mat-chip-list>
+                    </mat-form-field>
+                  </div>
+                </div>
+
+                <div class="row row-input">
+                  <div class="col-sm-2">
+                    <label class="control-label">Subscribed before</label>
+                  </div>
+                  <div class="col-sm-4">
+                    <input type="text" class="form-control date-input" [matDatepicker]="picker" placeholder="Choose a date" [formControl]="filtersForm.controls.subscribed">
+                    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                    <mat-datepicker #picker></mat-datepicker>
+                    <button type="button" class="reset-date" title="Clear date" (click)="resetDatePicker()">
+                      <span class="fa fa-times"></span>
+                    </button>
+                  </div>
+                </div>
+
+              </form>
+            </div>
+          </div>
+        </div>
+
+        <div class="row row-input">
+          <div class="col-xs-12">
+            <button class="btn btn-toggle" type="button" (click)="toggleFilters()">{{toggleFiltersLabel}}</button>
+            <button class="btn btn-clear" type="button" (click)="clearFilters()">Clear filters</button>
+          </div>
+        </div>
+
+        <div class="table-wrapper">
+          <table class="table table-stripes" mat-table [dataSource]="dataSourceTable1" matSort #sortTable1="matSort">
+
+            <ng-container matColumnDef="picture">
+              <th mat-header-cell *matHeaderCellDef> Picture </th>
+              <td mat-cell *matCellDef="let row">
+                <img class="profile-pic" [src]="row.picture">
+              </td>
+            </ng-container>
+
+            <ng-container matColumnDef="name">
+              <th mat-header-cell *matHeaderCellDef mat-sort-header> NAME </th>
+              <td mat-cell *matCellDef="let row"> {{row.name}} </td>
+            </ng-container>
+
+            <ng-container matColumnDef="country">
+              <th mat-header-cell *matHeaderCellDef mat-sort-header> COUNTRY </th>
+              <td mat-cell *matCellDef="let row"> {{row.country}} </td>
+            </ng-container>
+
+            <ng-container matColumnDef="interests">
+              <th mat-header-cell *matHeaderCellDef> INTERESTS </th>
+              <td mat-cell *matCellDef="let row"> {{row.interests}} </td>
+            </ng-container>
+
+            <ng-container matColumnDef="subscribed">
+              <th mat-header-cell *matHeaderCellDef mat-sort-header> SUBSCRIBED </th>
+              <td mat-cell *matCellDef="let row"> {{row.subscribed}} </td>
+            </ng-container>
+
+            <ng-container matColumnDef="age">
+              <th mat-header-cell *matHeaderCellDef mat-sort-header> AGE </th>
+              <td mat-cell *matCellDef="let row"> {{row.age}} </td>
+            </ng-container>
+
+            <ng-container matColumnDef="status">
+              <th mat-header-cell *matHeaderCellDef mat-sort-header> STATUS </th>
+              <td [attr.cell-name]="'status'" [attr.cell-value]="row.status" mat-cell *matCellDef="let row"> {{row.status}} </td>
+            </ng-container>
+
+            <tr mat-header-row *matHeaderRowDef="displayedColumnsTable1"></tr>
+            <tr mat-row *matRowDef="let row; columns: displayedColumnsTable1;">
+            </tr>
+          </table>
+
+          <mat-paginator #paginatorTable1 class="paginator" [pageSizeOptions]="[5, 10, 25]" [pageSize]="5"></mat-paginator>
+        </div>
+      </div>
+
+
+
+      <!-- Table 2 -->
+      <div class="card table-2">
+        <header class="row title">
+          <div class="col-xs-12">
+            <h2 class="main-title">Material Table with Selection</h2>
+            <span class="sub-title">Filtering, sorting, pagination and selection functionality provided by the Angular Materials Table.</span>
+          </div>
+        </header>
+
+        <mat-form-field class="filter-wrapper">
+          <input matInput (keyup)="applyFilterTable2($event.target.value)" placeholder="Filter by any field ...">
+        </mat-form-field>
+
+        <div class="table-wrapper">
+          <table class="table table-stripes" mat-table [dataSource]="dataSourceTable2" matSort #sortTable2="matSort">
+
+            <ng-container matColumnDef="select">
+              <th mat-header-cell *matHeaderCellDef>
+               <mat-checkbox (change)="$event ? masterToggle() : null"
+                             [checked]="selection.hasValue() && isAllSelected()"
+                             [indeterminate]="selection.hasValue() && !isAllSelected()">
+               </mat-checkbox>
+              </th>
+              <td mat-cell *matCellDef="let row">
+               <mat-checkbox (click)="$event.stopPropagation()"
+                             (change)="$event ? selection.toggle(row) : null"
+                             [checked]="selection.isSelected(row)">
+               </mat-checkbox>
+              </td>
+            </ng-container>
+
+            <ng-container matColumnDef="picture">
+              <th mat-header-cell *matHeaderCellDef> Picture </th>
+              <td mat-cell *matCellDef="let row">
+                <img class="profile-pic" [src]="row.picture">
+              </td>
+            </ng-container>
+
+            <ng-container matColumnDef="name">
+              <th mat-header-cell *matHeaderCellDef mat-sort-header> NAME </th>
+              <td mat-cell *matCellDef="let row"> {{row.name}} </td>
+            </ng-container>
+
+            <ng-container matColumnDef="country">
+              <th mat-header-cell *matHeaderCellDef mat-sort-header> COUNTRY </th>
+              <td mat-cell *matCellDef="let row"> {{row.country}} </td>
+            </ng-container>
+
+            <ng-container matColumnDef="interests">
+              <th mat-header-cell *matHeaderCellDef> INTERESTS </th>
+              <td mat-cell *matCellDef="let row"> {{row.interests}} </td>
+            </ng-container>
+
+            <ng-container matColumnDef="subscribed">
+              <th mat-header-cell *matHeaderCellDef mat-sort-header> SUBSCRIBED </th>
+              <td mat-cell *matCellDef="let row"> {{row.subscribed}} </td>
+            </ng-container>
+
+            <ng-container matColumnDef="age">
+              <th mat-header-cell *matHeaderCellDef mat-sort-header> AGE </th>
+              <td mat-cell *matCellDef="let row"> {{row.age}} </td>
+            </ng-container>
+
+            <ng-container matColumnDef="status">
+              <th mat-header-cell *matHeaderCellDef mat-sort-header> STATUS </th>
+              <td [attr.cell-name]="'status'" [attr.cell-value]="row.status" mat-cell *matCellDef="let row"> {{row.status}} </td>
+            </ng-container>
+
+            <tr mat-header-row *matHeaderRowDef="displayedColumnsTable2"></tr>
+            <tr mat-row *matRowDef="let row; columns: displayedColumnsTable2;" (click)="selection.toggle(row)">
+            </tr>
+          </table>
+
+          <mat-paginator #paginatorTable2 class="paginator" [pageSizeOptions]="[5, 10, 25]" [pageSize]="5"></mat-paginator>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

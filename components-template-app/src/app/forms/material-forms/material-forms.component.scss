@@ -1,0 +1,36 @@
+@import '../../shared/styles/_mixins.scss';
+
+.container {
+    margin-top: 50px;
+  }
+  
+  .section-title {
+    margin-bottom: 30px;
+  }
+  
+  .full-width {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  
+  .error-message {
+    font-size: 12px;
+  }
+  
+  .double-line-hint {
+    .mat-input-hint-wrapper {
+      flex-wrap: wrap;
+  
+      .hint-line {
+        flex: 0 0 100%;
+      }
+    }
+  }
+  
+  .btn-form {
+    margin-top: 30px;
+  }
+
+
+// Workaround for multiple errors overlap issue -  https://stackblitz.com/edit/angular-vyvbsj  -  https://github.com/angular/components/issues/4580
+@include mat-form-field-multiline-workaround();

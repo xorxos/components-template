@@ -1,0 +1,58 @@
+@import '../../shared/styles/_variables';
+
+#extended-tables {
+  table {
+    width: 100%;
+  }
+
+  .table {
+    .comments-title {
+      text-align: center;
+    }
+
+    tbody {
+      .mat-cell {
+        vertical-align: middle;
+
+        &[cell-name = 'status'] {
+          &[cell-value = 'ACTIVE'] {
+            color: $green2;
+          }
+        }
+
+        &[cell-name = 'policy'] {
+          .policy-plan {
+            display: block;
+
+            &.policy-plan-free {
+              color: $grey5;
+            }
+
+            &.policy-plan-basic {
+              color: $red;
+            }
+
+            &.policy-plan-pro {
+              color: $orange;
+            }
+
+            &.policy-plan-king {
+              color: $green2;
+            }
+          }
+        }
+
+        &[cell-name = 'comments'] {
+          color: $skyblue;
+          font-weight: bold;
+          text-align: center;
+
+          &::after {
+            content: '\f075';
+            font-family: FontAwesome;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,93 @@
+%td {
+  color: $grey5;
+  font-size: $font-size-xs;
+  letter-spacing: $letter-spacing-xs;
+
+  .profile-pic {
+    border-radius: 50%;
+    height: auto;
+    width: 30px;
+  }
+}
+.table-wrapper {
+  overflow-y: hidden;
+
+  .table {
+    th {
+      padding: 15px;
+      padding-left: 6px;
+    }
+
+    thead {
+      tr {
+        th {
+          color: #343434;
+          font-size: $font-size-sm;
+          font-weight: bold;
+          letter-spacing: $letter-spacing-xxs;
+          text-transform: uppercase;
+        }
+
+        td {
+          @extend %td;
+        }
+      }
+    }
+
+    tbody {
+      tr {
+        height: auto;
+        cursor: pointer;
+        transition: background-color 1s;
+
+        &:hover {
+          background-color: $grey !important;
+        }
+
+        td {
+          @extend %td;
+          border-bottom: none;
+        }
+      }
+    }
+
+    &.table-stripes {
+      thead {
+        tr {
+          th {
+            border-bottom: none;
+          }
+        }
+      }
+
+      tbody {
+        tr {
+          &:nth-child(odd) {
+            background-color: $grey2;
+          }
+
+          td {
+            border-top: none;
+          }
+        }
+      }
+    }
+
+    &.table-lines {
+      thead {
+        tr {
+          th {
+            border-bottom: none;
+          }
+        }
+      }
+    }
+  }
+}
+
+ng2-smart-table {
+  table {
+    @extend .table;
+    @extend .table-stripes;
+  }
+}

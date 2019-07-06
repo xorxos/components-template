@@ -1,14 +1,4 @@
-import { ModuleWithProviders } from '@angular/core';
-import { Routes, RouterModule } from '@angular/router';
-import { ControlsAndValidationComponent } from './forms/controls-and-validation/controls-and-validation.component';
-import { ControlsExtendedComponent } from './forms/controls-extended/controls-extended.component';
-import { MaterialFormsComponent } from './forms/material-forms/material-forms.component';
-import { SampleLoginsComponent } from './forms/sample-logins/sample-logins.component';
-import { SampleRegistrationsComponent } from './forms/sample-registrations/sample-registrations.component';
-import { RegularTablesComponent } from './tables/regular-tables/regular-tables.component';
-import { CustomTablesComponent } from './tables/custom-tables/custom-tables.component';
-import { PaginatedTablesComponent } from './tables/paginated-tables/paginated-tables.component';
-import { FilteredTablesComponent } from './tables/filtered-tables/filtered-tables.component';
+import { Routes } from '@angular/router';
 import { Ng2ChartsComponent } from './charts/ng2-charts/ng2-charts.component';
 import { Nvd3ChartsComponent } from './charts/nvd3-charts/nvd3-charts.component';
 import { AccordionsComponent } from './misc-utilities/accordions/accordions.component';
@@ -28,10 +18,7 @@ import { TabsComponent } from './layouts/tabs/tabs.component';
 export const rootRoutes: Routes = [
   { path: '', redirectTo: 'forms/controls-and-validations', pathMatch: 'full' },
   { path: 'forms', loadChildren: './forms/forms.module#FormsModule' },
-  { path: 'tables/regular-tables', component: RegularTablesComponent },
-  { path: 'tables/custom-tables', component: CustomTablesComponent },
-  { path: 'tables/paginated-tables', component: PaginatedTablesComponent },
-  { path: 'tables/filtered-tables', component: FilteredTablesComponent },
+  { path: 'tables', loadChildren: './tables/tables.module#TablesModule' },
   { path: 'charts/ng2-charts', component: Ng2ChartsComponent },
   { path: 'charts/nvd3-charts', component: Nvd3ChartsComponent },
   { path: 'miscellaneous/accordions', component: AccordionsComponent },
