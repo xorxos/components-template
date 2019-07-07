@@ -8,8 +8,6 @@ import { environment } from './../environments/environment';
 import { NavigationService } from './shared/services/navigation.service';
 
 import { AppComponent } from './app.component';
-import { Nvd3ChartsComponent } from './charts/nvd3-charts/nvd3-charts.component';
-import { Ng2ChartsComponent } from './charts/ng2-charts/ng2-charts.component';
 import { GridsComponent } from './layouts/grids/grids.component';
 import { ListsComponent } from './layouts/lists/lists.component';
 import { CardsComponent } from './layouts/cards/cards.component';
@@ -31,8 +29,6 @@ import { SharedModule } from './shared/shared.module';
 @NgModule({
   declarations: [
     AppComponent,
-    Nvd3ChartsComponent,
-    Ng2ChartsComponent,
     GridsComponent,
     ListsComponent,
     CardsComponent,

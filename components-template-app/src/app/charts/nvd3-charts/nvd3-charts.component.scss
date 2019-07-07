@@ -1,0 +1,24 @@
+@import '../../shared/styles/_variables';
+
+$line-color: rgba(144, 19, 254, .11);
+$text-fill: $grey5;
+
+.nvd3 {
+  .nv-axis {
+    line {
+      stroke: $line-color;
+    }
+  }
+
+  line {
+    &.nv-guideline {
+      stroke: $purple;
+    }
+  }
+
+  text {
+    fill: $text-fill;
+    font-family: $font-family;
+  }
+  
+}

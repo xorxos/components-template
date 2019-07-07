@@ -1,3 +1,61 @@
-<p>
-  nvd3-charts works!
-</p>
+<div class="row">
+
+  <div class="col-md-12">
+    <div class="card">
+      <header class="title">
+        <h2 class="main-title">Items sold and earnings</h2>
+        <span class="sub-title">In the last years</span>
+      </header>
+      <nvd3 *ngIf="isBrowser" [options]="options.linePlusBarWithFocusChart" [data]="data.linePlusBarWithFocusChart"></nvd3>
+    </div>
+  </div>
+
+  <div class="col-md-6">
+    <div class="card">
+      <header class="title">
+        <h2 class="main-title">Annual Earnings</h2>
+        <!-- <span class="sub-title">Subtitle</span> -->
+      </header>
+      <nvd3 *ngIf="isBrowser" [options]="options.barChart" [data]="data.barChart"></nvd3>
+    </div>
+  </div>
+  <div class="col-md-6">
+    <div class="card">
+      <header class="title">
+        <h2 class="main-title">Website Audience</h2>
+        <!-- <span class="sub-title">By source</span> -->
+      </header>
+      <nvd3 *ngIf="isBrowser" #donut [options]="options.donutChart" [data]="data.donutChart"></nvd3>
+    </div>
+  </div>
+
+  <div class="col-md-6">
+    <div class="card">
+      <header class="title">
+        <h2 class="main-title">Market Adoption</h2>
+        <span class="sub-title">By gender and by country</span>
+      </header>
+      <nvd3 *ngIf="isBrowser" [options]="options.multiBarHorizontalChart" [data]="data.multiBarHorizontalChart"></nvd3>
+    </div>
+  </div>
+  <div class="col-md-6">
+    <div class="card">
+      <header class="title">
+        <h2 class="main-title">Daily new users</h2>
+        <span class="sub-title">By mobile platform</span>
+      </header>
+      <nvd3 *ngIf="isBrowser" [options]="options.multiBarChart" [data]="data.multiBarChart"></nvd3>
+    </div>
+  </div>
+
+  <div class="col-md-12">
+    <div class="card">
+      <header class="title">
+        <h2 class="main-title">October 2017 overview</h2>
+        <span class="sub-title">Users, Sessions and Transactions</span>
+      </header>
+      <nvd3 *ngIf="isBrowser" [options]="options.lineChart" [data]="data.lineChart"></nvd3>
+    </div>
+  </div>
+
+</div>

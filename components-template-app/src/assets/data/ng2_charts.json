@@ -1,0 +1,125 @@
+{
+  "lineChart": {
+    "data": [
+      {"data": [10, 9, 11, 20, 13, 15, 20], "label": "Organic"},
+      {"data": [5, 6, 9, 17, 20, 25, 30], "label": "Social"},
+      {"data": [11, 33, 22, 14, 26, 40, 50], "label": "Referral"}
+    ],
+    "labels": ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul"],
+    "colors": [
+      {
+        "backgroundColor": "rgba(144, 19, 254, .2)",
+        "borderColor": "rgba(144, 19, 254, 1)",
+        "pointBackgroundColor": "rgba(144, 19, 254, 1)",
+        "pointBorderColor": "#fff",
+        "pointHoverBackgroundColor": "#fff",
+        "pointHoverBorderColor": "rgba(144, 19, 254, .8)"
+      },
+      {
+        "backgroundColor": "rgba(0, 170, 255, .2)",
+        "borderColor": "rgba(0, 170, 255, 1)",
+        "pointBackgroundColor": "rgba(0, 170, 255, 1)",
+        "pointBorderColor": "#fff",
+        "pointHoverBackgroundColor": "#fff",
+        "pointHoverBorderColor": "rgba(0, 170, 255, 1)"
+      },
+      {
+        "backgroundColor": "rgba(80, 227, 194, .2)",
+        "borderColor": "rgba(80, 227, 194, 1)",
+        "pointBackgroundColor": "rgba(80, 227, 194, 1)",
+        "pointBorderColor": "#fff",
+        "pointHoverBackgroundColor": "#fff",
+        "pointHoverBorderColor": "rgba(80, 227, 194, .8)"
+      }
+    ],
+    "legend": true,
+    "type": "line"
+  },
+
+
+  "doughnutChart": {
+    "labels": ["Search", "Direct", "Social", "Email", "Affiliate"],
+    "data": [43, 21, 12, 14, 10],
+    "colors": [{
+      "backgroundColor": [
+        "rgba(144, 19, 254, 1)",
+        "rgba(0, 170, 255, 1)",
+        "rgba(80, 227, 194, 1)",
+        "#f6a623",
+        "#c787ff"
+      ]
+    }],
+    "type": "doughnut"
+  },
+
+
+  "pieChart": {
+    "labels": ["USA", "Brazil", "India", "France", "UK", "Italy", "Spain"],
+    "data": [500, 300, 200, 100, 100, 90, 80],
+    "type": "pie",
+    "colors": [{
+      "backgroundColor": [
+        "rgba(144, 19, 254, 1)",
+        "rgba(0, 170, 255, 1)",
+        "rgba(80, 227, 194, 1)",
+        "#c787ff",
+        "#bd0fe1",
+        "#f6a623",
+        "#b8e986"
+      ]
+    }]
+  },
+
+
+  "barChart": {
+    "labels": ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul"],
+    "type": "bar",
+    "legend": true,
+    "colors": [
+      {
+        "backgroundColor": [
+          "rgba(144, 19, 254, .8)",
+          "rgba(144, 19, 254, .8)",
+          "rgba(144, 19, 254, .8)",
+          "rgba(144, 19, 254, .8)",
+          "rgba(144, 19, 254, .8)",
+          "rgba(144, 19, 254, .8)",
+          "rgba(144, 19, 254, .8)"
+        ]
+      },
+      {
+        "backgroundColor": [
+          "rgba(80, 227, 194, .8)",
+          "rgba(80, 227, 194, .8)",
+          "rgba(80, 227, 194, .8)",
+          "rgba(80, 227, 194, .8)",
+          "rgba(80, 227, 194, .8)",
+          "rgba(80, 227, 194, .8)",
+          "rgba(80, 227, 194, .8)"
+        ]
+      }
+    ],
+    "data": [
+      { "data": [50, 52, 48, 44, 47, 43, 45], "label": "Jessica" },
+      { "data": [42, 45, 41, 37, 44, 52, 50], "label": "Anna" }
+    ]
+  },
+
+
+  "radarChart": {
+    "labels": ["Designing", "Coding", "Testing", "Documenting", "Backend", "Frontend"],
+    "data": [
+      { "data": [65, 59, 90, 60, 56, 55], "label": "Paul" },
+      { "data": [85, 48, 60, 19, 96, 49], "label": "Tom" }
+    ],
+    "type": "radar",
+    "colors": [
+      {
+        "backgroundColor": "rgba(80, 227, 194, .8)"
+      },
+      {
+        "backgroundColor": "rgba(144, 19, 254, .8)"
+      }
+    ]
+  }
+}
