@@ -1,0 +1,30 @@
+<div class="modal-login">
+  <div class="modal-login-form">
+    <div class="brand-logo">
+      <app-preload-image [ratio]="{w:1, h:1}" src='../../../../../../assets/imgs/angular.svg' alt="Angular"></app-preload-image>
+    </div>
+    <h2 class="modal-title">SIGN IN</h2>
+    <form class="form-horizontal">
+      <input type="text" class="form-control" placeholder="EMAIL">
+      <input type="password" class="form-control" placeholder="PASSWORD">
+      <mat-checkbox disableRipple>Keep me logged in</mat-checkbox>
+      <a href="javascript:void(0)" class="recover-password">
+        Forgot email or password?
+      </a>
+      <div class="login-btns">
+        <input type="button" class="form-control btn btn-register" value="REGISTER">
+        <input type="submit" class="form-control btn btn-signin" value="SIGN IN">
+      </div>
+    </form>
+    <div class="login-divider">
+      <hr class="line"><span>OR</span><hr class="line">
+    </div>
+    <button type="button" class="fb-signin">
+      SIGN IN WITH FACEBOOK
+      <span class="fa fa-facebook"></span>
+    </button>
+  </div>
+  <div class="modal-login-image hidden-xs">
+    <div class="background-image"></div>
+  </div>
+</div>

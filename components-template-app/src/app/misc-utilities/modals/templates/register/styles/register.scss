@@ -1,0 +1,105 @@
+@import '../../../../../shared/styles/_variables';
+@import '../../../../../shared/styles/_mixins';
+
+.modal-register {
+  max-width: 100%;
+  text-align: center;
+  width: 350px;
+
+  .brand-logo {
+    height: auto;
+    margin: auto;
+    margin-bottom: 15px;
+    width: 80px;
+  }
+
+  .modal-title {
+    color: $purple;
+    font-size: $font-size-lg;
+    font-weight: 300;
+    letter-spacing: $letter-spacing-lg;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+
+  .form-control {
+    &[type='text'] {
+      margin-bottom: 20px;
+    }
+
+    &[type='password'] {
+      margin-bottom: 20px;
+    }
+  }
+
+  mat-checkbox {
+    display: block;
+    text-align: left;
+
+    .mat-checkbox-layout {
+      .mat-checkbox-frame {
+        border-color: $grey;
+      }
+
+      .mat-checkbox-label {
+        color: $grey;
+        font-size: $font-size-xs;
+        letter-spacing: $letter-spacing-xxs;
+      }
+    }
+  }
+
+  .tos {
+    color: $grey;
+    display: block;
+    font-size: $font-size-xs;
+    letter-spacing: $letter-spacing-xxs;
+    margin-bottom: 10px;
+    text-align: left;
+  }
+
+  .login-section {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+
+    .text {
+      color: $grey;
+      font-size: $font-size-xs;
+      letter-spacing: $letter-spacing-xxs;
+      padding-right: 15px;
+    }
+  }
+
+  .btn {
+    &.btn-register {
+      @include button($white, $purple, $purple);
+      margin-bottom: 15px;
+
+    }
+
+    &.btn-signin {
+      @include button($grey, $white, $grey);
+      max-width: 100px;
+    }
+  }
+
+  .register-divider {
+    align-items: center;
+    color: $grey8;
+    display: flex;
+    letter-spacing: $letter-spacing-sm;
+
+    .line {
+      flex-grow: 1;
+    }
+
+    span {
+      margin: 0  15px;
+    }
+  }
+
+  .fb-signin {
+    @include button($white, $blue-fb, $blue-fb);
+  }
+}

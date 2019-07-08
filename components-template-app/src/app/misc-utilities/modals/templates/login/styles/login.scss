@@ -1,0 +1,134 @@
+@import '../../../../../shared/styles/_variables';
+@import '../../../../../shared/styles/_mixins';
+@import '~bootstrap-sass/assets/stylesheets/bootstrap/variables';
+
+.modal-login {
+  display: flex;
+  max-width: 100%;
+  text-align: center;
+  width: 800px;
+
+  .modal-login-form {
+    flex-basis: 100%;
+    padding-bottom: 40px;
+    padding-left: 40px;
+    padding-right: 64px;
+
+    .brand-logo {
+      margin: auto;
+      width: 80px;
+    }
+
+    .modal-title {
+      color: $purple;
+      font-size: $font-size-lg;
+      font-weight: 300;
+      letter-spacing: $letter-spacing-lg;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    .form-control {
+      &[type='text'] {
+        margin-bottom: 30px;
+      }
+
+      &[type='password'] {
+        margin-bottom: 25px;
+      }
+    }
+
+    mat-checkbox {
+      display: block;
+      margin-bottom: 15px;
+
+      .mat-checkbox-layout {
+        .mat-checkbox-frame {
+          border-color: $grey;
+        }
+
+        .mat-checkbox-label {
+          color: $grey;
+          font-size: $font-size-xs;
+          letter-spacing: $letter-spacing-xxs;
+        }
+      }
+    }
+
+    .recover-password {
+      color: $grey;
+      font-size: $font-size-xs;
+      letter-spacing: $letter-spacing-xxs;
+    }
+
+    .login-btns {
+      display: flex;
+      margin-bottom: 15px;
+      margin-top: 20px;
+
+      .btn {
+        &.btn-login {
+          @include button($grey, $white, $grey);
+          margin-right: 15px;
+        }
+
+        &.btn-signin {
+          @include button($white, $purple, $purple);
+          margin-left: 15px;
+        }
+      }
+    }
+
+    .login-divider {
+      align-items: center;
+      color: $grey8;
+      display: flex;
+      letter-spacing: $letter-spacing-sm;
+      margin-bottom: 15px;
+
+      .line {
+        flex-grow: 1;
+      }
+
+      span {
+        margin: 0  15px;
+      }
+    }
+
+    .fb-signin {
+      @include button($white, $blue-fb, $blue-fb);
+
+      .fa {
+        font-size: 20px;
+        line-height: $font-size-md;
+        margin-left: 20px;
+        vertical-align: bottom;
+
+        @media only screen and (max-width: 830px) {
+          display: none;
+        }
+      }
+    }
+
+    @media only screen and (max-width: $screen-xs-max) {
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+
+  .modal-login-image {
+    flex-basis: 100%;
+    position: relative;
+
+    .background-image {
+      background-image: url('/assets/imgs/utils/login-modal.jpeg');
+      background-position: center;
+      background-size: cover;
+      bottom: -24px;
+      left: 0;
+      position: absolute;
+      right: -24px;
+      top: -24px;
+    }
+  }
+}

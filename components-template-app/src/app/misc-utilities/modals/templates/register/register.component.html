@@ -1,0 +1,29 @@
+<div class="modal-register">
+  <div class="modal-register-form">
+    <div class="brand-logo">
+      <app-preload-image [ratio]="{w:1, h:1}" src='../../../../../../assets/imgs/angular.svg' alt="Angular"></app-preload-image>
+    </div>
+    <h2 class="modal-title">SIGN UP</h2>
+    <form class="form-horizontal">
+      <input type="text" class="form-control" placeholder="USER NAME">
+      <input type="text" class="form-control" placeholder="EMAIL">
+      <input type="password" class="form-control" placeholder="PASSWORD">
+      <input type="password" class="form-control" placeholder="CONFIRM PASSWORD">
+      <mat-checkbox disableRipple>Subscribe to newsletter</mat-checkbox>
+      <span class="tos">
+        By creating an account, I agree to the site Terms of Service and Privacy Policy.
+      </span>
+      <input type="button" class="form-control btn btn-register" value="SIGN UP">
+      <div class="login-section">
+        <span class="text">Already have an account?</span>
+        <input type="submit" class="form-control btn btn-signin" value="LOG IN">
+      </div>
+    </form>
+    <div class="register-divider">
+      <hr class="line"><span>OR</span><hr class="line">
+    </div>
+    <button type="button" class="fb-signin">
+      SIGN UP WITH FACEBOOK
+    </button>
+  </div>
+</div>
