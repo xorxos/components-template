@@ -20,7 +20,7 @@
     }
 
     .modal-title {
-      color: $purple;
+      color: #343434;
       font-size: $font-size-lg;
       font-weight: 300;
       letter-spacing: $letter-spacing-lg;
@@ -73,7 +73,7 @@
         }
 
         &.btn-signin {
-          @include button($white, $purple, $purple);
+          @include button($white, $skyblue, $skyblue);
           margin-left: 15px;
         }
       }
@@ -121,7 +121,7 @@
     position: relative;
 
     .background-image {
-      background-image: url('/assets/imgs/utils/login-modal.jpeg');
+      background-image: url('/assets/imgs/utils/batman.jpg');
       background-position: center;
       background-size: cover;
       bottom: -24px;

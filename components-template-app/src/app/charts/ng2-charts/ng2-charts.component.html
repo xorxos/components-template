@@ -1,3 +1,157 @@
-<p>
-  ng2-charts works!
-</p>
+<div class="row">
+  <div class="col-lg-6">
+    <div class="card">
+      <header class="title">
+        <h2 class="main-title">New Users</h2>
+        <span class="sub-title">Segmented by source</span>
+      </header>
+      <canvas *ngIf="isBrowser" baseChart class="ng2-chart"
+        [datasets]="data.lineChart.data"
+        [labels]="data.lineChart.labels"
+        [options]="data.lineChart.options"
+        [colors]="data.lineChart.colors"
+        [legend]="data.lineChart.Legend"
+        [chartType]="data.lineChart.type"
+        (chartHover)="chartHovered($event)"
+        (chartClick)="chartClicked($event)">
+      </canvas>
+    </div>
+  </div>
+  <div class="col-lg-6">
+    <div class="card">
+      <header class="title">
+        <h2 class="main-title">Monthly Sales</h2>
+        <span class="sub-title">By Sales Representative</span>
+      </header>
+      <canvas *ngIf="isBrowser" baseChart class="ng2-chart"
+        [colors]="data.barChart.colors"
+        [datasets]="data.barChart.data"
+        [labels]="data.barChart.labels"
+        [options]="data.barChart.options"
+        [legend]="data.barChart.Legend"
+        [chartType]="data.barChart.type"
+        (chartHover)="chartHovered($event)"
+        (chartClick)="chartClicked($event)">
+      </canvas>
+    </div>
+  </div>
+  <div class="col-lg-6 col-sm-6">
+    <div class="card chart-round">
+      <header class="title">
+        <h2 class="main-title">Traffic Source</h2>
+        <span class="sub-title">By Channel</span>
+      </header>
+      <div class="chart-data-container row">
+        <div class="col-lg-7 col-sm-10 chart-data-chart">
+          <canvas *ngIf="isBrowser" baseChart class="ng2-chart"
+            [data]="data.doughnutChart.data"
+            [labels]="data.doughnutChart.labels"
+            [options]="data.doughnutChart.options"
+            [chartType]="data.doughnutChart.type"
+            [colors]="data.doughnutChart.colors"
+            (chartHover)="chartHovered($event)"
+            (chartClick)="chartClicked($event)">
+          </canvas>
+        </div>
+        <div class="col-lg-4 col-md-6 col-sm-10 chart-data-key">
+          <div class="chart-data-key-names">
+            <ng-container *ngFor="let label of data.doughnutChart.labels; let i = index">
+              <span class="chart-data-key-item chart-data-key-name">
+                <span class="chart-data-key-bullet" [style.color]="data.doughnutChart.colors[0].backgroundColor[i]">
+                  &middot;
+                </span>
+                {{ label }}
+              </span>
+            </ng-container>
+          </div>
+          <div class="chart-data-key-values">
+            <ng-container *ngFor="let n of data.doughnutChart.data">
+              <span class="chart-data-key-item chart-data-key-value">
+                {{ n }}
+              </span>
+            </ng-container>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-lg-6 col-sm-6">
+    <div class="card chart-round">
+      <header class="title">
+        <h2 class="main-title">Transactions Completed</h2>
+        <span class="sub-title">By Country</span>
+      </header>
+      <div class="chart-data-container row">
+        <div class="col-lg-7 col-sm-10 chart-data-chart">
+          <canvas *ngIf="isBrowser" baseChart class="ng2-chart"
+            [data]="data.pieChart.data"
+            [labels]="data.pieChart.labels"
+            [options]="data.pieChart.options"
+            [chartType]="data.pieChart.type"
+            [colors]="data.pieChart.colors"
+            (chartHover)="chartHovered($event)"
+            (chartClick)="chartClicked($event)">
+          </canvas>
+        </div>
+        <div class="col-lg-4 col-md-6 col-sm-10 chart-data-key">
+          <div class="chart-data-key-items chart-data-key-names">
+            <ng-container *ngFor="let label of data.pieChart.labels; let i = index">
+              <span class="chart-data-key-item chart-data-key-name">
+                <span class="chart-data-key-bullet" [style.color]="data.pieChart.colors[0].backgroundColor[i]">
+                  &middot;
+                </span>
+                {{ label }}
+              </span>
+            </ng-container>
+          </div>
+          <div class="chart-data-key-items chart-data-key-values">
+            <ng-container *ngFor="let n of data.pieChart.data">
+              <span class="chart-data-key-item chart-data-key-value">
+                {{ n }}
+              </span>
+            </ng-container>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-xs-12">
+    <div class="card">
+      <header class="title">
+        <h2 class="main-title">Skills distribution</h2>
+        <span class="sub-title">By team members</span>
+      </header>
+      <div class="chart-data-container">
+        <div class="chart-data-chart">
+          <canvas *ngIf="isBrowser" baseChart class="ng2-chart"
+            [datasets]="data.radarChart.data"
+            [labels]="data.radarChart.labels"
+            [options]="data.radarChart.options"
+            [colors]="data.radarChart.colors"
+            [chartType]="data.radarChart.type"
+            (chartHover)="chartHovered($event)"
+            (chartClick)="chartClicked($event)">
+          </canvas>
+        </div>
+        <div class="chart-data-table table-responsive">
+          <table class="table table-lines">
+            <thead class="table-head">
+              <tr class="table-row">
+                <th class="table-cell" *ngFor="let label of data.radarChart.labels">
+                  {{ label }}
+                </th>
+              </tr>
+            </thead>
+            <tbody class="table-body">
+              <tr *ngFor="let d of data.radarChart.data" class="table-row">
+                <td class="table-cell" *ngFor="let n of d.data">
+                  {{ n }}
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

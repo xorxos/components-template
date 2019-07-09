@@ -1,0 +1,23 @@
+@import '../../shared/styles/_variables';
+@import '../../shared/styles/_mixins';
+
+.notifications-page {
+  
+  .notifications-title {
+    color: #343434;
+    font-size: $font-size-lg;
+    font-weight: 300;
+    letter-spacing: $letter-spacing-lg;
+    margin-bottom: 15px;
+  }
+
+  .line {
+    margin: 15px 0;
+  }
+
+  .btn {
+    @include button($white, $skyblue, $skyblue);
+    margin-bottom: 30px;
+    width: 100%;
+  }
+}

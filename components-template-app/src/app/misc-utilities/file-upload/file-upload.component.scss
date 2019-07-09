@@ -1,0 +1,159 @@
+@import '../../shared/styles/_variables.scss';
+@import '../../shared/styles/_mixins.scss';
+
+input {
+  &[type='file'] {
+    display: none;
+  }
+}
+
+.file-uploader-page {
+  .mat-progress-bar-round {
+    .mat-progress-bar-buffer {
+      opacity: .5;
+    }
+  }
+
+  .dropzone {
+    border: 2px dashed $grey;
+    color: $grey;
+    font-size: $font-size-md;
+    font-weight: bold;
+    margin-bottom: 30px;
+    padding: 30px;
+    text-align: center;
+    width: 100%;
+
+    &.dropzone-image {
+      align-items: center;
+      border-color: $grey;
+      color: $grey;
+      display: flex;
+      flex-direction: column;
+      height: 273px;
+      justify-content: space-around;
+      margin: auto;
+      margin-bottom: 7px;
+      max-width: 400px;
+
+      .fa {
+        font-size: 60px;
+      }
+
+      .text {
+        font-size: $font-size-sm;
+        font-weight: bold;
+        letter-spacing: $letter-spacing-sm;
+      }
+
+      .btn-upload {
+        @include button($white, $skyblue, $skyblue);
+        max-width: 100%;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+
+      .btns-wrapper {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+
+        .btn-image {
+          flex-basis: 100%;
+          width: 95px;
+
+          &.btn-image-cancel {
+            @include button($white, $aqua, $aqua);
+            margin-right: 15px;
+          }
+
+          &.btn-image-post {
+            @include button($white, $grey, $grey);
+            margin-left: 15px;
+          }
+        }
+      }
+    }
+  }
+
+  .avatar-upload-wrapper {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+
+    .img-frame {
+      box-shadow: $shadow-hover;
+      height: 220px;
+      margin-bottom: 20px;
+      padding: 14px;
+      width: 220px;
+
+      .img-preview {
+        background-position: center;
+        background-size: cover;
+        box-shadow: $shadow-inset;
+        height: 100%;
+        width: 100%;
+      }
+    }
+
+    .btn-upload {
+      @include button($white, $skyblue, $skyblue);
+      min-height: 40px;
+      width: 220px;
+
+      &.done {
+        @include button($white, $aqua, $aqua);
+      }
+    }
+  }
+
+  .files-upload {
+    .dropzone-list {
+      list-style: none;
+      padding: 0;
+
+      .dropzone-list-item {
+        align-items: center;
+        border: 1px solid $grey4;
+        color: $grey;
+        display: flex;
+        font-size: $font-size-xs;
+        letter-spacing: $letter-spacing-xs;
+        margin-bottom: 20px;
+        padding: 15px 25px;
+
+        .fa {
+          font-size: 25px;
+          margin-right: 20px;
+        }
+
+        .dropzone-list-item-info {
+          flex-basis: 100%;
+          overflow: hidden;
+          text-overflow: ellipsis;
+
+          .mat-progress-bar-round {
+            margin: 5px 0;
+            width: 100%;
+          }
+        }
+      }
+    }
+
+    .btn-upload {
+      background-color: transparent;
+
+      &:hover {
+        color: inherit;
+      }
+
+      &:active,
+      &:focus {
+        box-shadow: none;
+        color: inherit;
+        outline: none;
+      }
+    }
+  }
+}

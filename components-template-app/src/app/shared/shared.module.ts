@@ -67,6 +67,8 @@ import { FileUploaderDirective } from './file-uploader/file-uploader.directive';
     MatSelectModule
   ],
   entryComponents: [
+    AlertComponent,
+    NotificationComponent
   ],
   providers: [
 

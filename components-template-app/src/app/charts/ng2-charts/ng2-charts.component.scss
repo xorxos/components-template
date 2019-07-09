@@ -1,0 +1,65 @@
+@import '../../shared/styles/_variables';
+
+.ng2-chart {
+  max-height: 100%;
+  max-width: 100%;
+}
+
+.chart-data-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+
+  .chart-data-table {
+    align-self: center;
+
+    .table-cell {
+      text-align: center;
+    }
+  }
+
+  .chart-data-chart {
+    margin-bottom: 30px;
+  }
+
+  .chart-data-key {
+    align-self: center;
+    border: 1px solid $purple;
+    border-radius: 5px;
+    display: flex;
+    font-size: 13px;
+    justify-content: space-between;
+    margin: auto;
+    padding: 20px 15px;
+
+    .chart-data-key-item {
+      font-weight: bold;
+      letter-spacing: $letter-spacing-xxxs;
+
+      &:not(:last-child) {
+        margin-bottom: 8px;
+      }
+    }
+
+    .chart-data-key-names {
+      .chart-data-key-name {
+        color: $grey;
+        display: flex;
+        margin-right: 30px;
+
+        .chart-data-key-bullet {
+          font-size: 51px;
+          line-height: $font-size-sm;
+          margin-right: 5px;
+        }
+      }
+    }
+
+    .chart-data-key-values {
+      .chart-data-key-value {
+        color: $purple;
+        display: block;
+      }
+    }
+  }
+}

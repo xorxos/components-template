@@ -1,3 +1,99 @@
-<p>
-  notifications works!
-</p>
+<div class="notifications-page">
+  <div class="row">
+    <div class="col-xs-12">
+      <div class="card">
+        <header class="title">
+          <h2 class="main-title">Notifications</h2>
+          <span class="sub-title">Handcrafted</span>
+          <hr class="line">
+        </header>
+
+        <div class="row">
+          <div class="col-md-6">
+            <h2 class="notifications-title">Notifications Style</h2>
+            <app-notification [message]="'This is a plain notification'"></app-notification>
+            <app-notification [message]="'This is a notification with close button'"></app-notification>
+            <app-notification [message]="'This is a notifications with close button and icon'" [icon]="'comments'"></app-notification>
+            <app-notification
+              [type]="'dark'"
+              [message]="'This is a notification with long text'"
+              [text]="'At vero eos et accusamus et iusto odio dignissimos ducimus qui
+              blanditiis praesentium voluptatum deleniti atque corrupti quos
+              dolores et quas molestias excepturi sint occaecati cupiditate non
+              provident, similique sunt in culpa qui officia deserunt mollitia
+              animi, id est laborum et dolorum fuga. Et harum quidem rerum
+              facilis est et expedita distinctio. Nam libero tempore, cum soluta
+              nobis est eligendi optio cumque nihil impedit quo minus id quod
+              maxime placeat facere possimus, omnis voluptas assumenda est,
+              omnis dolor repellendus. Temporibus autem quibusdam et aut
+              officiis debitis aut rerum necessitatibus saepe eveniet ut et
+              voluptates repudiandae sint et molestiae non recusandae. Itaque
+              earum rerum hic tenetur a sapiente delectus, ut aut reiciendis
+              voluptatibus maiores alias consequatur aut perferendis doloribus
+              asperiores repellat.'">
+            </app-notification>
+          </div>
+          <div class="col-md-6">
+            <h2 class="notifications-title">Notifications States</h2>
+            <app-notification
+              [message]="'Info - This is a regular notification made with .alert-info'"
+              [type]="'info'">
+            </app-notification>
+            <app-notification
+              [message]="'Success - This is a regular notification made with .alert-success'"
+              [type]="'success'">
+            </app-notification>
+            <app-notification
+              [message]="'Warning - This is a regular notification with .alert-warning'"
+              [type]="'warning'">
+            </app-notification>
+            <app-notification
+              [message]="'Danger - This is a regular notification with .alert-danger'"
+              [type]="'danger'">
+            </app-notification>
+          </div>
+        </div>
+
+        <header class="title">
+          <hr class="line">
+          <h2 class="main-title">Notification Places</h2>
+          <span class="sub-title">Click to view notifications</span>
+        </header>
+
+        <div class="row">
+          <div class="col-sm-6 col-md-4">
+            <button class="btn" type="button" (click)="showNotification('top', 'left', 'warning', 'info-circle')">
+              Top Left
+            </button>
+          </div>
+          <div class="col-sm-6 col-md-4">
+            <button class="btn" type="button" (click)="showNotification('top', 'center', 'danger', 'info-circle')">
+              Top Center
+            </button>
+          </div>
+          <div class="col-sm-6 col-md-4">
+            <button class="btn" type="button" (click)="showNotification('top', 'right', 'info', 'comments')">
+              Top Right with icon
+            </button>
+          </div>
+          <div class="col-sm-6 col-md-4">
+            <button class="btn" type="button" (click)="showNotification('bottom', 'left', 'success', 'info-circle')">
+              Bottom Left
+            </button>
+          </div>
+          <div class="col-sm-6 col-md-4">
+            <button class="btn" type="button" (click)="showNotification('bottom', 'center', 'dark', 'info-circle')">
+              Bottom Center
+            </button>
+          </div>
+          <div class="col-sm-6 col-md-4">
+            <button class="btn" type="button" (click)="showNotification('bottom', 'right', '', 'info-circle')">
+              Bottom Right
+            </button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>

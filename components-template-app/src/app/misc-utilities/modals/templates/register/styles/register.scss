@@ -14,7 +14,7 @@
   }
 
   .modal-title {
-    color: $purple;
+    color: #343434;
     font-size: $font-size-lg;
     font-weight: 300;
     letter-spacing: $letter-spacing-lg;
@@ -73,13 +73,13 @@
 
   .btn {
     &.btn-register {
-      @include button($white, $purple, $purple);
+      @include button($white, #343434, #343434);
       margin-bottom: 15px;
 
     }
 
     &.btn-signin {
-      @include button($grey, $white, $grey);
+      @include button($white, $skyblue, $skyblue);
       max-width: 100px;
     }
   }

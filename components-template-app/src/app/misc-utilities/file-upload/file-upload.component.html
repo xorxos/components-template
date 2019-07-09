@@ -1,3 +1,110 @@
-<p>
-  file-upload works!
-</p>
+<div class="row file-uploader-page">
+
+  <div class="col-md-6">
+    <div class="card">
+
+      <header class="row title">
+        <div class="col-xs-12 text-center">
+          <h2 class="main-title">Avatar Upload</h2>
+        </div>
+      </header>
+
+      <div class="avatar-upload-wrapper">
+        <div appFileUpload class="img-frame"
+          (filesChangeEmiter)="onDropzoneSingleChange($event, 'avatar')"
+          [allowedExtensions]="['png', 'jpg', 'bmp', 'jpeg']" >
+          <div class="img-preview" [ngStyle]="{ 'background-image': 'url(' + (uploaders.avatar.url || placeholder) + ')' }">
+          </div>
+        </div>
+        <button type="button"
+          [ngClass]="'btn btn-upload' + ((uploaders.avatar.progress === 100) ? ' done' : '')"
+          (click)="((uploaders.avatar.progress === undefined) ? fileDialogAvatar.click() : null)">
+          <span *ngIf="uploaders.avatar.progress === undefined">Choose File</span>
+          <mat-progress-bar *ngIf="(uploaders.avatar.progress >= 0) && (uploaders.avatar.progress < 100)"
+            [value]="uploaders.avatar.progress" class="mat-progress-bar-round color color-aqua">
+          </mat-progress-bar>
+          <span *ngIf="uploaders.avatar.progress === 100">Uploaded</span>
+        </button>
+        <input #fileDialogAvatar (change)="onSingleChange($event, 'avatar')" type="file" />
+      </div>
+    </div>
+  </div>
+
+  <div class="col-md-6">
+    <div class="card">
+
+      <header class="row title">
+        <div class="col-xs-12 text-center">
+          <h2 class="main-title">Image Uploader</h2>
+        </div>
+      </header>
+
+      <div appFileUpload class="dropzone dropzone-image"
+        (filesChangeEmiter)="onDropzoneSingleChange($event, 'image')"
+        [allowedExtensions]="['png', 'jpg', 'bmp', 'jpeg']" >
+        <span class="fa fa-cloud-upload"></span>
+        <span *ngIf="uploaders.image.progress === undefined" class="text">
+          Drag & drop images here
+        </span>
+        <span *ngIf="uploaders.image.progress < 100" class="text">
+          Uploading
+        </span>
+        <span *ngIf="uploaders.image.progress >= 100" class="text">
+          Uploaded
+        </span>
+        <button *ngIf="uploaders.image.progress === undefined"
+          type="button" class="btn btn-upload" (click)="fileDialogImage.click()">
+          or select one from your computer
+        </button>
+        <mat-progress-bar *ngIf="(uploaders.image.progress >= 0)"
+          [value]="uploaders.image.progress" class="mat-progress-bar-round color color-aqua">
+        </mat-progress-bar>
+        <div *ngIf="uploaders.image.progress !== undefined" class="btns-wrapper">
+          <button type="button" class="btn btn-image btn-image-cancel" (click)="resetUploader('image')">
+            cancel
+          </button>
+          <button type="button" class="btn btn-image btn-image-post" (click)="post()">
+            post
+          </button>
+        </div>
+        <input #fileDialogImage (change)="onSingleChange($event, 'image')" type="file" />
+      </div>
+    </div>
+  </div>
+
+  <div class="col-xs-12">
+    <div class="card files-upload">
+
+      <header class="row title">
+        <div class="col-xs-12 text-center">
+          <h2 class="main-title">Files Upload</h2>
+        </div>
+      </header>
+
+      <ul class="dropzone-list">
+        <li class="dropzone-list-item" *ngFor="let file of uploaders.files.list">
+          <span class="fa fa-file-o"></span>
+          <div class="dropzone-list-item-info">
+            <span>{{ file.name }}</span>
+            <mat-progress-bar *ngIf="(file.progress >= 0)"
+              [value]="file.progress" class="mat-progress-bar-round color color-aqua">
+            </mat-progress-bar>
+            <span>
+              {{ file.loaded }} KB of {{ file.total }} KB ({{ file.progress }}% done)
+            </span>
+          </div>
+        </li>
+      </ul>
+
+      <div appFileUpload class="dropzone" (filesChangeEmiter)="onDropzoneMultipleChange($event, 'files')">
+        <button type="button" class="btn btn-upload" (click)="fileDialogFiles.click()">
+          <span class="fa fa-cloud-upload"></span>
+          <span>Drop files here to upload or choose file</span>
+        </button>
+        <input #fileDialogFiles (change)="onMultipleChange($event, 'files')" type="file" multiple />
+      </div>
+
+    </div>
+  </div>
+
+</div>

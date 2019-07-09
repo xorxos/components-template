@@ -1,3 +1,50 @@
-<p>
-  auto-complete works!
-</p>
+<div class="row auto-completer">
+  <div class="col-xs-12">
+    <div class="card">
+      <header class="row title">
+        <div class="col-xs-12">
+          <h2 class="main-title">Autocompleters</h2>
+          <span class="sub-title">With fuzzy search</span>
+          <hr class="line">
+        </div>
+      </header>
+
+      <div class="row">
+
+        <div class="auto-completer-example col-xs-12 col-md-offset-1 col-md-5">
+          <h2 class="auto-completer-title">Simple</h2>
+          <input
+            type="text"
+            class="form-control"
+            matInput
+            [matAutocomplete]="auto1"
+            (keyup)="filter($event, 'simple')"
+            placeholder="Type something in">
+          <mat-autocomplete #auto1="matAutocomplete">
+             <mat-option *ngFor="let option of options.simple" [value]="option.title">
+               {{ option.title }}
+             </mat-option>
+          </mat-autocomplete>
+        </div>
+
+        <div class="auto-completer-example col-xs-12 col-md-5">
+          <h2 class="auto-completer-title">With images</h2>
+          <input
+            type="text"
+            class="form-control"
+            matInput
+            [matAutocomplete]="auto2"
+            (keyup)="filter($event, 'images')"
+            placeholder="Type something in">
+          <mat-autocomplete #auto2="matAutocomplete" class="auto-complete-images">
+             <mat-option *ngFor="let option of options.images" [value]="option.title">
+               <img class="auto-complete-image" [src]="option.image" alt="N/A" />
+               {{ option.title }}
+             </mat-option>
+          </mat-autocomplete>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>

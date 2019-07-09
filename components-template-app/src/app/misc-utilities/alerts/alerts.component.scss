@@ -1,15 +1,15 @@
 @import '../../shared/styles/_variables';
 @import '../../shared/styles/_mixins';
 
-.card-modals {
-  .card-modals-text {
+.card-alert {
+  .card-alert-text {
     color: $grey8;
     display: block;
     margin: 40px auto;
     text-align: center;
   }
 
-  .card-modals-button {
+  .card-alert-button {
     @include button($white, $skyblue, $skyblue);
     display: block;
     font-weight: 400;
