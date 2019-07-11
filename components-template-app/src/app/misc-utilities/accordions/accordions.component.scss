@@ -1,0 +1,25 @@
+@import '../../shared/styles/_variables';
+@import '../../shared/styles/_mixins';
+
+.expansion-panel-button {
+    @include button($white, $skyblue, $skyblue);
+    display: block;
+    font-weight: 400;
+    margin-right: 5px;
+    min-width: 90px;
+    width: 30%;
+}
+
+.expansion-panel-close {
+    @include button($white, $red, $red);
+    display: block;
+    font-weight: 400;
+    min-width: 90px;
+    width: 30%;
+}
+
+.card {
+    .controls-wrapper {
+        margin-bottom: 20px;
+    }
+}

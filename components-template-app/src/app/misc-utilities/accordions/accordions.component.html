@@ -1,3 +1,55 @@
-<p>
-  accordions works!
-</p>
+<div class="row">
+  <div class="col-xs-12">
+    <div class="card">
+      <header class="row title">
+        <div class="col-xs-12">
+          <h2 class="main-title">Material Accordions</h2>
+        </div>
+      </header>
+      <header class="row title" style="margin-bottom: 0;">
+        <div class="col-xs-12">
+          <h4 class="sub-title">Controls</h4>
+        </div>
+      </header>
+      <div class="controls-wrapper">
+        <mat-slide-toggle [(ngModel)]="multi">Allow Multi Expansion</mat-slide-toggle>
+      </div>
+      <div class="col-xs-12" style="padding: 0;">
+        <mat-accordion [displayMode]="displayMode" [multi]="multi" #accordion1>
+          <mat-expansion-panel #panel1>
+            <mat-expansion-panel-header>Example 1</mat-expansion-panel-header>
+            <div class="well">
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+                ex
+                ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
+                fugiat
+                nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
+                mollit
+                anim id est laborum.</p>
+            </div>
+          </mat-expansion-panel>
+          <mat-expansion-panel #panel2>
+            <mat-expansion-panel-header>Example 2</mat-expansion-panel-header>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+              dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+              ex
+              ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
+              fugiat
+              nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
+              mollit
+              anim id est laborum.</p>
+          </mat-expansion-panel>
+          <mat-expansion-panel #panel3>
+            <mat-expansion-panel-header>Example 3</mat-expansion-panel-header>
+            <mat-checkbox #showButtons>Reveal Buttons Below</mat-checkbox>
+            <mat-action-row *ngIf="showButtons.checked" class="text-right">
+              <button class="btn expansion-panel-button" type="button" (click)="panel2.expanded = true">OPEN SECTION
+                2</button>
+              <button class="btn expansion-panel-close" type="button" (click)="panel3.expanded = false">CLOSE</button>
+            </mat-action-row>
+          </mat-expansion-panel>
+        </mat-accordion>
+      </div>
+    </div>
+  </div>
