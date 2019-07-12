@@ -1,10 +1,12 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { MatAccordion } from '@angular/material';
+import { ViewEncapsulation } from '@angular/core';
 
 @Component({
   selector: 'app-accordions',
   templateUrl: './accordions.component.html',
-  styleUrls: ['./accordions.component.scss']
+  styleUrls: ['./accordions.component.scss'],
+  encapsulation: ViewEncapsulation.None
 })
 export class AccordionsComponent {
 

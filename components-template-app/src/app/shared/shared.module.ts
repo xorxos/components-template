@@ -22,7 +22,8 @@ import {
   MatSlideToggleModule,
   MatNativeDateModule,
   MatInputModule,
-  MatSelectModule
+  MatSelectModule,
+  MatProgressSpinnerModule
 } from '@angular/material';
 
 import { PreloadImageComponent } from './preload-image/preload-image.component';
@@ -57,6 +58,7 @@ import { FileUploaderDirective } from './file-uploader/file-uploader.directive';
     MatDialogModule,
     MatAutocompleteModule,
     MatSnackBarModule,
+    MatProgressSpinnerModule,
     MatButtonToggleModule,
     MatRadioModule,
     MatDatepickerModule,
@@ -95,6 +97,7 @@ import { FileUploaderDirective } from './file-uploader/file-uploader.directive';
     MatTabsModule,
     MatDialogModule,
     MatSnackBarModule,
+    MatProgressSpinnerModule,
     MatButtonToggleModule,
     MatRadioModule,
     MatDatepickerModule,
