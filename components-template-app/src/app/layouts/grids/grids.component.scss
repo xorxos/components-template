@@ -1,0 +1,146 @@
+@import '../../shared/styles/_variables';
+
+$min-card-height-xxs: 58px;
+$min-card-height-xs: 155px;
+$min-card-height-sm: 250px;
+$min-card-height-md: 350px;
+$min-card-height-lg: 740px;
+$card-margin-bottom: 40px;
+$card-gutter: 30px;
+
+.grid {
+  .grid-title {
+    color: #343434;
+    font-size: $font-size-lg;
+    font-weight: 300;
+    letter-spacing: $letter-spacing-lg;
+    margin-bottom: 0;
+    margin-top: 0;
+  }
+
+  .card {
+    margin-bottom: $card-margin-bottom;
+    min-height: $min-card-height-xs;
+  }
+
+  .flex-container {
+    display: flex;
+    flex-wrap: wrap;
+
+    &.flex-container-full {
+      width: 100%;
+    }
+
+    &.flex-container-half {
+      width: calc(50% - (#{$card-gutter} / 2));
+    }
+  }
+
+  &.grid-0 {
+    display: flex;
+    flex-wrap: wrap;
+
+    .card-1 {
+      margin-right: $card-gutter;
+      min-height: $min-card-height-lg;
+      width: calc(50% - (#{$card-gutter} / 2));
+    }
+
+    .card-2 {
+      min-height: $min-card-height-md;
+      width: 100%;
+    }
+
+    .card-3 {
+      margin-left: $card-gutter;
+      min-height: $min-card-height-md;
+      width: calc(50% - (#{$card-gutter} / 2));
+    }
+
+    .card-4 {
+      min-height: $min-card-height-xs;
+      width: 100%;
+    }
+
+    .card-5 {
+      margin-right: $card-gutter;
+      min-height: $min-card-height-xs;
+      width: calc(50% - (#{$card-gutter} / 2));
+    }
+
+    .card-6 {
+      min-height: $min-card-height-xxs;
+      width: calc(100% - (#{$card-gutter} / 2));
+    }
+
+    .card-7 {
+      min-height: $min-card-height-xxs;
+      width: calc(100% - (#{$card-gutter} / 2));
+    }
+  }
+
+  &.grid-1 {
+    .card-3 {
+      min-height: ($min-card-height-xs * 2) + $card-margin-bottom;
+    }
+  }
+
+  &.grid-2 {
+    .card-3 {
+      min-height: ($min-card-height-xs * 2) + $card-margin-bottom;
+    }
+  }
+
+  &.grid-3 {
+    .card-4 {
+      min-height: ($min-card-height-xs * 3) + ($card-margin-bottom * 2);
+    }
+  }
+
+  &.grid-4 {
+    .card {
+      min-height: $min-card-height-md;
+    }
+  }
+
+  &.grid-5 {
+    .card-2 {
+      margin-right: $card-gutter;
+    }
+
+    .card-2,
+    .card-3 {
+      display: inline-block;
+      min-height: $min-card-height-md;
+      width: calc(50% - 17px);
+    }
+
+    .card-4 {
+      min-height: ($min-card-height-md) + $min-card-height-xs + $card-margin-bottom;
+    }
+  }
+
+  &.grid-7 {
+    .card-2,
+    .card-3 {
+      min-height: $min-card-height-md;
+    }
+  }
+
+  &.grid-8 {
+    .card-1,
+    .card-2,
+    .card-3 {
+      min-height: $min-card-height-md;
+    }
+  }
+
+  &.grid-9 {
+    .card-1,
+    .card-2,
+    .card-3,
+    .card-4 {
+      min-height: $min-card-height-sm;
+    }
+  }
+}

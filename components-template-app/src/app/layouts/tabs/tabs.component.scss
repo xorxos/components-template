@@ -1,0 +1,139 @@
+@import '../../shared/styles/_variables';
+
+.card-tabs {
+  min-height: 350px;
+}
+
+.tabs-background {
+  &.mat-tab-group {
+    padding: 10px 40px;
+
+    .mat-tab-header {
+      margin-bottom: 15px;
+
+      .mat-tab-label {
+        border-bottom: 3px solid white;
+      }
+    }
+  }
+}
+
+.tabs-folder {
+  &.mat-tab-group {
+    .mat-tab-header {
+      margin-bottom: 15px;
+
+      .mat-tab-labels {
+        .mat-tab-label {
+
+          &:not(:first-child) {
+            border-top-left-radius: 6px;
+          }
+
+          &:not(:last-child) {
+            border-top-right-radius: 6px;
+          }
+
+          &.mat-tab-label-active {
+            background-color: $white;
+            box-shadow: 0 2px 9px 0 rgba(0, 0, 0, 0.06);
+            color: #343434;
+          }
+        }
+      }
+    }
+
+    .mat-tab-body-content {
+      padding: 15px 60px;
+    }
+  }
+}
+
+.tabs-vertical {
+  &.mat-tab-group {
+    flex-direction: row;
+    height: 100%;
+
+    .mat-tab-header {
+      .mat-tab-labels {
+        flex-direction: column;
+        height: 100%;
+
+        .mat-tab-label {
+          &:not(:last-child) {
+            border-bottom: 1px solid rgba(144, 19, 254, .1);
+          }
+
+          &.mat-tab-label-active {
+            background-color: $white;
+            border-bottom-color: $white;
+            border-top: 1px solid $white;
+            box-shadow: 0 2px 9px 0 rgba(0, 0, 0, 0.06);
+            color: #343434;
+            margin-top: -1px;
+          }
+        }
+      }
+    }
+
+    .mat-tab-body-content {
+      align-items: center;
+      display: flex;
+      padding: 0 15px;
+    }
+  }
+}
+
+.tabs-simple {
+  &.mat-tab-group {
+    padding: 10px 40px;
+
+    .mat-tab-header {
+      margin-bottom: 15px;
+
+      .mat-tab-labels {
+        background-color: transparent;
+
+        .mat-tab-label {
+          &.mat-tab-label-active,
+          &.mat-tab-label-focus {
+            background-color: transparent;
+            border-bottom: 3px solid #343434;
+            color: #343434;
+          }
+        }
+      }
+    }
+
+    .mat-tab-body-content {
+      align-items: flex-end;
+      display: flex;
+      padding: 0 15px;
+
+      .tab-content-wrapper {
+        &:nth-child(3) {
+          align-self: center;
+        }
+      }
+    }
+  }
+}
+
+.tab-content-wrapper {
+  padding: 30px 15px;
+  width: 100%;
+}
+
+.tab-content-title {
+  color: #343434;
+  font-size: $font-size-lg;
+  font-weight: 300;
+  letter-spacing: $letter-spacing-lg;
+}
+
+.tab-content-text {
+  color: $grey;
+  font-size: $font-size-xs;
+  font-weight: bold;
+  letter-spacing: $letter-spacing-xxs;
+}

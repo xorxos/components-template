@@ -1,15 +1,11 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, ViewEncapsulation } from '@angular/core';
 
 @Component({
   selector: 'app-grids',
   templateUrl: './grids.component.html',
-  styleUrls: ['./grids.component.css']
+  styleUrls: ['./grids.component.scss'],
+  encapsulation: ViewEncapsulation.None
 })
-export class GridsComponent implements OnInit {
-
-  constructor() { }
-
-  ngOnInit() {
-  }
+export class GridsComponent {
 
 }

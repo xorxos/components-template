@@ -1,0 +1,190 @@
+{
+  "latest_articles_list":
+  [
+    {
+      "image": "../../../../assets/imgs/lists/list1.jpg",
+      "title": "Mobile UI Design Patterns | Navigation",
+      "text": "We all know what a ‘Sign In’ is don’t we? A user wants to access an account, application, or content that is stored on the host site; and to do this they need to input their credentials they have previously setup.",
+      "tags": ["UX", "Design", "Navigation"]
+    },
+    {
+      "image": "../../../../assets/imgs/lists/list2.jpeg",
+      "title": "Sign In | Example business benefit",
+      "text": "Registered and logged-in users are more valuable to your business because you’ll generally have more information about them (both direct information, and indirect information gleaned through their behavior and interactions).",
+      "tags": ["UX", "Design", "Sign In", "Mobile", "Inspiration"]
+    },
+    {
+      "image": "../../../../assets/imgs/lists/list3.jpeg",
+      "title": "Identity Mobile Components",
+      "text": "Identity is the key thing that will engage users in your system, and keep them returning to experience it. The profile is one of the key pieces of a social offering. It becomes the virtual face of the user in your system.",
+      "tags": ["Identity", "Profile", "UX", "Design"]
+    },
+    {
+      "image": "../../../../assets/imgs/lists/list4.jpeg",
+      "title": "Engagement Mobile Components",
+      "text": "When people come to the site, you need to greet them and welcome them in a friendly manner and make them feel as if they are important and have value to add to the community.",
+      "tags": ["Engagement", "UX", "Design"]
+    }
+  ],
+  "latest_articles_small_list":
+  [
+    {
+      "image": "../../../../assets/imgs/lists/list2.jpeg",
+      "title": "Navigation design",
+      "text": "We all know what a ‘Sign In’ is don’t we? A user wants to access an account, application.",
+      "tags": ["UX", "Design", "Navigation"]
+    },
+    {
+      "image": "../../../../assets/imgs/lists/list4.jpeg",
+      "title": "Sign In example",
+      "text": "Registered and logged-in users are more valuable to your business because you’ll have more information about them.",
+      "tags": ["UX", "Sign In", "Mobile", "Inspiration"]
+    },
+    {
+      "image": "../../../../assets/imgs/lists/list1.jpg",
+      "title": "Identity Components",
+      "text": "Identity is the key thing that will engage users in your system, and keep them returning to experience it.",
+      "tags": ["Identity", "Profile", "UX", "Design"]
+    },
+    {
+      "image": "../../../../assets/imgs/lists/list3.jpeg",
+      "title": "Engagement Components",
+      "text": "When people come to the site, you need to greet them and welcome them in a friendly manner.",
+      "tags": ["Engagement", "UX", "Design"]
+    }
+  ],
+  "freelancers_list":
+  [
+    {
+      "image": "../../../../assets/imgs/profiles/profile2.jpeg",
+      "name": "John Doe",
+      "job": "Product Owner",
+      "rate": 45,
+      "likes": 15,
+      "stars": 9,
+      "jobs_done": 23,
+      "verified": true
+    },
+    {
+      "image": "../../../../assets/imgs/profiles/profile1.jpeg",
+      "name": "Amanda Clark",
+      "job": "Project Manager",
+      "rate": 40,
+      "likes": 41,
+      "stars": 23,
+      "jobs_done": 45,
+      "verified": true
+    },
+    {
+      "image": "../../../../assets/imgs/profiles/profile8.jpeg",
+      "name": "Fermin Ares",
+      "job": "Web Developer",
+      "rate": 60,
+      "likes": 5,
+      "stars": 12,
+      "jobs_done": 0,
+      "verified": false
+    },
+    {
+      "image": "../../../../assets/imgs/profiles/profile3.jpeg",
+      "name": "Stacy Miller",
+      "job": "UI Designer",
+      "rate": 50,
+      "likes": 15,
+      "stars": 9,
+      "jobs_done": 61,
+      "verified": true
+    }
+  ],
+  "users_list":
+  [
+    {
+      "image": "../../../../assets/imgs/profiles/profile9.jpeg",
+      "name": "Tony Pine",
+      "bio": "I like the internet it empowers me to make money on line. Father of Lisa."
+    },
+    {
+      "image": "../../../../assets/imgs/profiles/profile4.jpeg",
+      "name": "Selena Clark",
+      "bio": "Lover of kale, coffee, wine, craft beer & cooking."
+    },
+    {
+      "image": "../../../../assets/imgs/profiles/profile6.jpeg",
+      "name": "Tom Ford",
+      "bio": "I run a few sites. Creative Developer / Designer / Tech Consultant / Marketer."
+    },
+    {
+      "image": "../../../../assets/imgs/profiles/profile5.jpeg",
+      "name": "Ana Kuris",
+      "bio": "Director of Digital Design and User Experience. Avid Learner."
+    },
+    {
+      "image": "../../../../assets/imgs/profiles/profile2.jpeg",
+      "name": "John Doe",
+      "bio": "Dogs lover. Full stack developer and hobby designer."
+    },
+    {
+      "image": "../../../../assets/imgs/profiles/profile1.jpeg",
+      "name": "Dayana Ross",
+      "bio": "Product manager that hates skype meetings. In love with life."
+    }
+  ],
+  "expenses_list":
+  [
+    {
+      "image": "../../../../assets/imgs/profiles/profile8.jpeg",
+      "name": "Agustin Perez",
+      "store": "IonicThemes",
+      "date": "31 Oct 2017",
+      "time": "16:15",
+      "spent": 56,
+      "status": "Paid",
+      "category": "SOFTWARE",
+      "payment": "paypal"
+    },
+    {
+      "image": "../../../../assets/imgs/profiles/profile2.jpeg",
+      "name": "Alex Javcok",
+      "store": "Starbucks",
+      "date": "22 Sep 2017",
+      "time": "18:45",
+      "spent": 100,
+      "status": "Pending",
+      "category": "MEALS",
+      "payment": "paypal"
+    },
+    {
+      "image": "../../../../assets/imgs/profiles/profile1.jpeg",
+      "name": "Sheila Steiner",
+      "store": "Amazon",
+      "date": "15 Sep 2017",
+      "time": "13:21",
+      "spent": 150,
+      "status": "Paid",
+      "category": "CLOTHES",
+      "payment": "creditcard"
+    },
+    {
+      "image": "../../../../assets/imgs/profiles/profile4.jpeg",
+      "name": "Claire Thomas",
+      "store": "American Airlines",
+      "date": "16 Aug 2017",
+      "time": "21:00",
+      "spent": 650,
+      "status": "Refunded",
+      "category": "TRAVEL",
+      "payment": "paypal"
+    },
+    {
+      "image": "../../../../assets/imgs/profiles/profile9.jpeg",
+      "name": "Frank Underwook",
+      "store": "Joe's Tavern",
+      "date": "15 Aug 2017",
+      "time": "22:33",
+      "spent": 17,
+      "status": "Paid",
+      "category": "DRINKS",
+      "payment": "creditcard"
+    }
+  ]
+}

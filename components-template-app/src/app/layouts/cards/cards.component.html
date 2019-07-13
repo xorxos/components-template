@@ -1,3 +1,145 @@
-<p>
-  cards works!
-</p>
+<div class="row" style="margin-top: 20px;">
+
+  <div class="col-md-6">
+    <div class="card-1">
+      <header class="card-heading heading-danger">
+        <div class="header-text">
+          <h2 class="main-title">3 days Overdue</h2>
+          <h2 class="sub-title">Rent for Oct 2017</h2>
+        </div>
+        <i class="header-icon fa fa-times-circle"></i>
+      </header>
+      <div class="card-body">
+        <div class="user-image-wrapper">
+          <app-preload-image [ratio]="{w:1, h:1}" class="user-image" src="../../../../assets/imgs/profiles/profile1.jpeg" alt="user-pic"></app-preload-image>
+        </div>
+        <h3 class="user-name">Amanda Clue</h3>
+        <span class="user-description">Amanda lives in unit #507 for the past 4 months with a rent of $3500/month</span>
+        <div class="action-icons">
+          <i class="action-icon fa fa-heart-o"></i>
+          <span class="action-number">14</span>
+          <i class="action-icon fa fa-star-o"></i>
+          <span class="action-number">9</span>
+          <i class="action-icon fa fa-thumbs-o-up"></i>
+          <span class="action-number">15</span>
+        </div>
+        <div class="action-buttons">
+          <button type="button" class="action-button btn">MESSAGE</button>
+          <button type="button" class="action-button btn">VIEW PROFILE</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-md-6">
+    <div class="card-1">
+      <header class="card-heading heading-info">
+        <div class="header-text">
+          <h2 class="main-title">Paid 5 days ago</h2>
+          <h2 class="sub-title">Rent for Oct 2017</h2>
+        </div>
+        <i class="header-icon fa fa-check-circle"></i>
+      </header>
+      <div class="card-body">
+        <div class="user-image-wrapper">
+          <app-preload-image [ratio]="{w:1, h:1}" class="user-image" src="../../../../assets/imgs/profiles/profile2.jpeg" alt="user-pic"></app-preload-image>
+        </div>
+        <h3 class="user-name">Andy Shane</h3>
+        <span class="user-description">Andy lives in unit #304 for the past 11 months with a rent of $3000/month</span>
+        <div class="action-icons">
+          <i class="action-icon fa fa-heart"></i>
+          <span class="action-number">14</span>
+          <i class="action-icon fa fa-star-o"></i>
+          <span class="action-number">9</span>
+          <i class="action-icon fa fa-thumbs-o-up"></i>
+          <span class="action-number">15</span>
+        </div>
+        <div class="action-buttons">
+          <button type="button" class="action-button btn">MESSAGE</button>
+          <button type="button" class="action-button btn">VIEW PROFILE</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<div class="row">
+
+  <div class="col-md-4" *ngFor="let item of cards2">
+    <div class="card-2">
+      <div class="image-actions">
+        <div class="action-icon-tooltip">
+          <i class="action-icon fa fa-envelope-o"></i>
+          <div class="action-tooltip">
+            <span class="action-tooltip-point"></span>
+            <span class="action-tooltip-text">Message</span>
+          </div>
+        </div>
+        <div class="user-image-wrapper">
+            <app-preload-image [ratio]="{w:1, h:1}" class="user-image" [src]="item.image" alt="user-pic"></app-preload-image>
+        </div>
+        <div class="action-icon-tooltip">
+          <i class="action-icon fa fa-user"></i>
+          <div class="action-tooltip action-tooltip-alt">
+            <span class="action-tooltip-point"></span>
+            <span class="action-tooltip-text">Profile</span>
+          </div>
+        </div>
+      </div>
+      <h3 class="user-name">{{item.name}}</h3>
+      <span class="user-description">{{item.description}}</span>
+    </div>
+  </div>
+
+</div>
+
+
+<div class="row">
+
+  <div class="col-md-4" *ngFor="let item of cards3">
+    <div class="card card-3">
+      <div class="main-image-wrapper">
+          <app-preload-image [ratio]="{w:2, h:1}" class="main-image" [src]="item.image" alt="user-pic"></app-preload-image>
+      </div>
+      <div class="image-info">
+        <h3 class="image-title">{{item.title}}</h3>
+        <span class="image-text">{{item.description}}</span>
+      </div>
+      <hr class="card-image-divider">
+      <div class="card-image-user">
+        <img class="user-image" [src]="item.author.image" alt="user-pic">
+        <div class="user-info">
+          <span class="user-name">Collected by <em>{{item.author.name}}</em></span>
+          <span class="user-collecitons">{{item.author.collections}} Collections</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+
+<div class="row">
+
+  <div class="col-md-6" *ngFor="let item of cards4">
+    <div class="card card-4">
+      <div class="main-image-wrapper">
+          <app-preload-image [ratio]="{w:2, h:1}" class="main-image" [src]="item.image" alt="user-pic"></app-preload-image>
+      </div>
+      <div class="image-info">
+        <h3 class="image-title">{{item.title}}</h3>
+        <span class="image-text">{{item.description}}</span>
+      </div>
+      <hr class="card-image-divider">
+      <div class="card-image-user">
+        <img class="user-image" [src]="item.author.image" alt="user-pic">
+        <div class="user-info">
+          <span class="user-name">Collected by <em>{{item.author.name}}</em></span>
+          <span class="user-collecitons">{{item.author.collections}} Collections</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>

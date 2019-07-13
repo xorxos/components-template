@@ -1,0 +1,76 @@
+{
+  "cards2":
+  [
+    {
+      "image": "../../../../assets/imgs/profiles/profile3.jpeg",
+      "name": "Alina Luise",
+      "description": "Software Developer at Uber"
+    },
+    {
+      "image": "../../../../assets/imgs/profiles/profile4.jpeg",
+      "name": "Cecilia Lopez",
+      "description": "Student at London Institute"
+    },
+    {
+      "image": "../../../../assets/imgs/profiles/profile5.jpeg",
+      "name": "Carolina Fernandez",
+      "description": "Senior UI Designer at Airbnb"
+    }
+  ],
+  "cards3":
+  [
+    {
+      "image": "../../../../assets/imgs/cards/livingroom.jpg",
+      "title": "My new living room",
+      "description": "Shiny and clean, my most precious project.",
+      "author": {
+        "name": "Juan Casal",
+        "image": "../../../../assets/imgs/profiles/profile7.jpeg",
+        "collections": 32
+      }
+    },
+    {
+      "image": "../../../../assets/imgs/cards/353x177_2.jpg",
+      "title": "Nature is the king",
+      "description": "My nature collection from south Amercia.",
+      "author": {
+        "name": "José Gomez",
+        "image": "../../../../assets/imgs/profiles/profile8.jpeg",
+        "collections": 25
+      }
+    },
+    {
+      "image": "../../../../assets/imgs/cards/353x177_3.jpg",
+      "title": "Local paintings",
+      "description": "Young artists creating amazing art.",
+      "author": {
+        "name": "Robert Kiyosaki",
+        "image": "../../../../assets/imgs/profiles/profile9.jpeg",
+        "collections": 10
+      }
+    }
+  ],
+  "cards4":
+  [
+    {
+      "image": "../../../../assets/imgs/cards/545x296_1.jpg",
+      "title": "Food is my life",
+      "description": "Pixel perfect dishes. Eat well, live better.",
+      "author": {
+        "name": "Kim Ana",
+        "image": "../../../../assets/imgs/profiles/profile5.jpeg",
+        "collections": 63
+      }
+    },
+    {
+      "image": "../../../../assets/imgs/cards/545x296_2.jpg",
+      "title": "All kind of suculents",
+      "description": "In love with suculents. Plants lover.",
+      "author": {
+        "name": "José Suarez",
+        "image": "../../../../assets/imgs/profiles/profile6.jpeg",
+        "collections": 101
+      }
+    }
+  ]
+}

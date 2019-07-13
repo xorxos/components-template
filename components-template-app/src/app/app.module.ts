@@ -8,10 +8,6 @@ import { environment } from './../environments/environment';
 import { NavigationService } from './shared/services/navigation.service';
 
 import { AppComponent } from './app.component';
-import { GridsComponent } from './layouts/grids/grids.component';
-import { ListsComponent } from './layouts/lists/lists.component';
-import { CardsComponent } from './layouts/cards/cards.component';
-import { TabsComponent } from './layouts/tabs/tabs.component';
 import { HttpClientModule } from '@angular/common/http';
 import { CoreModule } from './core/core.module';
 import { PreloadAllModules, RouterModule } from '@angular/router';
@@ -19,11 +15,7 @@ import { SharedModule } from './shared/shared.module';
 
 @NgModule({
   declarations: [
-    AppComponent,
-    GridsComponent,
-    ListsComponent,
-    CardsComponent,
-    TabsComponent
+    AppComponent
   ],
   imports: [
     BrowserModule,

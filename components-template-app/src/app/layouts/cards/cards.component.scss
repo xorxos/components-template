@@ -1,0 +1,310 @@
+@import '../../shared/styles/_variables';
+@import '../../shared/styles/_mixins';
+
+.card-1 {
+  background-color: $card-bg-color;
+  box-shadow: $shadow;
+  margin-bottom: 30px;
+  border-radius: 4px;
+
+  .card-heading {
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+    color: $white;
+    display: flex;
+    padding: 20px 40px;
+    justify-content: space-between;
+
+    .main-title {
+      font-size: $font-size-md;
+      font-weight: 900;
+      letter-spacing: 2.3px;
+      margin-bottom: 10px;
+      margin-top: 0;
+    }
+
+    .sub-title {
+      font-size: $font-size-sm;
+      letter-spacing: $letter-spacing-sm;
+      margin: 0;
+    }
+
+    .header-icon {
+      align-self: center;
+      font-size: 40px;
+    }
+
+    &.heading-danger {
+      background-color: $red;
+    }
+    &.heading-info {
+      background-color: $aqua;
+    }
+  }
+
+  .card-body {
+    padding: 30px 15px;
+
+    .user-image-wrapper
+    {
+      margin: 0px auto;
+      width: 40%;
+
+      app-preload-image.user-image {
+        border-radius: 50%;
+        margin: 0px;
+
+        img {
+          width: 100%;
+        }
+      }
+    }
+    .user-name {
+      color: #343434;
+      font-size: $font-size-lg;
+      font-weight: 300;
+      letter-spacing: $letter-spacing-lg;
+      text-align: center;
+    }
+
+    .user-description {
+      color: $grey;
+      display: block;
+      font-size: $font-size-sm;
+      letter-spacing: $letter-spacing-sm;
+      margin-bottom: 20px;
+      text-align: center;
+
+      padding: 0px 25px;
+      margin-bottom: 20px;
+    }
+
+    .action-icons {
+      margin-bottom: 25px;
+      text-align: center;
+
+      .action-icon {
+        font-size: 20px;
+        height: 20px;
+        margin-right: 7px;
+        width: 20px;
+
+        &.fa-heart {
+          color: red;
+        }
+      }
+
+      .action-number {
+        color: $grey8;
+        display: inline-block;
+        font-size: $font-size-sm;
+        vertical-align: top;
+
+        &:not(:last-child) {
+          margin-right: 30px;
+        }
+      }
+    }
+
+    .action-buttons {
+      text-align: center;
+      display: flex;
+      justify-content: space-evenly;
+      flex-wrap: wrap;
+
+      .action-button {
+        @include button-outline(#343434, $white, #343434);
+        width: 40%;
+        min-width: 180px;
+        margin-bottom: 10px;
+      }
+    }
+  }
+
+}
+
+
+.card-2 {
+  background-color: $card-bg-color;
+  box-shadow: $shadow;
+  border-radius: 4px;
+  margin-bottom: 30px;
+  padding: 60px 20px;
+
+  .user-name {
+    color: #343434;
+    font-size: $font-size-lg;
+    font-weight: 300;
+    letter-spacing: $letter-spacing-lg;
+    text-align: center;
+  }
+
+  .user-description {
+    color: $grey;
+    display: block;
+    font-size: $font-size-sm;
+    letter-spacing: $letter-spacing-sm;
+    margin-bottom: 20px;
+    text-align: center;
+
+    padding: 0px 25px;
+    margin-bottom: 20px;
+  }
+
+  .image-actions {
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .user-image-wrapper{
+      padding: 0px 30px;
+      margin: 0px auto;
+      width: 100%;
+
+      app-preload-image.user-image {
+        border-radius: 50%;
+        margin: 0px;
+
+        img {
+          width: 100%;
+        }
+      }
+    }
+
+    .action-icon-tooltip {
+      display: inline-block;
+      position: relative;
+
+      .action-icon {
+        background-color: $grey2;
+        border-radius: 50%;
+        color: $grey8;
+        cursor: pointer;
+        font-size: 20px;
+        height: 36px;
+        line-height: 36px;
+        width: 36px;
+
+        &:hover {
+          color: #343434;
+        }
+      }
+
+      .action-tooltip {
+        background-color: #343434;
+        border-radius: 8px;
+        box-shadow: $shadow;
+        display: none;
+        left: -18px;
+        padding: 10px 15px;
+        position: absolute;
+        top: -55px;
+
+        .action-tooltip-point {
+          border-left: 10px solid transparent;
+          border-right: 10px solid transparent;
+          border-top: 10px solid #343434;
+          bottom: -7px;
+          left: 26px;
+          position: absolute;
+        }
+
+        .action-tooltip-text {
+          color: $white;
+          font-weight: bold;
+          letter-spacing: $letter-spacing-xxxs;
+        }
+
+        &.action-tooltip-alt {
+          background-color: $white;
+
+          .action-tooltip-point {
+            border-top-color: $white;
+          }
+
+          .action-tooltip-text {
+            color: #343434;
+          }
+        }
+      }
+
+      &:hover {
+        .action-tooltip {
+          display: block;
+        }
+      }
+    }
+  }
+}
+
+.card-3,
+.card-4 {
+  padding: 0;
+  padding-bottom: 20px;
+  margin-bottom: 30px;
+
+  .main-image-wrapper
+  {
+    margin: 0px auto;
+    width: 100%;
+
+    app-preload-image.main-image {
+      margin: 0px;
+      border-top-left-radius: 4px;
+      border-top-right-radius: 4px;
+
+      img {
+        width: 100%;
+      }
+    }
+  }
+
+
+  .image-info {
+    padding: 0 20px;
+
+    .image-title {
+      color: $grey8;
+      font-size: $font-size-sm;
+      font-weight: bold;
+      letter-spacing: $letter-spacing-sm;
+      margin-bottom: 5px;
+    }
+
+    .image-text {
+      color: $grey;
+      font-size: $font-size-sm;
+      letter-spacing: $letter-spacing-sm;
+    }
+  }
+
+  .card-image-user {
+    padding: 0 20px;
+    display: flex;
+
+    .user-image {
+      border-radius: 50%;
+      margin-right: 20px;
+      height: 60px;
+    }
+
+    .user-info {
+      align-self: center;
+
+      .user-name,
+      .user-collecitons {
+        color: $grey;
+        display: block;
+        font-style: $font-size-sm;
+        letter-spacing: $letter-spacing-sm;
+
+        em {
+          color: $grey8;
+          font-style: normal;
+          font-weight: bold;
+        }
+      }
+    }
+  }
+}

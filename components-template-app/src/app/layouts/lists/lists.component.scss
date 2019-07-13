@@ -1,0 +1,353 @@
+@import '~bootstrap-sass/assets/stylesheets/bootstrap/variables';
+@import '../../shared/styles/_variables';
+@import '../../shared/styles/_mixins';
+
+.list-image-circle {
+  align-self: center;
+  border-radius: 50%;
+  margin-right: 30px;
+}
+
+.list-title {
+  color: #343434;
+  font-size: $font-size-md;
+  letter-spacing: $letter-spacing-lg;
+  margin-bottom: 10px;
+  margin-top: 0;
+}
+
+.list-multiple {
+  .list-title {
+    margin-bottom: 10px;
+
+    .main-title {
+      color: #343434;
+      font-size: $font-size-lg;
+      font-weight: 300;
+      letter-spacing: $letter-spacing-lg;
+      margin-bottom: 7px;
+      margin-top: 0;
+    }
+
+    .sub-title {
+      color: $grey;
+      font-size: $font-size-sm;
+      letter-spacing: $letter-spacing-sm;
+      margin: 0;
+    }
+
+    // If there's a title the first item should have a border-top
+    & ~ .list-body {
+      .list-item {
+        border-top: 1px solid $grey4;
+      }
+    }
+  }
+
+  .list-body {
+    .list-item {
+      display: flex;
+      margin-bottom: 25px;
+      padding-top: 20px;
+
+      &:not(:first-child) {
+        border-top: 1px solid $grey4;
+      }
+
+      .list-image-circle {
+        width: 90px;
+      }
+
+      .list-item-content {
+        .list-item-text {
+          color: $grey;
+          letter-spacing: $letter-spacing-xxxs;
+          margin-bottom: 20px;
+        }
+
+        .list-item-tags {
+          margin-bottom: -10px;
+
+          .list-item-tag {
+            @include button-outline(#343434, $white, #343434);
+            font-size: $font-size-sm;
+            font-weight: normal;
+            letter-spacing: $letter-spacing-sm;
+            margin-bottom: 10px;
+            padding: 3px 5px;
+
+            &:not(:last-child) {
+              margin-right: 10px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  @media only screen and (max-width: $screen-xs-max) {
+    .list-item {
+      flex-wrap: wrap;
+
+      .list-image-circle {
+        margin: auto;
+        margin-bottom: 20px;
+      }
+    }
+  }
+}
+
+.list-single {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 20px;
+  padding-top: 20px;
+
+  &:not(:last-child) {
+    border-bottom: 1px solid $grey4;
+  }
+
+  .list-image-circle {
+    width: 60px;
+  }
+
+  .list-image-icon {
+    align-self: center;
+    position: relative;
+
+    .list-icon {
+      background-color: $white;
+      border-radius: 50%;
+      bottom: 0;
+      color: $green;
+      font-size: 24px;
+      position: absolute;
+      right: 25px;
+    }
+  }
+
+  .list-single-content {
+    align-items: center;
+    border-left: 1px solid #343434;
+    display: flex;
+    justify-content: space-between;
+    margin-right: 40px;
+    padding-left: 40px;
+    width: 100%;
+
+    .list-single-subtitle {
+      display: flex;
+      flex-wrap: wrap;
+
+      .subtitle-icon {
+        &:not(:last-child) {
+          margin-right: 20px;
+        }
+      }
+
+      .list-single-icon {
+        color: $grey8;
+        font-size: 20px;
+      }
+
+      .list-single-icon-number {
+        color: $grey8;
+        vertical-align: top;
+
+        &:not(:last-child) {
+          margin-right: 30px;
+        }
+      }
+
+      @media only screen and (max-width: $screen-xs-max) {
+        justify-content: center;
+      }
+    }
+  }
+
+  .list-single-action {
+    align-self: center;
+    cursor: pointer;
+    font-size: 40px;
+    opacity: .3;
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+
+  .list-single-title {
+    color: $green2;
+    font-size: $font-size-md;
+    font-weight: 900;
+    letter-spacing: $letter-spacing-lg;
+  }
+
+  .list-single-text {
+    color: $grey8;
+    letter-spacing: $letter-spacing-sm;
+  }
+
+  &.list-single-alt {
+    .list-single-content {
+      border: 0;
+      padding-left: 0;
+
+      .list-single-subtitle {
+        margin-bottom: 15px;
+
+        .list-single-icon {
+          color: #343434;
+          font-size: 12px;
+          margin-right: 7px;
+        }
+
+        .list-single-icon-text {
+          color: $grey8;
+          letter-spacing: $letter-spacing-sm;
+          vertical-align: top;
+
+          &:not(:last-child) {
+            margin-right: 20px;
+          }
+        }
+      }
+
+      .list-single-subactions {
+        display: flex;
+
+        .list-single-subaction-button {
+          @include button($aqua, $white, $aqua);
+          font-size: $font-size-sm;
+          letter-spacing: $letter-spacing-sm;
+          margin-right: 15px;
+          padding: 3px 6px;
+        }
+
+        .list-single-subaction-icon-text {
+          align-self: center;
+          cursor: pointer;
+
+          .list-single-subaction-icon {
+            color: $grey8;
+            font-size: 20px;
+            margin-right: 7px;
+          }
+
+          .list-single-subaction-text {
+            color: $grey8;
+            font-weight: bold;
+            letter-spacing: $letter-spacing-sm;
+            vertical-align: text-bottom;
+          }
+        }
+      }
+    }
+
+    .list-single-right {
+      align-self: center;
+      border-right: 1px solid $grey4;
+      flex: 0 0 20%;
+      min-width: 20%;
+      padding-right: 70px;
+      text-align: left;
+
+      .list-single-title {
+        color: #343434;
+      }
+    }
+
+    .list-single-action {
+      color: $grey;
+      margin-right: 20px;
+      opacity: 1;
+    }
+
+    @media only screen and (max-width: $screen-xs-max) {
+      .list-single-right {
+        border-right: 0;
+        padding-right: 0;
+      }
+
+      .list-single-action {
+        margin-right: 0;
+      }
+
+      .list-single-content {
+        .list-single-subactions {
+          justify-content: center;
+        }
+      }
+    }
+  }
+
+  @media only screen and (max-width: $screen-xs-max) {
+    align-items: center;
+    flex-direction: column;
+
+    .list-image-circle {
+      margin-bottom: 20px;
+      margin-right: 0;
+    }
+
+    .list-image-icon {
+      .list-icon {
+        bottom: 20px;
+        right: -5px;
+      }
+    }
+
+    .list-single-subtitle {
+      margin-top: 30px;
+    }
+
+    .list-single-action {
+      margin-top: 20px;
+    }
+
+    .list-single-content {
+      border-left: 0;
+      flex-direction: column;
+      margin-right: 0;
+      padding-left: 0;
+      text-align: center;
+
+      .list-single-left {
+        margin: 20px 0;
+      }
+
+      .list-single-right {
+        .list-single-title {
+          float: right;
+        }
+
+        .list-single-text {
+          line-height: 36px;
+          margin-right: 10px;
+        }
+      }
+    }
+  }
+}
+
+.square-image {
+  .list-image-circle {
+    border-radius: 8px;
+  }
+
+  .list-single-content {
+    border-left: 0;
+    margin-right: 20px;
+    padding-left: 0;
+
+    .list-title {
+      font-size: 18px;
+      margin-bottom: 6px;
+    }
+
+    .list-item-text {
+      color: $grey;
+      letter-spacing: $letter-spacing-xxxs;
+    }
+  }
+}
